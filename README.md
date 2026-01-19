@@ -5,4 +5,3 @@ This repository contains the code for Wildcat Robotics' team Stuffed Crust. This
 TO DO:
 - Add Mecanum Controls
 - Replace all `#include "arduino.h"` and `#include <arduino.h>` with `#include <Arduino.h>`
-- Delete `MELTY_CONFIG_GUARD` in `melty_config.h`
