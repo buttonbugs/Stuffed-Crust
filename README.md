@@ -2,5 +2,7 @@
 
 This repository contains the code for Wildcat Robotics' team Stuffed Crust. This is a fork of the [open source melty brain code](https://github.com/nothinglabs/openmelt2/tree/main), openmelt, with some changes specific to Stuffed Crust's design.
 
-TODO:
+TO DO:
 - Add Mecanum Controls
+- Replace all `#include "arduino.h"` and `#include <arduino.h>` with `#include <Arduino.h>`
+- Delete `MELTY_CONFIG_GUARD` in `melty_config.h`
