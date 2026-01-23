@@ -23,8 +23,8 @@ bool rc_get_is_lr_in_normal_deadzone();
 //it's accepted that a TX with fully centered trims may produce values somewhat off these numbers
 
 //RC pulses outside this range are considered invalid (indicate a bad RC signal)
-#define MAX_RC_PULSE_LENGTH 2400
-#define MIN_RC_PULSE_LENGTH 700
+#define MAX_RC_PULSE_LENGTH 2100
+#define MIN_RC_PULSE_LENGTH 900
 
 //This value reflects nominal range of possible RC pulse values (maximum - minimum)
 //This value is used to help scale left / right adjustment of heading
