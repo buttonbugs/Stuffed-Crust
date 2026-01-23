@@ -1,5 +1,6 @@
 // See melty_config.h for configuration parameters
 
+#include <Arduino.h>
 #include "rc_handler.h"
 #include "melty_config.h"
 #include "motor_driver.h"
@@ -30,7 +31,6 @@ static void wait_for_rc_good_and_zero_throttle() {
 
         // services watchdog and echo diagnostics while we are waiting for RC signal
         service_watchdog();
-        echo_diagnostics();
     }
 }
 

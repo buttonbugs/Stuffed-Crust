@@ -19,7 +19,6 @@ void save_melty_config_settings();
 
 //holds melty parameters used to determine timing for current spin cycle
 //all time offsets are in microseconds
-
 typedef struct melty_parameters_t {
     int translate_forback;               // RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD, RC_FORBACK_NETURAL
     float throttle_percent;              // stores throttle percent
@@ -32,4 +31,4 @@ typedef struct melty_parameters_t {
     unsigned long motor_stop_phase_2;    // time offset for when motor 2 turns on when translating forward (or motor 1 translating backwards)
     int steering_disabled;               // Prevents adjustment of left / right heading adjustment (used for configuration mode)
     int led_shimmer;                     // LED is shimmering to indicate something to the user
-};
+} melty_parameters_t;
