@@ -289,7 +289,7 @@ void spin_one_rotation(void) {
 
     // the melty parameters are updated either at the beginning of the rotation - or the middle of the rotation (alternating each time)
     // this is done so that any errors due to the ~1ms accel read / math cycle cancel out any effect on tracking / translational drift
-    int melty_parameter_update_time_offset_us = 0;
+    long unsigned int melty_parameter_update_time_offset_us = 0;
     if (cycle_count % 2 == 1)
         melty_parameter_update_time_offset_us = melty_parameters.rotation_interval_us / 2;
     bool melty_parameters_updated_this_rotation = false;
