@@ -19,7 +19,7 @@ struct rc_channel_t {
 
 static struct rc_channel_t forback_rc_channel = {.pin = FORBACK_RC_CHANNEL_PIN, .pulse_length = MIN_RC_PULSE_LENGTH, .pulse_start_time = 0, .last_good_signal = 0};
 
-static struct rc_channel_t leftright_rc_channel = {.pin = LEFTRIGHT_RC_CHANNEL_PIN, .pulse_length = MIN_RC_PULSE_LENGTH, .pulse_start_time = 0, .last_good_signal = 0};
+static struct rc_channel_t revolution_rc_channel = {.pin = REVOLUTION_RC_CHANNEL_PIN, .pulse_length = MIN_RC_PULSE_LENGTH, .pulse_start_time = 0, .last_good_signal = 0};
 
 static struct rc_channel_t throttle_rc_channel = {.pin = THROTTLE_RC_CHANNEL_PIN, .pulse_length = MIN_RC_PULSE_LENGTH, .pulse_start_time = 0, .last_good_signal = 0};
 
@@ -95,14 +95,14 @@ int rc_get_throttle_percent() {
     return (int)throttle_percent;
 }
 
-bool rc_get_is_lr_in_config_deadzone() {
-    if (abs(rc_get_leftright()) < LR_CONFIG_MODE_DEADZONE_WIDTH)
+bool rc_get_is_rev_in_config_deadzone() {
+    if (abs(rc_get_revolution()) < REV_CONFIG_MODE_DEADZONE_WIDTH)
         return true;
     return false;
 }
 
-bool rc_get_is_lr_in_normal_deadzone() {
-    if (abs(rc_get_leftright()) < LR_NORMAL_DEADZONE_WIDTH)
+bool rc_get_is_rev_in_normal_deadzone() {
+    if (abs(rc_get_revolution()) < REV_NORMAL_DEADZONE_WIDTH)
         return true;
     return false;
 }
@@ -124,20 +124,20 @@ rc_forback rc_get_forback() {
 // returns offset in microseconds from center value (not converted to percentage)
 // 0 for hypothetical perfect center (reality is probably +/-50)
 // returns negative value for left / positive value for right
-int rc_get_leftright() {
+int rc_get_revolution() {
     lock_rc_data();
-    unsigned long pulse_length = leftright_rc_channel.pulse_length;
+    unsigned long pulse_length = revolution_rc_channel.pulse_length;
     unlock_rc_data();
 
-    return pulse_length - CENTER_LEFTRIGHT_PULSE_LENGTH;
+    return pulse_length - CENTER_REVOLUTION_PULSE_LENGTH;
 }
 
 // ISRs for each RC interrupt pin
 void forback_rc_change() {
     update_rc_channel(&forback_rc_channel);
 }
-void leftright_rc_change() {
-    update_rc_channel(&leftright_rc_channel);
+void revolution_rc_change() {
+    update_rc_channel(&revolution_rc_channel);
 }
 void throttle_rc_change() {
     update_rc_channel(&throttle_rc_channel);
@@ -146,6 +146,6 @@ void throttle_rc_change() {
 // attach interrupts to rc pins
 void init_rc(void) {
     attachInterrupt(digitalPinToInterrupt(forback_rc_channel.pin), forback_rc_change, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(leftright_rc_channel.pin), leftright_rc_change, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(revolution_rc_channel.pin), revolution_rc_change, CHANGE);
     attachInterrupt(digitalPinToInterrupt(throttle_rc_channel.pin), throttle_rc_change, CHANGE);
 }
