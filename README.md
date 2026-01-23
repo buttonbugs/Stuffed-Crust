@@ -4,6 +4,7 @@ This repository contains the code for Wildcat Robotics' team Stuffed Crust. This
 
 TODO:
 - Add Mecanum Controls
+- Open Melt's LEFTRIGHT is actually our Z_REVOLUTION
 - Watchdog
 
 ![Wiring.png](Wiring.png)
