@@ -1,6 +1,6 @@
 // See melty_config.h for configuration parameters
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "rc_handler.h"
 #include "melty_config.h"
 #include "motor_driver.h"
