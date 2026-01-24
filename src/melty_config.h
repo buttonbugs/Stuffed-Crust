@@ -99,7 +99,7 @@ enum throttle_modes {
 
 //TODO: ADD WATCHDOG
 //----------SAFETY----------
-//#define ENABLE_WATCHDOG                           //Uses Adafruit's sleepdog to enable watchdog / reset (tested on AVR - should work for ARM https://github.com/adafruit/Adafruit_SleepyDog)
+#define ENABLE_WATCHDOG                           //Uses WDT_T4's watchdog to enable watchdog / reset (tested on AVR - should work for ARM https://github.com/tonton81/WDT_T4)
 #define WATCH_DOG_TIMEOUT_MS 2000                 //Timeout value for watchdog (not all values are supported - 2000ms verified with Arudino Micro)
 #define VERIFY_RC_THROTTLE_ZERO_AT_BOOT           //Requires RC throttle be 0% at boot to allow spin-up for duration of MAX_MS_BETWEEN_RC_UPDATES (about 1 second)
                                                   //Intended as safety feature to prevent bot from spinning up at power-on if RC was inadvertently left on.

@@ -12,6 +12,7 @@ bool rc_signal_is_healthy();           //return true if RC signal looks good
 
 int rc_get_throttle_percent();        //returns 0-100 value indicating throttle level
 
+rc_forback rc_get_leftright();        //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
 rc_forback rc_get_forback();          //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
 int rc_get_revolution();               //returns offset in microseconds from center value (not converted to percentage)
 

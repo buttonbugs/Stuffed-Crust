@@ -10,15 +10,8 @@
 #include "led_driver.h"
 #include "battery_monitor.h"
 
-#ifdef ENABLE_WATCHDOG
-#include <Adafruit_SleepyDog.h>
-#endif
+#include "watchdog.h"       // No need to use #ifdef ENABLE_WATCHDOG here - handled in watchdog.h
 
-void service_watchdog() {
-#ifdef ENABLE_WATCHDOG
-    Watchdog.reset();
-#endif
-}
 
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
@@ -42,10 +35,8 @@ void setup() {
     init_motors();
     init_led();
 
-#ifdef ENABLE_WATCHDOG
     // returns actual watchdog timeout MS
-    int watchdog_ms = Watchdog.enable(WATCH_DOG_TIMEOUT_MS);
-#endif
+    init_watchdog();
 
     init_rc();
     init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
@@ -83,7 +74,7 @@ static void echo_diagnostics() {
     Serial.print(rc_get_throttle_percent());
     
     Serial.print("  RC L/R: ");
-    Serial.print(rc_get_revolution());
+    Serial.print(rc_get_leftright());
     
     Serial.print("  RC F/B: ");
     Serial.print(rc_get_forback());
