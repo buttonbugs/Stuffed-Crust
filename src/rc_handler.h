@@ -35,8 +35,10 @@ bool rc_get_is_rev_in_normal_deadzone();
 #define FULL_THROTTLE_PULSE_LENGTH 1850           //pulses above this value are considered 100%
 #define CENTER_REVOLUTION_PULSE_LENGTH 1500        //center value for left / right
 #define CENTER_FORBACK_PULSE_LENGTH 1500          //center value for for / back
+#define CENTER_LEFTRIGHT_PULSE_LENGTH 1500          //center value for for / back
 
 #define FORBACK_MIN_THRESH_PULSE_LENGTH 100       //pulse length must differ by this much from CENTER_FORBACK_PULSE_LENGTH to be considered going forward or back
+#define LEFTRIGHT_MIN_THRESH_PULSE_LENGTH 100       //pulse length must differ by this much from CENTER_FORBACK_PULSE_LENGTH to be considered going forward or back
 
 #define REV_CONFIG_MODE_DEADZONE_WIDTH 100         //deadzone for REV when in config mode (in US) - prevents unintended tracking adjustments
 #define REV_NORMAL_DEADZONE_WIDTH 25               //deadzone for normal drive - can help with unintentional drift when moving forward / back
