@@ -34,7 +34,7 @@
 //----------PIN MAPPINGS----------
 //RC pins must be Arduino interrupt pins
 //we need 3 interrupt pins - which requires an Arduino with Atmega32u4 or better (Atmega328 only support 2 interrupts)
-//Common RC receiver setup LEFTRIGHT = CH1, FORBACK = CH2, THROTTLE = CH3
+//Common RC receiver setup REVOLUTION = CH1, FORBACK = CH2, THROTTLE = CH3
 //Note: Accelerometer is connected with default Arduino SDA / SCL pins
 
 #define LEFTRIGHT_RC_CHANNEL_PIN 23                //To Left / Right on RC receiver

@@ -83,7 +83,7 @@ static void echo_diagnostics() {
     Serial.print(rc_get_throttle_percent());
     
     Serial.print("  RC L/R: ");
-    Serial.print(rc_get_leftright());
+    Serial.print(rc_get_revolution());
     
     Serial.print("  RC F/B: ");
     Serial.print(rc_get_forback());
