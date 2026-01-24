@@ -42,7 +42,8 @@
 #define THROTTLE_RC_CHANNEL_PIN 21                 //To Throttle on RC receiver (Pin 0 on Arduino Micro labelled as "RX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
 #define REVOLUTION_RC_CHANNEL_PIN 20                  //To Heading / Spin direction on RC receiver (Pin 4 on Arduino Micro - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
 
-#define HEADING_LED_PIN	11                         //To heading LED (pin 13 is on-board Arduino LED)
+// #define HEADING_LED_PIN	11                         //To heading LED (pin 13 is on-board Arduino LED)
+#define HEADING_LED_PIN	13                         //For testing, in case we don't have external LED
 
 //no configuration changes are needed if only 1 motor is used!
 #define MOTOR_PIN1 2                              //Pin for Motor 1 driver
