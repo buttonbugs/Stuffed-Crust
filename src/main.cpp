@@ -81,12 +81,15 @@ static void echo_diagnostics() {
     
     Serial.print("  RC Throttle: ");
     Serial.print(rc_get_throttle_percent());
-    
-    Serial.print("  RC L/R: ");
+
+    Serial.print(" RC Revolution: ");
     Serial.print(rc_get_revolution());
     
+    Serial.print("  RC L/R: ");
+    Serial.print(rc_get_translation().leftright);
+    
     Serial.print("  RC F/B: ");
-    Serial.print(rc_get_forback());
+    Serial.print(rc_get_translation().forback);
 
 #ifdef BATTERY_ALERT_ENABLED
     Serial.print("  Battery Voltage: ");
@@ -110,10 +113,10 @@ static void echo_diagnostics() {
 // Used to flash out max recorded RPM 100's of RPMs
 static void display_rpm_if_requested() {
     // triggered by user pushing throttle up while bot is at idle for 750ms
-    if (rc_get_forback() == RC_FORBACK_FORWARD) {
+    if (rc_get_translation().forback > 5) {
         delay(750);
         // verify throttle at zero to prevent accidental entry into RPM flash
-        if (rc_get_forback() == RC_FORBACK_FORWARD && rc_get_throttle_percent() == 0) {
+        if (rc_get_translation().forback > 5 && rc_get_throttle_percent() == 0) {
             // throttle up cancels RPM count
             for (int x = 0; x < get_max_rpm() && rc_get_throttle_percent() == 0; x = x + 100) {
                 service_watchdog();  // flashing out RPM can take a while - need to assure watchdog doesn't trigger
@@ -130,15 +133,15 @@ static void display_rpm_if_requested() {
 // checks if user has requested to enter / exit config mode
 static void check_config_mode() {
     // if user pulls control stick back for 750ms - enters (or exits) interactive configuration mode
-    if (rc_get_forback() == RC_FORBACK_BACKWARD) {
+    if (rc_get_translation().forback < -5) {
         delay(750);
-        if (rc_get_forback() == RC_FORBACK_BACKWARD) {
+        if (rc_get_translation().forback < -5) {
             toggle_config_mode();
             if (get_config_mode() == false)
                 save_melty_config_settings();  // save melty settings on config mode exit
 
             // wait for user to release stick - so we don't re-toggle modes
-            while (rc_get_forback() == RC_FORBACK_BACKWARD) {
+            while (rc_get_translation().forback < -5) {
                 service_watchdog();
             }
         }

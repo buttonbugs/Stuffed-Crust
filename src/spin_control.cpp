@@ -105,7 +105,7 @@ static struct melty_parameters_t handle_config_mode(struct melty_parameters_t me
     // if forback forward - normal drive (for driver testing - no adjustment of melty parameters)
 
     // if forback neutral - then do radius adjustment
-    if (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL) {
+    if (melty_parameters.translate.forback < 5 && melty_parameters.translate.forback > -5) {
         // radius adjustment overrides steering
         melty_parameters.steering_disabled = 1;
 
@@ -124,14 +124,15 @@ static struct melty_parameters_t handle_config_mode(struct melty_parameters_t me
     }
 
     // if forback backward - do LED heading adjustment (don't translate)
-    if (melty_parameters.translate_forback == RC_FORBACK_BACKWARD) {
+    if (melty_parameters.translate.forback < -5) {
         // LED heading offset adjustment overrides steering
         melty_parameters.steering_disabled = 1;
 
         // only adjust if stick is outside deadzone
         if (rc_get_is_rev_in_config_deadzone() == false) {
             // disable translation if adjusting heading
-            melty_parameters.translate_forback = RC_FORBACK_NEUTRAL;
+            melty_parameters.translate.forback = 0;
+            melty_parameters.translate.leftright = 0;
 
             // show that we are changing config
             melty_parameters.led_shimmer = 1;
@@ -174,7 +175,7 @@ static struct melty_parameters_t get_melty_parameters(void) {
     if (led_on_portion > 0.90f)
         led_on_portion = 0.90f;
     
-    melty_parameters.translate_forback = rc_get_forback();
+    melty_parameters.translate = rc_get_translation();
     
     // if we are in config mode - handle it (and disable steering if needed)
     if (get_config_mode() == true) {
@@ -208,16 +209,35 @@ static struct melty_parameters_t get_melty_parameters(void) {
     //"wraps" led off time if it exceeds rotation length
     if (melty_parameters.led_stop > melty_parameters.rotation_interval_us)
         melty_parameters.led_stop = melty_parameters.led_stop - melty_parameters.rotation_interval_us;
+
+    float direction_angle_rad = atan2(melty_parameters.translate.leftright, melty_parameters.translate.forback);
+    float translation_magnitude = sqrt((melty_parameters.translate.leftright * melty_parameters.translate.leftright) + (melty_parameters.translate.forback * melty_parameters.translate.forback));
+
+    // convert radians to microseconds (0 to rotation_interval_us)
+    // atan2 returns -PI to PI, so add PI to shift to 0 to 2PI range
+    float phase_offset_us = ((direction_angle_rad + 3.14159f) / 6.28318f) * melty_parameters.rotation_interval_us;
     
-    // phase 1 timing: for motor_1 in forward translation or motor_2 in reverse
-    // motor "on" period is centered at the halfway point of the rotation cycle (6 o'clock)
-    melty_parameters.motor_start_phase_1 = (melty_parameters.rotation_interval_us / 2) - (motor_on_us / 2);
-    melty_parameters.motor_stop_phase_1 = melty_parameters.motor_start_phase_1 + motor_on_us;
+    // motor_on_us is determined by throttle (spin speed)
+    // scaled_motor_on_us is the portion of motor_on_us that actually delivers thrust (determined by translation magnitude)
+    unsigned long scaled_motor_on_us = motor_on_us * translation_magnitude;
     
-    // phase 2 timing: for motor_2 in forward translation or motor_1 in reverse
-    // 180-degree phase shift relative to phase 1, centering the "on" period at the cycle's start/end (12 o'clock)
-    melty_parameters.motor_start_phase_2 = melty_parameters.rotation_interval_us - (motor_on_us / 2);
-    melty_parameters.motor_stop_phase_2 = motor_on_us / 2;
+    // phase 1 timing: motor pulses centered at direction_angle
+    melty_parameters.motor_start_phase_1 = phase_offset_us - (scaled_motor_on_us / 2);
+    melty_parameters.motor_stop_phase_1 = melty_parameters.motor_start_phase_1 + scaled_motor_on_us;
+    
+    // phase 2 timing: 180-degree opposite (opposite direction thrust)
+    float opposite_phase_us = phase_offset_us + (melty_parameters.rotation_interval_us / 2);
+    if (opposite_phase_us > melty_parameters.rotation_interval_us)
+        opposite_phase_us -= melty_parameters.rotation_interval_us;
+    
+    melty_parameters.motor_start_phase_2 = opposite_phase_us - (scaled_motor_on_us / 2);
+    melty_parameters.motor_stop_phase_2 = melty_parameters.motor_start_phase_2 + scaled_motor_on_us;
+    
+    // wrap phase 2 times if they exceed rotation interval
+    if (melty_parameters.motor_start_phase_2 < 0)
+        melty_parameters.motor_start_phase_2 += melty_parameters.rotation_interval_us;
+    if (melty_parameters.motor_stop_phase_2 < 0)
+        melty_parameters.motor_stop_phase_2 += melty_parameters.rotation_interval_us;
     
     // if the battery voltage is low - shimmer the LED to let user know
 #ifdef BATTERY_ALERT_ENABLED
@@ -229,27 +249,13 @@ static struct melty_parameters_t get_melty_parameters(void) {
 }
 
 // handle translating forward
-static void translate_forward(struct melty_parameters_t melty_parameters, unsigned long time_spent_this_rotation_us) {
+static void translate(struct melty_parameters_t melty_parameters, unsigned long time_spent_this_rotation_us) {
     if (time_spent_this_rotation_us >= melty_parameters.motor_start_phase_1 && time_spent_this_rotation_us <= melty_parameters.motor_stop_phase_1) {
         motor_1_on(melty_parameters.throttle_percent);
     } else {
         motor_1_coast();
     }
     if (time_spent_this_rotation_us >= melty_parameters.motor_start_phase_2 || time_spent_this_rotation_us <= melty_parameters.motor_stop_phase_2) {
-        motor_2_on(melty_parameters.throttle_percent);
-    } else {
-        motor_2_coast();
-    }
-}
-
-// handle translating backward (motor1 and motor2 timings are swapped - offset by 180 degrees)
-static void translate_backward(struct melty_parameters_t melty_parameters, unsigned long time_spent_this_rotation_us) {
-    if (time_spent_this_rotation_us >= melty_parameters.motor_start_phase_2 || time_spent_this_rotation_us <= melty_parameters.motor_stop_phase_2) {
-        motor_1_on(melty_parameters.throttle_percent);
-    } else {
-        motor_1_coast();
-    }
-    if (time_spent_this_rotation_us >= melty_parameters.motor_start_phase_1 && time_spent_this_rotation_us <= melty_parameters.motor_stop_phase_1) {
         motor_2_on(melty_parameters.throttle_percent);
     } else {
         motor_2_coast();
@@ -302,18 +308,7 @@ void spin_one_rotation(void) {
             melty_parameters_updated_this_rotation = true;
         }
 
-        // if translation direction is RC_FORBACK_NEUTRAL - robot cycles between forward and reverse translation for net zero translation
-        // if motor 2 (or motor 1) is not present - control sequence remains identical (signal still generated for non-connected motor)
-
-        // translate forward
-        if (melty_parameters.translate_forback == RC_FORBACK_FORWARD || (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL && cycle_count % 2 == 0)) {
-            translate_forward(melty_parameters, time_spent_this_rotation_us);
-        }
-
-        // translate backward
-        if (melty_parameters.translate_forback == RC_FORBACK_BACKWARD || (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL && cycle_count % 2 == 1)) {
-            translate_backward(melty_parameters, time_spent_this_rotation_us);
-        }
+        translate(melty_parameters, time_spent_this_rotation_us);
 
         // displays heading LED at correct location
         update_heading_led(melty_parameters, time_spent_this_rotation_us);

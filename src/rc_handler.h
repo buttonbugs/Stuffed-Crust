@@ -1,10 +1,7 @@
-
-//used to return forward / back control stick position
-typedef enum {
-    RC_FORBACK_FORWARD = 1,     //control stick pushed forward
-    RC_FORBACK_NEUTRAL = 0,     //control stick neutral
-    RC_FORBACK_BACKWARD = -1     //control stick held back
-} rc_forback;
+typedef struct rc_translation {
+    int forback;    // Percent -100 (backward) to 0 (neutral) to +100 (forward)
+    int leftright;  // Percent -100 (left) to 0 (neutral) to +100 (right)
+} rc_translation;
 
 void init_rc();
 
@@ -12,7 +9,7 @@ bool rc_signal_is_healthy();           //return true if RC signal looks good
 
 int rc_get_throttle_percent();        //returns 0-100 value indicating throttle level
 
-rc_forback rc_get_forback();          //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
+rc_translation rc_get_translation();
 int rc_get_revolution();               //returns offset in microseconds from center value (not converted to percentage)
 
 //these functions return true if L/R stick movement is below defined thresholds
@@ -34,11 +31,12 @@ bool rc_get_is_rev_in_normal_deadzone();
 #define IDLE_THROTTLE_PULSE_LENGTH 1250           //pulses below this value are considered 0% throttle
 #define FULL_THROTTLE_PULSE_LENGTH 1850           //pulses above this value are considered 100%
 #define CENTER_REVOLUTION_PULSE_LENGTH 1500        //center value for left / right
-#define CENTER_FORBACK_PULSE_LENGTH 1500          //center value for for / back
-#define CENTER_LEFTRIGHT_PULSE_LENGTH 1500          //center value for for / back
+
+#define CENTER_FORBACK_PULSE_LENGTH 1500         //center value for forward / backward
+#define CENTER_LEFTRIGHT_PULSE_LENGTH 1500       //center value for left / right
 
 #define FORBACK_MIN_THRESH_PULSE_LENGTH 100       //pulse length must differ by this much from CENTER_FORBACK_PULSE_LENGTH to be considered going forward or back
-#define LEFTRIGHT_MIN_THRESH_PULSE_LENGTH 100       //pulse length must differ by this much from CENTER_FORBACK_PULSE_LENGTH to be considered going forward or back
+#define LEFTRIGHT_MIN_THRESH_PULSE_LENGTH 100       //pulse length must differ by this much from CENTER_LEFTRIGHT_PULSE_LENGTH to be considered going forward or back
 
 #define REV_CONFIG_MODE_DEADZONE_WIDTH 100         //deadzone for REV when in config mode (in US) - prevents unintended tracking adjustments
 #define REV_NORMAL_DEADZONE_WIDTH 25               //deadzone for normal drive - can help with unintentional drift when moving forward / back

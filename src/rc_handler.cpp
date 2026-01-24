@@ -79,6 +79,22 @@ bool rc_signal_is_healthy() {
     return true;
 }
 
+int calculate_percentage_from_pulse_length(int pulse_length, int center_pulse_length, int min_threshold) {
+    int delta = pulse_length - center_pulse_length;
+
+    if (abs(delta) < min_threshold)
+        return 0;
+
+    int percent = (delta * 100) / (MAX_RC_PULSE_LENGTH - MIN_RC_PULSE_LENGTH) * 2; // multiply by 2 to account for centering
+
+    if (percent > 100)
+        percent = 100;
+    if (percent < -100)
+        percent = -100;
+
+    return percent;
+}
+
 // returns at integer from 0 to 100 based on throttle position
 // default values are intended to have "dead zones" at both top
 // and bottom of stick for 0 and 100 percent
@@ -87,13 +103,8 @@ int rc_get_throttle_percent() {
     unsigned long pulse_length = throttle_rc_channel.pulse_length;
     unlock_rc_data();
 
-    if (pulse_length >= FULL_THROTTLE_PULSE_LENGTH)
-        return 100;
-    if (pulse_length <= IDLE_THROTTLE_PULSE_LENGTH)
-        return 0;
+    long throttle_percent = calculate_percentage_from_pulse_length(pulse_length, IDLE_THROTTLE_PULSE_LENGTH, 0);
 
-    long throttle_percent = (pulse_length - IDLE_THROTTLE_PULSE_LENGTH) * 100;
-    throttle_percent = throttle_percent / (FULL_THROTTLE_PULSE_LENGTH - IDLE_THROTTLE_PULSE_LENGTH);
     return (int)throttle_percent;
 }
 
@@ -109,32 +120,16 @@ bool rc_get_is_rev_in_normal_deadzone() {
     return false;
 }
 
-// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
-rc_forback rc_get_forback() {
+rc_translation rc_get_translation() {
     lock_rc_data();
-    unsigned long pulse_length = forback_rc_channel.pulse_length;
+    unsigned long forback_pulse_length = forback_rc_channel.pulse_length;
+    unsigned long leftright_pulse_length = leftright_rc_channel.pulse_length;
     unlock_rc_data();
 
-    int rc_forback_offset = pulse_length - CENTER_FORBACK_PULSE_LENGTH;
-    if (rc_forback_offset > FORBACK_MIN_THRESH_PULSE_LENGTH)
-        return RC_FORBACK_FORWARD;
-    if (rc_forback_offset < (FORBACK_MIN_THRESH_PULSE_LENGTH * -1))
-        return RC_FORBACK_BACKWARD;
-    return RC_FORBACK_NEUTRAL;
-}
+    long forback_percent = calculate_percentage_from_pulse_length(forback_pulse_length, CENTER_FORBACK_PULSE_LENGTH, FORBACK_MIN_THRESH_PULSE_LENGTH);
+    long leftright_percent = calculate_percentage_from_pulse_length(leftright_pulse_length, CENTER_LEFTRIGHT_PULSE_LENGTH, LEFTRIGHT_MIN_THRESH_PULSE_LENGTH);
 
-// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
-rc_forback rc_get_leftright() {
-    lock_rc_data();
-    unsigned long pulse_length = leftright_rc_channel.pulse_length;
-    unlock_rc_data();
-
-    int rc_leftright_offset = pulse_length - CENTER_LEFTRIGHT_PULSE_LENGTH;
-    if (rc_leftright_offset > LEFTRIGHT_MIN_THRESH_PULSE_LENGTH)
-        return RC_FORBACK_FORWARD;
-    if (rc_leftright_offset < (LEFTRIGHT_MIN_THRESH_PULSE_LENGTH * -1))
-        return RC_FORBACK_BACKWARD;
-    return RC_FORBACK_NEUTRAL;
+    return {(int)forback_percent, (int)leftright_percent};
 }
 
 // returns offset in microseconds from center value (not converted to percentage)
