@@ -1,8 +1,10 @@
 .vscode
 .DS_Store
 .pio/build/
-PCB/PCB_v1-backups
-PCB/~PCB_v1.kicad_sch.lck
+
+# KiCad Temp File
+*~
 PCB/fp-info-cache
 PCB/fp-lib-table
+PCB/PCB_v1-backups
 PCB/symbols_and_footprints/Teensy-backups
