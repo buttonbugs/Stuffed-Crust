@@ -2704,6 +2704,16 @@
 		)
 		(uuid "1a8fd4d2-a8b7-4dc2-bb64-2e4e523a8acb")
 	)
+	(label "GND"
+		(at 96.52 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d658410-7c45-4ec4-9f18-51d5020cb781")
+	)
 	(label "SCL_19"
 		(at 200.66 99.06 180)
 		(effects
@@ -2753,16 +2763,6 @@
 			(justify left bottom)
 		)
 		(uuid "37978a83-2ae1-4077-8974-03a3f746ef58")
-	)
-	(label "GND"
-		(at 96.52 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3886b8d6-3378-447d-abc4-3d7400301af3")
 	)
 	(label "12V"
 		(at 229.87 64.77 180)
@@ -2843,6 +2843,16 @@
 			(justify left bottom)
 		)
 		(uuid "635eefbb-a021-4b0e-97e4-4750e2d437bb")
+	)
+	(label "5V"
+		(at 96.52 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "670d69e8-ddf9-4c41-a045-53c85c5df81f")
 	)
 	(label "S_ESC_Left_2"
 		(at 177.8 127 0)
@@ -2925,6 +2935,16 @@
 		(uuid "88abcde2-c32d-4cd6-91e0-7a96c0f2e6fa")
 	)
 	(label "GND"
+		(at 96.52 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "89cfd761-7d27-4af0-9dc3-ebb43fcf6044")
+	)
+	(label "GND"
 		(at 121.92 73.66 180)
 		(effects
 			(font
@@ -2933,16 +2953,6 @@
 			(justify right bottom)
 		)
 		(uuid "91a250ca-ef02-4560-97de-4ad8b24cd0f6")
-	)
-	(label "12V"
-		(at 96.52 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "93bf73ce-46e0-4b9c-a5dc-e57e1f3b2688")
 	)
 	(label "CH3_21"
 		(at 177.8 66.04 0)
@@ -2974,6 +2984,16 @@
 		)
 		(uuid "a41eccab-c7f7-4cc8-9715-205acc1a8cef")
 	)
+	(label "12V"
+		(at 96.52 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a789379e-2aa7-4ea2-b79b-7e490209b531")
+	)
 	(label "GND"
 		(at 234.95 92.71 180)
 		(effects
@@ -2983,16 +3003,6 @@
 			(justify right bottom)
 		)
 		(uuid "ab2c5c86-5062-4d16-b09b-0dfd1e50b254")
-	)
-	(label "GND"
-		(at 96.52 113.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ab7aea9f-b0af-41b7-ba85-0cf225afcb7a")
 	)
 	(label "5V"
 		(at 121.92 76.2 180)
@@ -3033,16 +3043,6 @@
 			(justify left bottom)
 		)
 		(uuid "e1176dc7-d070-4e79-aca5-28fcda177484")
-	)
-	(label "5V"
-		(at 96.52 115.57 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e1280d00-aaa1-4844-aef3-bb20fdc4bf0f")
 	)
 	(label "S_ESC_Right_3"
 		(at 177.8 124.46 0)
