@@ -3101,7 +3101,7 @@
 			)
 		)
 	)
-	(gr_text "F.Cu  1 oz (35 μm)"
+	(gr_text "F.Cu  3 oz (105 μm)"
 		(at 200 66 0)
 		(layer "F.SilkS")
 		(uuid "3b2883b5-3399-499a-98db-44dd00cb4fde")
@@ -3255,7 +3255,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "B.Cu  3 oz (105 μm)"
+	(gr_text "B.Cu  1 oz (35 μm)"
 		(at 200 66 0)
 		(layer "B.SilkS")
 		(uuid "c5c638c3-73ea-4fea-9fb0-183845d39dd2")
