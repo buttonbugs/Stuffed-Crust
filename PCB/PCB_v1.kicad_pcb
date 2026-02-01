@@ -311,12 +311,12 @@
 	(footprint "Stuffed Crust:Battery_or_LED"
 		(layer "F.Cu")
 		(uuid "3399631e-b9b4-4076-b69e-b9db1ae26c09")
-		(at 196.56 98.305 90)
+		(at 197.56 98.305 90)
 		(property "Reference" "J5"
 			(at 0 -0.5 90)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "62ecc270-89ab-405c-b119-002e02e94759")
+			(uuid "c7537459-d45d-4ebd-bb34-bb456ef07908")
 			(effects
 				(font
 					(size 1 1)
@@ -328,7 +328,7 @@
 			(at 0 1 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "f2b0675a-d1e6-4bf6-b423-401fa80dcaf8")
+			(uuid "860c0256-07a6-4fe1-b7d4-5de4a46a01a4")
 			(effects
 				(font
 					(size 1 1)
@@ -341,7 +341,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6f27e09d-a66d-4fbb-9087-cda034e1a360")
+			(uuid "920c3fc2-0e16-4214-a4c4-ec51cde50704")
 			(effects
 				(font
 					(size 1 1)
@@ -354,7 +354,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4daf2f96-ddcd-4de7-82c0-b8627c20d849")
+			(uuid "8011eb41-2b85-4173-b8f1-8047afe08753")
 			(effects
 				(font
 					(size 1 1)
@@ -435,6 +435,260 @@
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "aeee72db-359f-450d-a82c-e60c45de394a")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Stuffed Crust:DC_DC"
+		(layer "F.Cu")
+		(uuid "5e1a0453-baff-4b31-bfbf-63253e095777")
+		(at 147.1 79.6 90)
+		(property "Reference" "J3"
+			(at 0 -0.5 90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "d7a10072-ff85-4d99-abb3-8daf5d2faada")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Value" "DC-DC"
+			(at 0 1 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "ea3e6869-a3c6-4a00-bf47-1d20c7736b1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1a2d73ef-72e7-46ac-a26b-5e2b72ab1c81")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "936a4af2-6984-48db-9b25-d09efd870b06")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/54eb7812-872b-4a68-9af3-73aad125943d")
+		(sheetname "/")
+		(sheetfile "PCB_v1.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0 -1.905)
+			(end -4.445 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "2df65502-7585-435f-983d-5009c03b7fd1")
+		)
+		(fp_line
+			(start 3.81 -0.635)
+			(end -1.27 -0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "01d2cb0b-93fe-4d63-8359-9424c99cd087")
+		)
+		(fp_line
+			(start -1.27 -0.635)
+			(end 0 -1.905)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "ef6df535-28ec-4d31-ab73-a22f4785625b")
+		)
+		(fp_line
+			(start -4.445 0)
+			(end 0 1.905)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "0ce607f6-1e89-4b26-a3cc-276f89324fbc")
+		)
+		(fp_line
+			(start -1.27 0.635)
+			(end 3.81 0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "2c9ad5b8-0325-428e-aef7-26dc8f859703")
+		)
+		(fp_line
+			(start 0 1.905)
+			(end -1.27 0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "20ecf704-a67c-429a-b7ad-4de919157d16")
+		)
+		(fp_rect
+			(start -8.15 -4.45)
+			(end 8.15 4.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.SilkS")
+			(uuid "0f0bc15a-f5b0-41b8-954c-92f92c921b29")
+		)
+		(fp_arc
+			(start 3.81 -0.635)
+			(mid 4.445 0)
+			(end 3.81 0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "aee5c0b2-6e30-499f-bd8a-19b910cdca04")
+		)
+		(fp_text user "IN-"
+			(at 5 -1.5 90)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "32a0fcbd-a044-41df-9a0c-0e54a226725c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "IN+"
+			(at 5 2.5 90)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "480fed56-02ba-4e6a-9ada-14d9c2e444b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "VO-"
+			(at -8 -1.5 90)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "54dbf28a-e7f6-45e8-8386-a455d9f3bc8c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "VO+"
+			(at -8 2.5 90)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "90514b17-bc0f-4aef-910b-f14500d69b47")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify left bottom)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 2.5 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "f33656a6-c50f-4085-be2f-0979d4f308c0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 6.5 -3.5 90)
+			(size 2.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 2 "/GND")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "11d0afdf-7127-4a54-ab32-7527dfe5af03")
+		)
+		(pad "2" thru_hole roundrect
+			(at 6.5 3.5 90)
+			(size 2.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.1)
+			(net 13 "/12V")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "4ac76385-093a-4917-a29d-1d30b0f42d08")
+		)
+		(pad "3" thru_hole roundrect
+			(at -6.5 -3.5 90)
+			(size 2.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.1)
+			(net 2 "/GND")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "8fc80453-a0f2-4866-9c5f-9fd2920d7511")
+		)
+		(pad "4" thru_hole roundrect
+			(at -6.5 3.5 90)
+			(size 2.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.1)
+			(net 14 "/5V")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "7437d2b5-f2b7-45f3-a139-64f161bfd519")
 		)
 		(embedded_fonts no)
 	)
@@ -1460,7 +1714,7 @@
 	(footprint "Stuffed Crust:Battery_or_LED"
 		(layer "F.Cu")
 		(uuid "74a909cf-646f-40a1-9549-45b988aca30f")
-		(at 211.94 62.695 -90)
+		(at 213.44 63.695 -90)
 		(property "Reference" "J8"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -1584,260 +1838,6 @@
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "b666d9f0-b761-4813-8a64-98d7577b7bdb")
-		)
-		(embedded_fonts no)
-	)
-	(footprint "Stuffed Crust:DC_DC"
-		(layer "F.Cu")
-		(uuid "82f2324c-b59d-4b6f-88c0-2e45241feefe")
-		(at 146 79 90)
-		(property "Reference" "J3"
-			(at 0 -3.175 90)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "e10ac4d0-1c5c-4511-865a-02dec6abe218")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-			)
-		)
-		(property "Value" "DC-DC"
-			(at 0 1 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(uuid "409c4cc1-6ff2-4001-96ef-2eaee86d3bd0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3a6fe324-1551-4f0e-b77b-56240f29c626")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fa6d640d-d16b-4e10-95ad-f2527625203c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/54eb7812-872b-4a68-9af3-73aad125943d")
-		(sheetname "/")
-		(sheetfile "PCB_v1.kicad_sch")
-		(attr smd)
-		(fp_line
-			(start 0 -1.905)
-			(end -4.445 0)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "7156e44c-24f0-41bd-9400-5bb29604aa66")
-		)
-		(fp_line
-			(start 3.81 -0.635)
-			(end -1.27 -0.635)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "5a951952-edc8-4696-bd63-f9d3648e0e85")
-		)
-		(fp_line
-			(start -1.27 -0.635)
-			(end 0 -1.905)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "484752fe-8b09-461e-95cb-9ba0b0f5e168")
-		)
-		(fp_line
-			(start -4.445 0)
-			(end 0 1.905)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "a3dd7676-7882-4184-a247-f8713322ffc2")
-		)
-		(fp_line
-			(start -1.27 0.635)
-			(end 3.81 0.635)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "fb665856-1b25-4ca1-8f79-26283a6c00b3")
-		)
-		(fp_line
-			(start 0 1.905)
-			(end -1.27 0.635)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "d7bf16cf-da79-4c44-bd19-79204199d38a")
-		)
-		(fp_arc
-			(start 3.81 -0.635)
-			(mid 4.445 0)
-			(end 3.81 0.635)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "df501d0a-10b8-4741-88f0-d83e163e771c")
-		)
-		(fp_rect
-			(start -8.15 -4.45)
-			(end 8.15 4.45)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.SilkS")
-			(uuid "3c21b137-37c0-4b29-9083-0d6515da960a")
-		)
-		(fp_text user "VO-"
-			(at -8 -1.5 90)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "0d8ffeac-599b-43cb-b236-22f36d72d68a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify left bottom)
-			)
-		)
-		(fp_text user "IN+"
-			(at 5 2.5 90)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "6682f6be-44f7-41f3-855a-ef66eb6e949c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify left bottom)
-			)
-		)
-		(fp_text user "VO+"
-			(at -8 2.5 90)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "8cf974c4-0f18-4134-ae4b-6cef39222bca")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify left bottom)
-			)
-		)
-		(fp_text user "IN-"
-			(at 5 -1.5 90)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "dc058132-fc53-45db-b61d-917a09a143ea")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify left bottom)
-			)
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2.5 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(uuid "13031e27-9f9e-4686-99a3-3221f0091737")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole rect
-			(at 6.5 -3.5 90)
-			(size 2.5 1.5)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 2 "/GND")
-			(pinfunction "Pin_1")
-			(pintype "passive")
-			(uuid "9aec07be-7978-4a1f-b3b2-6894ad790834")
-		)
-		(pad "2" thru_hole roundrect
-			(at 6.5 3.5 90)
-			(size 2.5 1.5)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(roundrect_rratio 0.1)
-			(net 13 "/12V")
-			(pinfunction "Pin_2")
-			(pintype "passive")
-			(uuid "7540fc42-790b-46d2-84fd-8441ea437a55")
-		)
-		(pad "3" thru_hole roundrect
-			(at -6.5 -3.5 90)
-			(size 2.5 1.5)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(roundrect_rratio 0.1)
-			(net 2 "/GND")
-			(pinfunction "Pin_3")
-			(pintype "passive")
-			(uuid "7076b4bf-c977-4aba-8630-7f6dbc042e54")
-		)
-		(pad "4" thru_hole roundrect
-			(at -6.5 3.5 90)
-			(size 2.5 1.5)
-			(drill 1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(roundrect_rratio 0.1)
-			(net 14 "/5V")
-			(pinfunction "Pin_4")
-			(pintype "passive")
-			(uuid "965492ba-e804-4b12-9a3d-610a4e4c42f5")
 		)
 		(embedded_fonts no)
 	)
@@ -2024,7 +2024,7 @@
 	(footprint "Stuffed Crust:Accelerometer"
 		(layer "F.Cu")
 		(uuid "9fe17c52-4e1f-4588-9361-4303eefb6666")
-		(at 212.26 71.14 -90)
+		(at 213.56 70.94 -90)
 		(property "Reference" "J1"
 			(at 15.5 -2 270)
 			(unlocked yes)
@@ -2706,12 +2706,24 @@
 		(end 220 100)
 		(stroke
 			(width 0.2)
-			(type default)
+			(type solid)
 		)
 		(fill no)
-		(layer "F.Cu")
-		(net 2)
+		(layer "Edge.Cuts")
 		(uuid "75e6dbb3-5d84-4364-b9e8-fd5177594e1a")
+	)
+	(gr_text "Top Layer"
+		(at 191.7 67.7 0)
+		(layer "F.SilkS")
+		(uuid "385c14e0-c7a3-4757-9bd1-0c41752d37e2")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
 	)
 	(embedded_fonts no)
 )
