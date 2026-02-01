@@ -3443,7 +3443,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Stuffed Crust:ESC"
 			(at 58.42 93.98 0)
 			(effects
 				(font
@@ -3523,7 +3523,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Stuffed Crust:ESC"
 			(at 236.855 95.25 0)
 			(effects
 				(font
@@ -3600,7 +3600,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Stuffed Crust:Battery_or_LED"
 			(at 205.74 66.04 0)
 			(effects
 				(font
@@ -3668,7 +3668,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Stuffed Crust:Battery_or_LED"
 			(at 58.42 63.5 0)
 			(effects
 				(font
@@ -3908,7 +3908,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Stuffed Crust:Battery_or_LED"
 			(at 234.95 64.77 0)
 			(effects
 				(font
