@@ -3,3 +3,5 @@
 .pio/build/
 PCB/PCB_v1-backups
 PCB/~PCB_v1.kicad_sch.lck
+PCB/fp-info-cache
+PCB/fp-lib-table

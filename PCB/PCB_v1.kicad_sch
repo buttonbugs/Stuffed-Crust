@@ -3482,10 +3482,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "cb9fddf0-8546-4ad2-b5b2-dadf7e90ff2f")
+			(uuid "cb9fddf0-8546-4ad2-b5b2-dadf7e90ff30")
 		)
 		(pin "1"
-			(uuid "7ed04be5-5a43-4a9f-bd4f-798019a7a757")
+			(uuid "7ed04be5-5a43-4a9f-bd4f-798019a7a758")
 		)
 		(instances
 			(project ""
@@ -3522,7 +3522,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Teensy:Teensy40"
 			(at 160.02 105.41 0)
 			(effects
 				(font
