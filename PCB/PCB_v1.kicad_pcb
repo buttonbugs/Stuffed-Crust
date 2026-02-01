@@ -79,6 +79,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
+		(grid_origin 180 80)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -2982,6 +2983,77 @@
 		(layer "F.SilkS")
 		(uuid "dd8f1b59-b5c8-41fe-b7c6-29dc1b74ec5f")
 	)
+	(gr_line
+		(start 180 80)
+		(end 180 72)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "034ae507-60d4-4d2e-81f7-2ca7902b85f2")
+	)
+	(gr_line
+		(start 180 80)
+		(end 188 80)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "12363b93-f53d-45ab-a49c-7b3605bb94b1")
+	)
+	(gr_circle
+		(center 180 80)
+		(end 180.3 80)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.SilkS")
+		(uuid "52f682f2-a696-4f67-a932-34606fb0a0c1")
+	)
+	(gr_line
+		(start 180 72)
+		(end 181 73)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "59454153-2b18-42f0-b01a-fde2e5fd7947")
+	)
+	(gr_line
+		(start 188 80)
+		(end 187 79)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "cc77fa76-f0be-4df7-ae03-9b5b430cc1bf")
+	)
+	(gr_line
+		(start 188 80)
+		(end 187 81)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "ce50b6a0-7961-42d9-863e-7d8c18a2778c")
+	)
+	(gr_line
+		(start 180 72)
+		(end 179 73)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "da1c5d48-ce52-45f8-991b-647ef3888959")
+	)
 	(gr_rect
 		(start 140 60)
 		(end 220 100)
@@ -3027,6 +3099,18 @@
 				(thickness 0.3)
 				(bold yes)
 			)
+		)
+	)
+	(gr_text "F.Cu  1 oz (35 μm)"
+		(at 200 66 0)
+		(layer "F.SilkS")
+		(uuid "3b2883b5-3399-499a-98db-44dd00cb4fde")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify bottom)
 		)
 	)
 	(gr_text "Battery"
@@ -3086,6 +3170,18 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "80mm × 40mm"
+		(at 219 99 0)
+		(layer "F.SilkS")
+		(uuid "cde6dbae-543c-4a04-8464-8e995ee09e2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify right)
+		)
+	)
 	(gr_text "Wildcat Robotics"
 		(at 146.05 74.93 0)
 		(layer "F.SilkS")
@@ -3110,6 +3206,42 @@
 			)
 		)
 	)
+	(gr_text "x"
+		(at 186 81 -0)
+		(layer "B.SilkS")
+		(uuid "5a5ac4b4-c0a9-4139-bfed-e8930e60289f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "y"
+		(at 182 73 0)
+		(layer "B.SilkS")
+		(uuid "70d9f60c-11e8-4b0b-a316-edea9a70b8ad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "(PCB Center)"
+		(at 180 81 0)
+		(layer "B.SilkS")
+		(uuid "9f873ec7-d317-41c5-bd8a-ce6bedcbefaa")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify bottom mirror)
+		)
+	)
 	(gr_text "Bottom Layer"
 		(at 200.025 63.5 -0)
 		(layer "B.SilkS")
@@ -3121,6 +3253,18 @@
 				(bold yes)
 			)
 			(justify mirror)
+		)
+	)
+	(gr_text "B.Cu  3 oz (105 μm)"
+		(at 200 66 0)
+		(layer "B.SilkS")
+		(uuid "c5c638c3-73ea-4fea-9fb0-183845d39dd2")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify bottom mirror)
 		)
 	)
 	(segment

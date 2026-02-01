@@ -9,3 +9,4 @@ PCB/fp-lib-table
 PCB/PCB_v1-backups
 PCB/symbols_and_footprints/Teensy-backups
 *.lck
+*_autosave-*
