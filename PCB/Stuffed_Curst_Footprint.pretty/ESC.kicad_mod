@@ -56,7 +56,7 @@
 	(attr through_hole)
 	(fp_rect
 		(start 0 0)
-		(end 8.255 15.24)
+		(end 3.81 10.16)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -66,7 +66,7 @@
 		(uuid "0cb858d3-5332-4371-abcf-a720339fbd7e")
 	)
 	(fp_text user "-"
-		(at 5.08 2.54 0)
+		(at 2.54 1.27 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "26efc051-5709-4601-8db7-4329514f25ac")
@@ -78,8 +78,8 @@
 			(justify left)
 		)
 	)
-	(fp_text user "GND"
-		(at 5.08 5.08 0)
+	(fp_text user "-"
+		(at 2.54 3.81 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "3da40c75-2cb3-450b-9fa7-97a1b501e8f2")
@@ -91,8 +91,8 @@
 			(justify left)
 		)
 	)
-	(fp_text user "T"
-		(at 5.08 10.16 0)
+	(fp_text user "+"
+		(at 2.54 8.89 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "d09a46b1-ab35-491a-8a5f-f48add050f40")
@@ -104,21 +104,8 @@
 			(justify left)
 		)
 	)
-	(fp_text user "+"
-		(at 5.08 12.7 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "dfe1cd4f-f1ff-461e-8b48-e9e80ca5c490")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.1)
-			)
-			(justify left)
-		)
-	)
 	(fp_text user "S"
-		(at 5.08 7.62 0)
+		(at 2.54 6.35 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "ff726b65-841c-49b2-8d58-b025b9d7dbf1")
@@ -143,7 +130,7 @@
 		)
 	)
 	(pad "1" thru_hole rect
-		(at 2.54 2.54)
+		(at 1.27 1.27)
 		(size 2 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -151,7 +138,7 @@
 		(uuid "2c36b9ba-45c4-4449-bacc-e568950f537b")
 	)
 	(pad "2" thru_hole circle
-		(at 2.54 5.08)
+		(at 1.27 3.81)
 		(size 2 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -159,7 +146,7 @@
 		(uuid "e087e5b7-32a9-487e-a8c5-fd3490358756")
 	)
 	(pad "3" thru_hole circle
-		(at 2.54 7.62)
+		(at 1.27 6.35)
 		(size 2 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -167,20 +154,12 @@
 		(uuid "048614bd-8669-4620-bb15-4420cba5afba")
 	)
 	(pad "4" thru_hole circle
-		(at 2.54 10.16)
+		(at 1.27 8.89)
 		(size 2 2)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "254cc378-5540-4cb8-a302-a9db16b8a85d")
-	)
-	(pad "5" thru_hole circle
-		(at 2.54 12.7)
-		(size 2 2)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "1a473267-9a41-4b0d-ad01-5e417e3a8bee")
 	)
 	(embedded_fonts no)
 )
