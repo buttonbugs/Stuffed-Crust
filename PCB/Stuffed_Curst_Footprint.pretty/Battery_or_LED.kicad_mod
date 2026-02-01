@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -0.5 0)
 		(unlocked yes)
-		(layer "F.SilkS")
+		(layer "F.Fab")
 		(uuid "72cdc8a6-c4ba-496e-811c-ee6947e792f6")
 		(effects
 			(font
@@ -66,7 +66,7 @@
 		(uuid "ce74b2aa-b6bb-4b95-b2e6-a65621a57a34")
 	)
 	(fp_text user "+"
-		(at 3.175 1.27 0)
+		(at 3.175 1.27 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "2ee26147-b130-4ccd-873b-1893dd2e48c7")
@@ -78,7 +78,7 @@
 		)
 	)
 	(fp_text user "-"
-		(at 3.175 3.81 0)
+		(at 3.175 3.81 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "c7d9e8a9-c825-417e-a2b9-6252e333d171")
