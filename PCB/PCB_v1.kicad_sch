@@ -3282,7 +3282,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Suffed Crust:DC_DC"
 			(at 91.44 110.49 0)
 			(effects
 				(font

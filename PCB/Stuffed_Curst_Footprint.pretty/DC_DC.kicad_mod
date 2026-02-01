@@ -1,4 +1,4 @@
-(footprint "PCB_v1"
+(footprint "DC_DC"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -15,7 +15,7 @@
 			)
 		)
 	)
-	(property "Value" "PCB_v1"
+	(property "Value" "DC_DC"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -54,6 +54,17 @@
 		)
 	)
 	(attr smd)
+	(fp_rect
+		(start -8.15 -4.45)
+		(end 8.15 4.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.SilkS")
+		(uuid "deaa9ccf-e1be-4097-ae0e-b85d4d66a45e")
+	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.5 0)
 		(unlocked yes)
@@ -65,6 +76,41 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(pad "1" thru_hole rect
+		(at 6.5 -3.5)
+		(size 2.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a5801f40-54d7-4345-9dfc-d990a51b7c24")
+	)
+	(pad "2" thru_hole roundrect
+		(at 6.5 3.5)
+		(size 2.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "B.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1)
+		(uuid "f0993372-aa77-4c3c-a061-e1695e4f2bde")
+	)
+	(pad "3" thru_hole roundrect
+		(at -6.5 -3.5)
+		(size 2.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "B.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1)
+		(uuid "b627d1c3-f55b-4fcc-b07f-0fc3f0a640ab")
+	)
+	(pad "4" thru_hole roundrect
+		(at -6.5 3.5)
+		(size 2.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "B.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1)
+		(uuid "cd67c480-bd96-43ce-8f07-c1c0cf6d21c5")
 	)
 	(embedded_fonts no)
 )
