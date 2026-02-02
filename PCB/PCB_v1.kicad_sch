@@ -2704,7 +2704,7 @@
 		)
 		(uuid "1a8fd4d2-a8b7-4dc2-bb64-2e4e523a8acb")
 	)
-	(label "GND"
+	(label "GND_BT"
 		(at 96.52 110.49 0)
 		(effects
 			(font
@@ -2734,7 +2734,7 @@
 		)
 		(uuid "2b022159-d0d5-4d91-a8ea-e98a265fa0fc")
 	)
-	(label "GND"
+	(label "GND_BT"
 		(at 229.87 67.31 180)
 		(effects
 			(font
@@ -2814,7 +2814,7 @@
 		)
 		(uuid "5eac7cc8-efae-46c8-aea6-bc92bafeab16")
 	)
-	(label "GND"
+	(label "GND_BT"
 		(at 63.5 88.9 0)
 		(effects
 			(font
@@ -2884,7 +2884,7 @@
 		)
 		(uuid "6dcd51e7-0589-4e44-b440-c092bfdcc666")
 	)
-	(label "GND"
+	(label "GND_BT"
 		(at 234.95 90.17 180)
 		(effects
 			(font
@@ -3054,7 +3054,7 @@
 		)
 		(uuid "e24ca5ce-95d7-4c49-88e2-90790988e781")
 	)
-	(label "GND"
+	(label "GND_BT"
 		(at 63.5 66.04 0)
 		(effects
 			(font
@@ -3160,7 +3160,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Stuffed Crust:Battery_or_LED"
+		(property "Footprint" "Stuffed Crust:LED"
 			(at 205.74 66.04 0)
 			(effects
 				(font
@@ -3228,7 +3228,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Stuffed Crust:Battery_or_LED"
+		(property "Footprint" "Stuffed Crust:Battery"
 			(at 58.42 63.5 0)
 			(effects
 				(font
@@ -3545,7 +3545,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Stuffed Crust:Battery_or_LED"
+		(property "Footprint" "Stuffed Crust:Battery"
 			(at 234.95 64.77 0)
 			(effects
 				(font
