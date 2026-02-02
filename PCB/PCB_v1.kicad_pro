@@ -490,7 +490,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "PCB_v1.step",
+      "step": "3D_models/PCB_v1.step",
       "svg": "",
       "vrml": ""
     },

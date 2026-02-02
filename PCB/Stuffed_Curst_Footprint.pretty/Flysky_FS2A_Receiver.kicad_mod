@@ -79,7 +79,7 @@
 		)
 	)
 	(fp_text user "25mm × 11 mm"
-		(at 25 11 0)
+		(at 24.638 10.668 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "0ee4cad9-3910-4eec-ab8b-aff6bce40e0c")
