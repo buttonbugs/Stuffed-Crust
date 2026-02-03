@@ -56,7 +56,7 @@
 	(attr through_hole)
 	(fp_rect
 		(start 0 0)
-		(end 4.064 6.35)
+		(end 3.429 5.08)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -66,7 +66,7 @@
 		(uuid "ce74b2aa-b6bb-4b95-b2e6-a65621a57a34")
 	)
 	(fp_text user "+"
-		(at 3.302 1.27 90)
+		(at 2.794 1.27 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "2ee26147-b130-4ccd-873b-1893dd2e48c7")
@@ -78,7 +78,7 @@
 		)
 	)
 	(fp_text user "-"
-		(at 3.302 5.08 90)
+		(at 2.794 3.81 90)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "c7d9e8a9-c825-417e-a2b9-6252e333d171")
@@ -103,16 +103,16 @@
 	)
 	(pad "1" thru_hole rect
 		(at 1.27 1.27)
-		(size 2.4 2.4)
-		(drill 1.5)
+		(size 2 2)
+		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "0d963373-47ca-43fa-90bc-86d4609066d4")
 	)
 	(pad "2" thru_hole circle
-		(at 1.27 5.08)
-		(size 2.4 2.4)
-		(drill 1.5)
+		(at 1.27 3.81)
+		(size 2 2)
+		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "8463ce1c-5a01-44ad-bfa2-21f5009e8b73")
