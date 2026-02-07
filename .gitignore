@@ -4,6 +4,7 @@
 
 # KiCad Temp File
 */~*
+*.kicad_prl
 PCB/fp-info-cache
 PCB/fp-lib-table
 PCB/PCB_v1-backups
