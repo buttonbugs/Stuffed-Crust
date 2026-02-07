@@ -2807,24 +2807,14 @@
 		(uuid "094443ee-5bbe-499f-989c-01ae7600261a")
 	)
 	(label "CH2_22"
-		(at 121.92 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "12234fef-3bae-41cc-8187-649d9774be4b")
-	)
-	(label "CH4_20"
-		(at 96.52 71.12 0)
+		(at 96.52 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "1a8fd4d2-a8b7-4dc2-bb64-2e4e523a8acb")
+		(uuid "214a8d98-2392-4c67-b78e-8cbc4e4d5c84")
 	)
 	(label "SCL_19"
 		(at 200.66 99.06 180)
@@ -2845,6 +2835,16 @@
 			(justify right bottom)
 		)
 		(uuid "2b022159-d0d5-4d91-a8ea-e98a265fa0fc")
+	)
+	(label "CH1_23"
+		(at 121.92 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2cdc5149-b99c-45b2-a688-a2f004385071")
 	)
 	(label "GND"
 		(at 96.52 91.44 0)
@@ -2885,6 +2885,16 @@
 			(justify right bottom)
 		)
 		(uuid "4800a9bd-26f8-4c55-8232-bd6327b1f871")
+	)
+	(label "CH1_23"
+		(at 96.52 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "49943f51-ed72-4a2e-a6b2-569bcfc1d1b8")
 	)
 	(label "GND"
 		(at 96.52 110.49 0)
@@ -2936,6 +2946,16 @@
 		)
 		(uuid "5eac7cc8-efae-46c8-aea6-bc92bafeab16")
 	)
+	(label "CH3_21"
+		(at 177.8 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "601faf72-b879-4013-876a-f0aefbdfe7f6")
+	)
 	(label "GND"
 		(at 96.52 83.82 0)
 		(effects
@@ -2986,6 +3006,16 @@
 		)
 		(uuid "6dcd51e7-0589-4e44-b440-c092bfdcc666")
 	)
+	(label "CH2_22"
+		(at 121.92 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7aec4c3e-cc02-4c85-9465-c1cf0fff8a06")
+	)
 	(label "3.3V"
 		(at 96.52 78.74 0)
 		(effects
@@ -3026,6 +3056,16 @@
 		)
 		(uuid "89cfd761-7d27-4af0-9dc3-ebb43fcf6044")
 	)
+	(label "CH3_21"
+		(at 96.52 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "90a15f80-5f01-40c4-986a-afacf4c52881")
+	)
 	(label "GND"
 		(at 121.92 73.66 180)
 		(effects
@@ -3036,15 +3076,15 @@
 		)
 		(uuid "91a250ca-ef02-4560-97de-4ad8b24cd0f6")
 	)
-	(label "CH3_21"
-		(at 177.8 66.04 0)
+	(label "CH4_20"
+		(at 177.8 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "9cdc067a-5254-4681-8735-f57587636b11")
+		(uuid "9c88c0dd-fcc7-45f1-b823-42fc6a821b69")
 	)
 	(label "LED"
 		(at 177.8 104.14 0)
@@ -3055,16 +3095,6 @@
 			(justify left bottom)
 		)
 		(uuid "a3ec699b-204d-4472-a996-a6603b00ec98")
-	)
-	(label "CH3_21"
-		(at 96.52 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a41eccab-c7f7-4cc8-9715-205acc1a8cef")
 	)
 	(label "12V"
 		(at 96.52 107.95 0)
@@ -3106,6 +3136,16 @@
 		)
 		(uuid "d99c5bad-8869-4e9c-963a-03ebfacb1132")
 	)
+	(label "CH4_20"
+		(at 96.52 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd1bbe72-8b18-4416-a21a-3c8d49b3bc42")
+	)
 	(label "GND"
 		(at 177.8 134.62 0)
 		(effects
@@ -3125,16 +3165,6 @@
 			(justify left bottom)
 		)
 		(uuid "e24ca5ce-95d7-4c49-88e2-90790988e781")
-	)
-	(label "CH1_23"
-		(at 96.52 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8f0ce17-e11b-4a5a-a82e-5db4c978f33c")
 	)
 	(label "S_ESC_Left_2"
 		(at 63.5 74.93 0)
@@ -3156,26 +3186,6 @@
 		)
 		(uuid "f1f52beb-8182-4df3-8265-d609284bcb4d")
 	)
-	(label "CH1_23"
-		(at 121.92 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f28673b0-ed2b-4905-9558-c928ed480f34")
-	)
-	(label "CH2_22"
-		(at 96.52 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fd49dc62-f0e3-47f5-88f7-b8f59327ac3b")
-	)
 	(label "3.3V"
 		(at 200.66 93.98 180)
 		(effects
@@ -3185,16 +3195,6 @@
 			(justify right bottom)
 		)
 		(uuid "fe3d6e8e-5643-40b4-a37f-3aba03bfa337")
-	)
-	(label "CH4_20"
-		(at 177.8 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fe7e9ef5-7d83-46f8-85f1-9b96fe33f28f")
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Pin")
