@@ -2596,7 +2596,7 @@
 			)
 		)
 	)
-	(gr_text "80mm × 40mm"
+	(gr_text "50mm × 40mm"
 		(at 170.5 99 0)
 		(layer "F.SilkS")
 		(uuid "cde6dbae-543c-4a04-8464-8e995ee09e2b")
