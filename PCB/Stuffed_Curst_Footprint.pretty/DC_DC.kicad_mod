@@ -13,7 +13,6 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
-			(justify mirror)
 		)
 	)
 	(property "Value" "DC_DC"
@@ -147,7 +146,7 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
-			(justify top)
+			(justify top mirror)
 		)
 	)
 	(fp_text user "IN+"
@@ -160,7 +159,7 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
-			(justify bottom)
+			(justify bottom mirror)
 		)
 	)
 	(fp_text user "VO+"
@@ -173,7 +172,7 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
-			(justify bottom)
+			(justify bottom mirror)
 		)
 	)
 	(fp_text user "VO-"
@@ -186,7 +185,7 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
-			(justify top)
+			(justify top mirror)
 		)
 	)
 	(fp_text user "${REFERENCE}"
