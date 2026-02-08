@@ -5,9 +5,9 @@
 # KiCad Temp File
 */~*
 *.kicad_prl
-PCB/fp-info-cache
-PCB/fp-lib-table
-PCB/PCB_v1-backups
-PCB/symbols_and_footprints/Teensy-backups
+*fp-info-cache
+*fp-lib-table
+*-backups
+*-backups
 *.lck
 *_autosave-*
