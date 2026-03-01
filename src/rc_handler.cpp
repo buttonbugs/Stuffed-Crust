@@ -98,6 +98,10 @@ int rc_get_throttle_percent() {
     return (int)throttle_percent;
 }
 
+float rc_get_throttle_ratio() {
+    return rc_get_throttle_percent() / 100.0;
+}
+
 bool rc_get_is_rev_in_config_deadzone() {
     if (abs(rc_get_revolution()) < REV_CONFIG_MODE_DEADZONE_WIDTH)
         return true;
@@ -142,6 +146,15 @@ unsigned long rc_get_leftright_pulse_length() {
     return pulse_length;
 }
 
+// returns the pulse length based on stick position
+unsigned long rc_get_revolution_pulse_length() {
+    lock_rc_data();
+    unsigned long pulse_length = revolution_rc_channel.pulse_length;
+    unlock_rc_data();
+
+    return pulse_length;
+}
+
 // returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
 rc_forback rc_get_forback() {
     int rc_forback_offset = rc_get_forback_pulse_length() - CENTER_FORBACK_PULSE_LENGTH;
@@ -171,15 +184,17 @@ float rc_get_forback_ratio() {
 float rc_get_leftright_ratio() {
     return rc_get_ratio(rc_get_leftright_pulse_length());
 }
+
+// return float from -1.0 to 1.0 based on the pulse_length based on stick position
+float rc_get_revolution_ratio() {
+    return rc_get_ratio(rc_get_revolution_pulse_length());
+}
+
 // returns offset in microseconds from center value (not converted to percentage)
 // 0 for hypothetical perfect center (reality is probably +/-50)
 // returns negative value for left / positive value for right
 int rc_get_revolution() {
-    lock_rc_data();
-    unsigned long pulse_length = revolution_rc_channel.pulse_length;
-    unlock_rc_data();
-
-    return pulse_length - CENTER_REVOLUTION_PULSE_LENGTH;
+    return rc_get_revolution_pulse_length() - CENTER_REVOLUTION_PULSE_LENGTH;
 }
 
 // ISRs for each RC interrupt pin
