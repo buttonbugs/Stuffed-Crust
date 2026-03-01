@@ -1,72 +1,57 @@
-// this module handles interfacing to the motors
-
 #include <Arduino.h>
+#include <Servo.h>
 #include "melty_config.h"
 #include "motor_driver.h"
 
-// motor_X_on functions are used for the powered phase of each rotation
-// motor_X_coast functions are used for the unpowered phase of each rotation
-// motor_X_off functions are used for when the robot is spun-down
+Servo motor1;
+Servo motor2;
 
-void motor_on(float throttle_percent, int motor_pin) {
-    if (THROTTLE_TYPE == BINARY_THROTTLE) {
-        digitalWrite(motor_pin, HIGH);
-    }
+constexpr uint16_t ESC_MIN_US  = 1000;
+constexpr uint16_t ESC_MAX_US  = 2000;
+constexpr uint16_t ESC_STOP_US = 1000;
 
-    if (THROTTLE_TYPE == FIXED_PWM_THROTTLE) {
-        analogWrite(motor_pin, PWM_MOTOR_ON);
-    }
+// Map 0-100% to 1000-2000us
+static uint16_t toMicroseconds(float throttle_percent) {
+    throttle_percent = constrain(throttle_percent, 0.0f, 1.0f);
+    return ESC_MIN_US + static_cast<uint16_t>(throttle_percent * (ESC_MAX_US - ESC_MIN_US));
+}
 
-    // If DYNAMIC_PWM_THROTTLE - PWM is scaled between PWM_MOTOR_COAST and PWM_MOTOR_ON
-    // Applies over range defined by DYNAMIC_PWM_THROTTLE_PERCENT_MAX - maxed at PWM_MOTOR_ON above this
-    if (THROTTLE_TYPE == DYNAMIC_PWM_THROTTLE) {
-        float throttle_pwm = PWM_MOTOR_COAST + ((throttle_percent / DYNAMIC_PWM_THROTTLE_PERCENT_MAX) * (PWM_MOTOR_ON - PWM_MOTOR_COAST));
-        if (throttle_pwm > PWM_MOTOR_ON)
-            throttle_pwm = PWM_MOTOR_ON;
-        analogWrite(motor_pin, throttle_pwm);
-    }
+void motor_on(float throttle_percent, Servo &motor) {
+    motor.writeMicroseconds(toMicroseconds(throttle_percent));
 }
 
 void motor_1_on(float throttle_percent) {
-    motor_on(throttle_percent, MOTOR_PIN1);
+    motor_on(throttle_percent, motor1);
 }
 
 void motor_2_on(float throttle_percent) {
-    motor_on(throttle_percent, MOTOR_PIN2);
+    motor_on(throttle_percent, motor2);
 }
 
-void motor_coast(int motor_pin) {
-    if (THROTTLE_TYPE == FIXED_PWM_THROTTLE || THROTTLE_TYPE == DYNAMIC_PWM_THROTTLE) {
-        analogWrite(motor_pin, PWM_MOTOR_COAST);
-    }
-    if (THROTTLE_TYPE == BINARY_THROTTLE) {
-        digitalWrite(motor_pin, LOW);  // same as "off" for brushed motors
-    }
+void motor_coast(Servo &motor) {
+    // In normal mode, coast is a low throttle rather than zero
+    // to keep the ESC signal alive — adjust this value to suit your motor
+    motor.writeMicroseconds(1100);
 }
 
 void motor_1_coast() {
-    motor_coast(MOTOR_PIN1);
+    motor_coast(motor1);
 }
 
 void motor_2_coast() {
-    motor_coast(MOTOR_PIN2);
+    motor_coast(motor2);
 }
 
-void motor_off(int motor_pin) {
-    if (THROTTLE_TYPE == FIXED_PWM_THROTTLE || THROTTLE_TYPE == DYNAMIC_PWM_THROTTLE) {
-        analogWrite(motor_pin, PWM_MOTOR_OFF);
-    }
-    if (THROTTLE_TYPE == BINARY_THROTTLE) {
-        digitalWrite(motor_pin, LOW);  // same as "off" for brushed motors
-    }
+void motor_off(Servo &motor) {
+    motor.writeMicroseconds(ESC_STOP_US);
 }
 
 void motor_1_off() {
-    motor_off(MOTOR_PIN1);
+    motor_off(motor1);
 }
 
 void motor_2_off() {
-    motor_off(MOTOR_PIN2);
+    motor_off(motor2);
 }
 
 void motors_off() {
@@ -75,7 +60,10 @@ void motors_off() {
 }
 
 void init_motors() {
-    pinMode(MOTOR_PIN1, OUTPUT);
-    pinMode(MOTOR_PIN2, OUTPUT);
+    motor1.attach(MOTOR_PIN1, ESC_MIN_US, ESC_MAX_US);
+    motor2.attach(MOTOR_PIN2, ESC_MIN_US, ESC_MAX_US);
+
+    // Send stop signal immediately then hold to arm
     motors_off();
+    delay(5000);
 }
