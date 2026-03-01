@@ -109,13 +109,18 @@ bool rc_get_is_rev_in_normal_deadzone() {
     return false;
 }
 
-// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
-rc_forback rc_get_forback() {
+// returns the positive or negative pulse length based on stick position
+int rc_get_forback_value() {
     lock_rc_data();
     unsigned long pulse_length = forback_rc_channel.pulse_length;
     unlock_rc_data();
+    
+    return pulse_length - CENTER_FORBACK_PULSE_LENGTH;
+}
 
-    int rc_forback_offset = pulse_length - CENTER_FORBACK_PULSE_LENGTH;
+// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
+rc_forback rc_get_forback() {
+    int rc_forback_offset = rc_get_forback_value();
     if (rc_forback_offset > FORBACK_MIN_THRESH_PULSE_LENGTH)
         return RC_FORBACK_FORWARD;
     if (rc_forback_offset < (FORBACK_MIN_THRESH_PULSE_LENGTH * -1))
@@ -123,13 +128,17 @@ rc_forback rc_get_forback() {
     return RC_FORBACK_NEUTRAL;
 }
 
-// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
-rc_forback rc_get_leftright() {
+int rc_get_leftright_value() {
     lock_rc_data();
     unsigned long pulse_length = leftright_rc_channel.pulse_length;
     unlock_rc_data();
+    
+    return pulse_length - CENTER_LEFTRIGHT_PULSE_LENGTH;
+}
 
-    int rc_leftright_offset = pulse_length - CENTER_LEFTRIGHT_PULSE_LENGTH;
+// returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
+rc_forback rc_get_leftright() {
+    int rc_leftright_offset = rc_get_leftright_value();
     if (rc_leftright_offset > LEFTRIGHT_MIN_THRESH_PULSE_LENGTH)
         return RC_FORBACK_FORWARD;
     if (rc_leftright_offset < (LEFTRIGHT_MIN_THRESH_PULSE_LENGTH * -1))
