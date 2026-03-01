@@ -1,3 +1,6 @@
+#ifndef MOTOR_DRIVER_GUARD
+#define MOTOR_DRIVER_GUARD
+
 //intitialize motors
 void init_motors();
 
@@ -14,3 +17,4 @@ void motors_off();
 void motor_1_coast();
 void motor_2_coast();
 
+#endif

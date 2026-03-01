@@ -6,6 +6,7 @@
 #include "motor_driver.h"
 #include "accel_handler.h"
 #include "spin_control.h"
+#include "motor_low_speed.h"
 #include "config_storage.h"
 #include "led_driver.h"
 #include "battery_monitor.h"
@@ -182,9 +183,11 @@ void loop() {
     }
 
     // if RC is good - and throtte is above 0 - spin a single rotation
-    if (rc_get_throttle_percent() > 0) {
+    if (rc_get_throttle_percent() > LOW_SPEED_RC_THROTTLE_THRESHOLD) {
         // this is where all the motor control happens!  (see spin_control.cpp)
         spin_one_rotation();
+    } else if (rc_get_throttle_percent() > 0) {
+        low_speed_set_motor();
     } else {
         handle_bot_idle();
     }

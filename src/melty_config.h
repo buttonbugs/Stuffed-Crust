@@ -83,6 +83,8 @@ enum throttle_modes {
                                                 //0.5f for 0-50% throttle (full PWM_MOTOR_ON used for >50% throttle)
                                                 //1.0f for 0-100% throttle
 
+#define LOW_SPEED_RC_THROTTLE_THRESHOLD 5       //0 - 100; turn on low_speed_mode if rc_get_throttle_percent() < LOW_SPEED_RC_THROTTLE_THRESHOLD
+
 //----------PWM MOTOR SETTINGS---------- 
 //(only used if a PWM throttle mode is chosen)
 //PWM values are 0-255 duty cyclek
