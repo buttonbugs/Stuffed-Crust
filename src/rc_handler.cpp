@@ -3,6 +3,7 @@
 #include "rc_handler.h"
 #include <Arduino.h>
 #include "melty_config.h"
+#include "map_float.h"
 
 #define RC_DATA_UNLOCKED 0
 #define RC_DATA_LOCKED 1 
@@ -109,18 +110,41 @@ bool rc_get_is_rev_in_normal_deadzone() {
     return false;
 }
 
-// returns the positive or negative pulse length based on stick position
-int rc_get_forback_value() {
+// return float from -1.0 to 1.0 based on the pulse_length
+float rc_get_ratio(unsigned long pulse_length) {
+    unsigned long absolute_threshold_pulse_length_forward = CENTER_FORBACK_PULSE_LENGTH + FORBACK_MIN_THRESH_PULSE_LENGTH;
+    unsigned long absolute_threshold_pulse_length_backward = CENTER_FORBACK_PULSE_LENGTH - FORBACK_MIN_THRESH_PULSE_LENGTH;
+
+    if (pulse_length > absolute_threshold_pulse_length_forward)
+        return map_float(pulse_length, absolute_threshold_pulse_length_forward, MAX_RC_PULSE_LENGTH, 0.0, 1.0);
+
+    if (pulse_length < absolute_threshold_pulse_length_backward)
+        return map_float(pulse_length, absolute_threshold_pulse_length_backward, MIN_RC_PULSE_LENGTH, 0.0, -1.0);
+
+    return 0.0;
+}
+
+// returns the pulse length based on stick position
+unsigned long rc_get_forback_pulse_length() {
     lock_rc_data();
     unsigned long pulse_length = forback_rc_channel.pulse_length;
     unlock_rc_data();
     
-    return pulse_length - CENTER_FORBACK_PULSE_LENGTH;
+    return pulse_length;
+}
+
+// returns the pulse length based on stick position
+unsigned long rc_get_leftright_pulse_length() {
+    lock_rc_data();
+    unsigned long pulse_length = leftright_rc_channel.pulse_length;
+    unlock_rc_data();
+
+    return pulse_length;
 }
 
 // returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
 rc_forback rc_get_forback() {
-    int rc_forback_offset = rc_get_forback_value();
+    int rc_forback_offset = rc_get_forback_pulse_length() - CENTER_FORBACK_PULSE_LENGTH;
     if (rc_forback_offset > FORBACK_MIN_THRESH_PULSE_LENGTH)
         return RC_FORBACK_FORWARD;
     if (rc_forback_offset < (FORBACK_MIN_THRESH_PULSE_LENGTH * -1))
@@ -128,17 +152,9 @@ rc_forback rc_get_forback() {
     return RC_FORBACK_NEUTRAL;
 }
 
-int rc_get_leftright_value() {
-    lock_rc_data();
-    unsigned long pulse_length = leftright_rc_channel.pulse_length;
-    unlock_rc_data();
-    
-    return pulse_length - CENTER_LEFTRIGHT_PULSE_LENGTH;
-}
-
 // returns RC_FORBACK_FORWARD, RC_FORBACK_BACKWARD or RC_FORBACK_NEUTRAL based on stick position
 rc_forback rc_get_leftright() {
-    int rc_leftright_offset = rc_get_leftright_value();
+    int rc_leftright_offset = rc_get_leftright_pulse_length() - CENTER_LEFTRIGHT_PULSE_LENGTH;
     if (rc_leftright_offset > LEFTRIGHT_MIN_THRESH_PULSE_LENGTH)
         return RC_FORBACK_FORWARD;
     if (rc_leftright_offset < (LEFTRIGHT_MIN_THRESH_PULSE_LENGTH * -1))
@@ -146,6 +162,15 @@ rc_forback rc_get_leftright() {
     return RC_FORBACK_NEUTRAL;
 }
 
+// return float from -1.0 to 1.0 based on the pulse_length based on stick position
+float rc_get_forback_ratio() {
+    return rc_get_ratio(rc_get_forback_pulse_length());
+}
+
+// return float from -1.0 to 1.0 based on the pulse_length based on stick position
+float rc_get_leftright_ratio() {
+    return rc_get_ratio(rc_get_leftright_pulse_length());
+}
 // returns offset in microseconds from center value (not converted to percentage)
 // 0 for hypothetical perfect center (reality is probably +/-50)
 // returns negative value for left / positive value for right
