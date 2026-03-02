@@ -10690,7 +10690,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_2x04_P1.00mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_2x04_P1.00mm_Vertical_SMD"
 			(at 36.83 48.26 0)
 			(effects
 				(font
@@ -10844,7 +10844,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4115-03-C"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_Molex_105450-0101"
 			(at 195.58 53.34 0)
 			(effects
 				(font
