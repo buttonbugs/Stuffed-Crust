@@ -5678,14 +5678,14 @@
 	(footprint "Connector_USB:USB_C_Receptacle_Molex_105450-0101"
 		(layer "F.Cu")
 		(uuid "dd0162ee-c8d7-455c-90c4-68bf2e7f8f09")
-		(at 150 111.75)
+		(at 150 112.5)
 		(descr "USB 3.0 3.1 3.2 4.0 Type-C receptable, through-hole mount, SMD, right-angle (https://www.molex.com/pdm_docs/sd/1054500101_sd.pdf)")
 		(tags "USB C Type-C USB3 receptacle SMD")
 		(property "Reference" "J1"
 			(at 0 -5.315 0)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "f6fa83f2-1571-43ed-a7e3-08fedbf84aa3")
+			(uuid "d28aee77-f6fc-4556-83f1-a4a5937341d2")
 			(effects
 				(font
 					(size 1 1)
@@ -5697,7 +5697,7 @@
 			(at 0 5.935 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "131a8090-3afb-4cef-bc88-87e27e3eb4b0")
+			(uuid "2a8d5e2f-4a21-486f-b98a-13986a06b3cd")
 			(effects
 				(font
 					(size 1 1)
@@ -5710,7 +5710,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7a3b43e4-5031-4919-b560-fe91f197fd72")
+			(uuid "e3a96103-e9dd-4ce4-a683-2761b6b4aa07")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5723,7 +5723,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0efb6f52-4252-416b-8818-013a1aea5daf")
+			(uuid "4db1a3b2-d5fa-418d-857d-1540a06773ec")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6139,7 +6139,7 @@
 			(net 18 "unconnected-(J1-SHIELD-PadS1)_2")
 			(pinfunction "SHIELD")
 			(pintype "passive+no_connect")
-			(uuid "bb22a916-0f36-4b5e-b483-0e9f7324ef8b")
+			(uuid "52be1060-0e44-4a59-8be6-575d44462145")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -2.805)
@@ -6151,7 +6151,7 @@
 			(net 24 "unconnected-(J1-SHIELD-PadS1)_3")
 			(pinfunction "SHIELD")
 			(pintype "passive+no_connect")
-			(uuid "bb22a916-0f36-4b5e-b483-0e9f7324ef8b")
+			(uuid "acbae7bc-4b02-463e-a877-1aabe64d894f")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 2.555)
@@ -6163,7 +6163,7 @@
 			(net 11 "unconnected-(J1-SHIELD-PadS1)")
 			(pinfunction "SHIELD")
 			(pintype "passive+no_connect")
-			(uuid "bb22a916-0f36-4b5e-b483-0e9f7324ef8b")
+			(uuid "5e65c5b4-0fcf-4bae-bb08-fb3042b5fd98")
 		)
 		(zone
 			(net 0)
@@ -6193,7 +6193,7 @@
 			)
 			(polygon
 				(pts
-					(xy 153.5 116.075) (xy 146.5 116.075) (xy 146.5 110.445) (xy 153.5 110.445)
+					(xy 153.5 116.825) (xy 146.5 116.825) (xy 146.5 111.195) (xy 153.5 111.195)
 				)
 			)
 		)
@@ -9220,14 +9220,14 @@
 	)
 	(gr_circle
 		(center 150 100)
-		(end 165 100)
+		(end 150 117.5)
 		(stroke
-			(width 0.2)
-			(type solid)
+			(width 0.05)
+			(type default)
 		)
 		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "d65c2009-80a9-4645-87b7-6a74cfab4d48")
+		(uuid "1911174a-eca7-486f-80b3-978b7b9cb820")
 	)
 	(segment
 		(start 150 97.624999)
@@ -9546,7 +9546,7 @@
 		(net 2)
 		(net_name "GNDREF")
 		(layers "F.Cu" "B.Cu")
-		(uuid "dd955b91-42d8-4a07-95f0-4e6d9d403064")
+		(uuid "24de7745-e2ce-47a4-9163-a47b04b56a8e")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0.5)
@@ -9559,11 +9559,7 @@
 		)
 		(polygon
 			(pts
-				(arc
-					(start 135 100)
-					(mid 165 100)
-					(end 135 100)
-				)
+				(xy 130 80) (xy 170 80) (xy 170 120) (xy 130 120)
 			)
 		)
 	)
