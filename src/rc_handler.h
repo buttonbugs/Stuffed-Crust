@@ -3,18 +3,22 @@
 typedef enum {
     RC_FORBACK_FORWARD = 1,     //control stick pushed forward
     RC_FORBACK_NEUTRAL = 0,     //control stick neutral
-    RC_FORBACK_BACKWARD = -1     //control stick held back
+    RC_FORBACK_BACKWARD = -1    //control stick held back
 } rc_forback;
 
 void init_rc();
 
-bool rc_signal_is_healthy();           //return true if RC signal looks good
+bool rc_signal_is_healthy();            //return true if RC signal looks good
 
-int rc_get_throttle_percent();        //returns 0-100 value indicating throttle level
+int rc_get_throttle_percent();          //returns 0-100 value indicating throttle level
 
-rc_forback rc_get_leftright();        //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
-rc_forback rc_get_forback();          //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
-int rc_get_revolution();               //returns offset in microseconds from center value (not converted to percentage)
+float rc_get_forback_ratio();           // return float from -1.0 to 1.0 based on the pulse_length based on stick position
+float rc_get_leftright_ratio();         // return float from -1.0 to 1.0 based on the pulse_length based on stick position
+float rc_get_revolution_ratio();        // return float from -1.0 to 1.0 based on the pulse_length based on stick position
+
+rc_forback rc_get_leftright();          //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
+rc_forback rc_get_forback();            //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
+int rc_get_revolution();                //returns offset in microseconds from center value (not converted to percentage)
 
 //these functions return true if L/R stick movement is below defined thresholds
 bool rc_get_is_rev_in_config_deadzone();  

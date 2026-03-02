@@ -30,6 +30,11 @@
 
 #define MIN_TRANSLATION_RPM 400                   //full power spin in below this number (increasing can reduce spin-up time)
 
+// #define ENABLE_REVERSE                              //Enable motor reverse
+
+//----------LOW SPEED MODE----------
+#define LOW_SPEED_FORBACK_THROTTLE_PERCENT 0.01f
+#define LOW_SPEED_REVOLUTION_THROTTLE_PERCENT 0.002f
 
 //----------PIN MAPPINGS----------
 //RC pins must be Arduino interrupt pins
@@ -82,6 +87,8 @@ enum throttle_modes {
 #define DYNAMIC_PWM_THROTTLE_PERCENT_MAX 1.0f   //Range of RC throttle DYNAMIC_PWM_THROTTLE is applied to 
                                                 //0.5f for 0-50% throttle (full PWM_MOTOR_ON used for >50% throttle)
                                                 //1.0f for 0-100% throttle
+
+#define LOW_SPEED_RC_THROTTLE_THRESHOLD 5       //0 - 100; turn on low_speed_mode if rc_get_throttle_percent() < LOW_SPEED_RC_THROTTLE_THRESHOLD
 
 //----------PWM MOTOR SETTINGS---------- 
 //(only used if a PWM throttle mode is chosen)
