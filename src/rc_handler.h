@@ -15,7 +15,6 @@ int rc_get_throttle_percent();          //returns 0-100 value indicating throttl
 float rc_get_forback_ratio();           // return float from -1.0 to 1.0 based on the pulse_length based on stick position
 float rc_get_leftright_ratio();         // return float from -1.0 to 1.0 based on the pulse_length based on stick position
 float rc_get_revolution_ratio();        // return float from -1.0 to 1.0 based on the pulse_length based on stick position
-float rc_get_throttle_ratio();          // return float from -1.0 to 1.0 based on the pulse_length based on stick position
 
 rc_forback rc_get_leftright();          //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position
 rc_forback rc_get_forback();            //returns RC_FORBACK_FORWARD, RC_FORBACK_NEUTRAL or RC_FORBACK_BACKWARD depending on stick position

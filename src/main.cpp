@@ -186,8 +186,10 @@ void loop() {
     if (rc_get_throttle_percent() > LOW_SPEED_RC_THROTTLE_THRESHOLD) {
         // this is where all the motor control happens!  (see spin_control.cpp)
         spin_one_rotation();
+        #ifdef ENABLE_REVERSE
     } else if (rc_get_throttle_percent() > 0) {
         low_speed_set_motor();
+        #endif
     } else {
         handle_bot_idle();
     }

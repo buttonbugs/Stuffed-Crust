@@ -98,10 +98,6 @@ int rc_get_throttle_percent() {
     return (int)throttle_percent;
 }
 
-float rc_get_throttle_ratio() {
-    return rc_get_throttle_percent() / 100.0;
-}
-
 bool rc_get_is_rev_in_config_deadzone() {
     if (abs(rc_get_revolution()) < REV_CONFIG_MODE_DEADZONE_WIDTH)
         return true;
