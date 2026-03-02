@@ -1,0 +1,176 @@
+(footprint "3_Pin"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 3.25 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "99da0cfd-a533-4e1b-bfdb-429d743caea9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "ESC_Connectors:3_Pin"
+		(at 0 -4.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b2da1ff9-94a6-419f-8085-da54296bad56")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb08bd83-111b-4334-a30e-bbe7b0f437ed")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "16d38fef-91eb-43f3-a3da-f9943bac2b40")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -3.6 -1.1)
+		(end 3.6 1.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4edd4961-0884-429a-9899-dae654e441d3")
+	)
+	(fp_text user "+"
+		(at -3.2 2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "0c60abe2-f995-41b4-8e0a-d5211bbd3e67")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "S"
+		(at 2.1 2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "656e8774-e47a-49d2-afaa-2eb76291f259")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "-"
+		(at -0.7 2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "90ab98c1-9da1-4b10-a2f2-4c79279deacc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "3_Pin"
+		(at 0 -2.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "96d2af9d-2005-4de6-a0df-85f54c81f51f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -2.5 0)
+		(size 1.905 1.905)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "41657a97-2bc6-4d4e-9700-dfdb8caf0703")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.905 1.905)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d52c5225-1816-403c-827f-260a60495292")
+	)
+	(pad "3" thru_hole circle
+		(at 2.5 0)
+		(size 1.905 1.905)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "78ef0741-3692-4ee7-9097-ecd3cb15041d")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.SilkS")
+		(uuid "5ed70f79-1baa-4f09-8419-abf9f39d767e")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -3.5 -1) (xy 3.5 -1) (xy 3.5 1) (xy -3.5 1)
+			)
+		)
+	)
+	(embedded_fonts no)
+)
