@@ -11,8 +11,6 @@
 #include "led_driver.h"
 #include "battery_monitor.h"
 
-#include "watchdog.h"       // No need to use #ifdef ENABLE_WATCHDOG here - handled in watchdog.h
-
 
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
@@ -121,9 +119,9 @@ static void display_rpm_if_requested() {
 
 // checks if user has requested to enter / exit config mode
 static void check_config_mode() {
-    // if user pulls control stick back for 750ms - enters (or exits) interactive configuration mode
+    // if user pulls control stick back for 150ms - enters (or exits) interactive configuration mode
     if (rc_get_forback() == RC_FORBACK_BACKWARD) {
-        delay(750);
+        delay(150);
         if (rc_get_forback() == RC_FORBACK_BACKWARD) {
             toggle_config_mode();
             if (get_config_mode() == false)

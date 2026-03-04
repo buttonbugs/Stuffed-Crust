@@ -7,21 +7,21 @@
 
 #ifdef ENABLE_WATCHDOG
 #include "Watchdog_t4.h"
-WDT_T4<WDT3> wdt;
+static WDT_T4<WDT3> wdt;
 #endif
 
 
-void service_watchdog() {
+static inline void service_watchdog() {
     #ifdef ENABLE_WATCHDOG
     wdt.feed();
     #endif
 }
 
-void my_watchdog_callback() {
+static inline void my_watchdog_callback() {
     Serial.println("FEED THE DOG SOON, OR RESET!");
 }
 
-void init_watchdog() {
+static inline void init_watchdog() {
     #ifdef ENABLE_WATCHDOG
     WDT_timings_t config;
     config.trigger = 1000;

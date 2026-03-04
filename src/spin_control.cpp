@@ -47,6 +47,7 @@ void save_melty_config_settings() {
 static void update_accel_zero_g_offset() {
     int offset_samples = 200;
     for (int accel_sample_loop = 0; accel_sample_loop < offset_samples; accel_sample_loop++) {
+        service_watchdog();  // this can take a while - need to assure watchdog doesn't trigger
         accel_zero_g_offset += get_accel_force_g();
     }
     accel_zero_g_offset = accel_zero_g_offset / offset_samples;
