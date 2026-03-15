@@ -1,4 +1,4 @@
-(footprint "4_Pin"
+(footprint "2_Pin"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -15,7 +15,7 @@
 			)
 		)
 	)
-	(property "Value" "ESC_Connectors:4_Pin"
+	(property "Value" "ESC_Connectors:2_Pin"
 		(at 0 -4.2 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -55,8 +55,8 @@
 	)
 	(attr smd)
 	(fp_rect
-		(start -3.6 -1.1)
-		(end 6.14 1.1)
+		(start -2.33 -1.1)
+		(end 2.33 1.1)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -66,7 +66,7 @@
 		(uuid "4edd4961-0884-429a-9899-dae654e441d3")
 	)
 	(fp_text user "+"
-		(at -2.54 1.524 0)
+		(at -1.27 1.524 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "0c60abe2-f995-41b4-8e0a-d5211bbd3e67")
@@ -78,7 +78,7 @@
 		)
 	)
 	(fp_text user "-"
-		(at 0 1.524 0)
+		(at 1.27 1.524 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "90ab98c1-9da1-4b10-a2f2-4c79279deacc")
@@ -89,31 +89,7 @@
 			)
 		)
 	)
-	(fp_text user "+"
-		(at 2.54 1.524 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "dae9f6a9-2afb-40dc-95b1-e0470d14a2f6")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-		)
-	)
-	(fp_text user "-"
-		(at 5.08 1.524 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "f3be9f97-98fa-4127-850a-e21d79ef3d65")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-		)
-	)
-	(fp_text user "4_Pin"
+	(fp_text user "2_Pin"
 		(at 0 -2.4 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -126,7 +102,7 @@
 		)
 	)
 	(pad "1" thru_hole circle
-		(at -2.5 0)
+		(at -1.23 0)
 		(size 1.905 1.905)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -134,28 +110,12 @@
 		(uuid "41657a97-2bc6-4d4e-9700-dfdb8caf0703")
 	)
 	(pad "2" thru_hole circle
-		(at 0 0)
+		(at 1.27 0)
 		(size 1.905 1.905)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "d52c5225-1816-403c-827f-260a60495292")
-	)
-	(pad "3" thru_hole circle
-		(at 2.54 0)
-		(size 1.905 1.905)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "e833a6eb-cd05-4e13-b551-7d9951603461")
-	)
-	(pad "4" thru_hole circle
-		(at 5.08 0)
-		(size 1.905 1.905)
-		(drill 1)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "89a4bd4b-f8aa-4fb3-8571-be1f6cde29cf")
 	)
 	(zone
 		(net 0)
@@ -185,7 +145,7 @@
 		)
 		(polygon
 			(pts
-				(xy -3.5 -1) (xy 6.04 -1) (xy 6.04 1) (xy -3.5 1)
+				(xy -2.23 -1) (xy 2.23 -1) (xy 2.23 1) (xy -2.23 1)
 			)
 		)
 	)
