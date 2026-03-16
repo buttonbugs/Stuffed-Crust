@@ -2476,7 +2476,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "27ccae13-3d54-4605-9ec3-4ce2ca74abe8")
+			(uuid "748352ec-02c2-4824-afb3-321386fe4653")
 		)
 		(fp_line
 			(start -7.8 7.8)
@@ -2486,7 +2486,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "bceab59b-12b3-4583-8d3c-e865617ddfc4")
+			(uuid "8a6b612b-6721-4e38-9926-d73acf07d375")
 		)
 		(fp_line
 			(start 7.8 -7.8)
@@ -2496,7 +2496,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "d7684efd-28e4-4084-ae58-7c59315304dd")
+			(uuid "9840b009-14ec-46c3-b842-39cf4fc12008")
 		)
 		(fp_line
 			(start 7.8 7.8)
@@ -2506,7 +2506,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "27bb5ca6-daf2-46ae-a120-326017e68d05")
+			(uuid "e4b1a91d-a928-408c-9ab3-68d9c18b28d8")
 		)
 		(fp_poly
 			(pts
@@ -2518,7 +2518,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "40a2a236-f7cc-4386-87a6-0a2567350158")
+			(uuid "a54d64e5-0b9f-4cad-aed6-ccea648d8deb")
 		)
 		(fp_line
 			(start -7.95 -7.95)
@@ -2528,7 +2528,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "f76b2fb9-8acf-429e-ae6d-c0ae09e8d551")
+			(uuid "e2684d08-f467-4ec5-bec7-0f129f2fd847")
 		)
 		(fp_line
 			(start -7.95 7.95)
@@ -2538,7 +2538,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "3069c555-fa77-4172-bf89-c1e50a3110b1")
+			(uuid "05e4e7a7-3f22-4eb3-8842-d56bd6b676aa")
 		)
 		(fp_line
 			(start 7.95 -7.95)
@@ -2548,7 +2548,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "ccaceada-9af2-4885-8221-c6f676d98bbb")
+			(uuid "f521a8a7-209a-4ee5-8d1d-8fa20d44c7e3")
 		)
 		(fp_line
 			(start 7.95 7.95)
@@ -2558,7 +2558,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "6127c9d0-8cc0-47cf-8a83-e3fe5361ced5")
+			(uuid "fec290df-088a-4927-a4fc-fde2470d469d")
 		)
 		(fp_line
 			(start -7.7 -6.3)
@@ -2568,7 +2568,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "90f38d89-64ad-4406-988d-6dee99bb7483")
+			(uuid "6d8b7045-fd7a-4687-b071-a0e8877a14d3")
 		)
 		(fp_line
 			(start -7.7 7.7)
@@ -2578,7 +2578,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "931b5e02-7a9b-4706-bccd-35b10ec176ba")
+			(uuid "bb5656fd-e3dc-4546-b2a0-71d24d3d0447")
 		)
 		(fp_line
 			(start -6.3 -7.7)
@@ -2588,7 +2588,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "8845b387-bc11-4b47-bd23-fd2e7537558d")
+			(uuid "48ad938a-a31b-4755-88e1-d23b6ec2fd19")
 		)
 		(fp_line
 			(start -5.35 -6.95)
@@ -2598,7 +2598,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "d5f8f802-6abf-4171-b81d-75bac0fc8ac9")
+			(uuid "fedabfc2-013c-475b-8f5f-ceed216b6644")
 		)
 		(fp_line
 			(start -5.35 -5.25)
@@ -2608,7 +2608,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "9c6cc7db-1e64-486b-8a90-13db2dc7f66b")
+			(uuid "119077c0-cba4-4ea2-b5e9-20ea24852cb4")
 		)
 		(fp_line
 			(start -3.65 -6.95)
@@ -2618,7 +2618,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "1a43f7e2-01d5-4a76-8939-b76d399a0a67")
+			(uuid "4d1e7890-c6ca-417a-8535-7c6c17311912")
 		)
 		(fp_line
 			(start -3.65 -5.25)
@@ -2628,7 +2628,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "d75600d7-3601-41c7-8327-07a2250e8fac")
+			(uuid "db682038-d86b-4fe8-b3d2-a844a72a65bb")
 		)
 		(fp_line
 			(start 7.7 -7.7)
@@ -2638,7 +2638,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "66b42c29-fad0-4ad3-a796-45630490f555")
+			(uuid "61679220-b45b-4cb3-9c23-9c3eb8d3b159")
 		)
 		(fp_line
 			(start 7.7 7.7)
@@ -2648,7 +2648,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "4a382eda-9e27-4c99-8884-541e67fcd7ac")
+			(uuid "898017ed-e55b-46fb-b4a4-c71204058d61")
 		)
 		(fp_circle
 			(center -4.5 -6.1)
@@ -2659,7 +2659,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "ae9569e7-1fe6-4b64-81ff-9180ffd4f630")
+			(uuid "07e6f365-b022-49bd-8abc-ef2601c6b268")
 		)
 		(fp_circle
 			(center -4.5 -6.1)
@@ -2670,7 +2670,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "6691d9aa-e2d5-41ab-8929-8e82052208ca")
+			(uuid "269be269-8ce2-4c36-ad4d-34fc2cbd32cd")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
@@ -3365,7 +3365,7 @@
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/imports/ESP32-S3-MINI-1U/ESP32-S3-MINI-1U.STEP"
 			(offset
-				(xyz -7.8 -7.8 0)
+				(xyz -7.7 -7.7 0)
 			)
 			(scale
 				(xyz 1 1 1)
