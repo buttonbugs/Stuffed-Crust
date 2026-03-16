@@ -1899,7 +1899,7 @@
 		(fp_text user "*"
 			(at -1.1303 -1.25 0)
 			(layer "F.Fab")
-			(uuid "5b66cd33-0c49-4e81-b396-e7d44b189e83")
+			(uuid "ab8edfe7-4ca2-4f15-8757-445d7ba001ac")
 			(effects
 				(font
 					(size 1 1)
@@ -2064,6 +2064,17 @@
 			(uuid "9a4e9e6b-6bf6-41a8-9d08-ecfb23d775c5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/imports/ul_H3LIS331DL/H3LIS331DLTR.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
 		(layer "F.Cu")
