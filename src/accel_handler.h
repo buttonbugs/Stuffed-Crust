@@ -13,7 +13,7 @@
 //(Adafuit breakout default is 0x18, Sparkfun default is 0x19)
 #define ACCEL_I2C_ADDRESS 0x19
 
-explicit bool is_facing_up;
+extern bool is_facing_up;
 
 void init_accel();
 

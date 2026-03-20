@@ -19,8 +19,7 @@ static uint16_t toMicroseconds(float throttle_percent) {
     if (!is_facing_up) {
         throttle_percent = -throttle_percent;
     }
-    map_float(throttle_percent, -1.0f, 1.0f, ESC_MIN_US, ESC_MAX_US);
-    
+    return map_float(throttle_percent, -1.0f, 1.0f, ESC_MIN_US, ESC_MAX_US);
 }
 
 void motor_on(float throttle_percent, Servo &motor) {
