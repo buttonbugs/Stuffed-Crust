@@ -19,6 +19,7 @@
 #include "SparkFun_LIS331.h"
 
 LIS331 xl;
+bool is_facing_up = true;   // true: facing up, false: upside down
 
 void init_accel() {
     Wire.begin();
@@ -40,5 +41,6 @@ void init_accel() {
 float get_accel_force_g() {
     int16_t x, y, z;
     xl.readAxes(x, y, z);
+    is_facing_up = z > 0;
     return xl.convertToG(ACCEL_MAX_SCALE, x);
 }
