@@ -2,18 +2,25 @@
 #include <Servo.h>
 #include "melty_config.h"
 #include "motor_driver.h"
+#include "accel_handler.h"
+#include "map_float.h"
 
 Servo motor1;
 Servo motor2;
 
-constexpr uint16_t ESC_MIN_US  = 1000;
-constexpr uint16_t ESC_MAX_US  = 2000;
-constexpr uint16_t ESC_STOP_US = 1000;
+constexpr uint16_t ESC_MIN_US   = 1000;
+constexpr uint16_t ESC_MAX_US   = 2000;
+constexpr uint16_t ESC_STOP_US  = 1500;
+constexpr uint16_t ESC_COAST_DIFF_US = 50;
 
 // Map 0-100% to 1000-2000us
 static uint16_t toMicroseconds(float throttle_percent) {
-    throttle_percent = constrain(throttle_percent, 0.0f, 1.0f);
-    return ESC_MIN_US + static_cast<uint16_t>(throttle_percent * (ESC_MAX_US - ESC_MIN_US));
+    throttle_percent = constrain(throttle_percent, -1.0f, 1.0f);
+    if (!is_facing_up) {
+        throttle_percent = -throttle_percent;
+    }
+    map_float(throttle_percent, -1.0f, 1.0f, ESC_MIN_US, ESC_MAX_US);
+    
 }
 
 void motor_on(float throttle_percent, Servo &motor) {
@@ -31,7 +38,12 @@ void motor_2_on(float throttle_percent) {
 void motor_coast(Servo &motor) {
     // In normal mode, coast is a low throttle rather than zero
     // to keep the ESC signal alive — adjust this value to suit your motor
-    motor.writeMicroseconds(1100);
+    if (is_facing_up) {
+        motor.writeMicroseconds(ESC_STOP_US + ESC_COAST_DIFF_US);
+    } else {
+        motor.writeMicroseconds(ESC_STOP_US - ESC_COAST_DIFF_US);
+    }
+    
 }
 
 void motor_1_coast() {
