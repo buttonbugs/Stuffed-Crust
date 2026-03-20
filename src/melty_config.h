@@ -30,7 +30,7 @@
 
 #define MIN_TRANSLATION_RPM 400                   //full power spin in below this number (increasing can reduce spin-up time)
 
-#define ENABLE_REVERSE                              //Enable motor reverse
+// #define ENABLE_REVERSE                              //Enable motor reverse
 
 //----------LOW SPEED MODE----------
 #define LOW_SPEED_FORBACK_THROTTLE_PERCENT 0.01f
