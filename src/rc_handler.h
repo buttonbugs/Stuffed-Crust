@@ -36,8 +36,8 @@ bool rc_get_is_rev_in_normal_deadzone();
 //(does not need to be perfect)
 #define NOMINAL_PULSE_RANGE (MAX_RC_PULSE_LENGTH - MIN_RC_PULSE_LENGTH)
 
-#define IDLE_THROTTLE_PULSE_LENGTH 1250           //pulses below this value are considered 0% throttle
-#define FULL_THROTTLE_PULSE_LENGTH 1850           //pulses above this value are considered 100%
+#define IDLE_THROTTLE_PULSE_LENGTH 1100           //pulses below this value are considered 0% throttle
+#define FULL_THROTTLE_PULSE_LENGTH 1950           //pulses above this value are considered 100%
 #define CENTER_REVOLUTION_PULSE_LENGTH 1500        //center value for left / right
 #define CENTER_FORBACK_PULSE_LENGTH 1500          //center value for for / back
 #define CENTER_LEFTRIGHT_PULSE_LENGTH 1500          //center value for for / back

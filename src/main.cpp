@@ -185,8 +185,12 @@ void loop() {
         // this is where all the motor control happens!  (see spin_control.cpp)
         spin_one_rotation();
         #ifdef ENABLE_REVERSE
-    } else if (rc_get_throttle_percent() > 0) {
+    } else if (rc_get_throttle_percent() > 5) {
+        Serial.println("low_speed_set_motor(); start");
+        service_watchdog();  // keep the watchdog happy
         low_speed_set_motor();
+        service_watchdog();  // keep the watchdog happy
+        Serial.println("low_speed_set_motor(); end");
         #endif
     } else {
         handle_bot_idle();

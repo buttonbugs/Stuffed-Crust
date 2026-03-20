@@ -30,7 +30,7 @@
 
 #define MIN_TRANSLATION_RPM 400                   //full power spin in below this number (increasing can reduce spin-up time)
 
-// #define ENABLE_REVERSE                              //Enable motor reverse
+#define ENABLE_REVERSE                              //Enable motor reverse
 
 //----------LOW SPEED MODE----------
 #define LOW_SPEED_FORBACK_THROTTLE_PERCENT 0.01f
@@ -88,7 +88,7 @@ enum throttle_modes {
                                                 //0.5f for 0-50% throttle (full PWM_MOTOR_ON used for >50% throttle)
                                                 //1.0f for 0-100% throttle
 
-#define LOW_SPEED_RC_THROTTLE_THRESHOLD 5       //0 - 100; turn on low_speed_mode if rc_get_throttle_percent() < LOW_SPEED_RC_THROTTLE_THRESHOLD
+#define LOW_SPEED_RC_THROTTLE_THRESHOLD 15       //0 - 100; turn on low_speed_mode if rc_get_throttle_percent() < LOW_SPEED_RC_THROTTLE_THRESHOLD
 
 //----------PWM MOTOR SETTINGS---------- 
 //(only used if a PWM throttle mode is chosen)
@@ -108,7 +108,7 @@ enum throttle_modes {
 //TODO: ADD WATCHDOG
 //----------SAFETY----------
 #define ENABLE_WATCHDOG                           //Uses WDT_T4's watchdog to enable watchdog / reset (tested on AVR - should work for ARM https://github.com/tonton81/WDT_T4)
-#define WATCH_DOG_TIMEOUT_MS 2000                 //Timeout value for watchdog (not all values are supported - 2000ms verified with Arudino Micro)
+#define WATCH_DOG_TIMEOUT_MS 10000                 //Timeout value for watchdog (not all values are supported - 2000ms verified with Arudino Micro)
 #define VERIFY_RC_THROTTLE_ZERO_AT_BOOT           //Requires RC throttle be 0% at boot to allow spin-up for duration of MAX_MS_BETWEEN_RC_UPDATES (about 1 second)
                                                   //Intended as safety feature to prevent bot from spinning up at power-on if RC was inadvertently left on.
                                                   //Downside is if unexpected reboot occurs during a fight - driver will need to set throttle to zero before power 
