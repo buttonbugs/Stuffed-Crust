@@ -92,6 +92,9 @@ static void echo_diagnostics() {
 
     Serial.print("  Zero G Offset: ");
     Serial.print(load_accel_zero_g_offset());
+
+    Serial.print("Gyro Z: ");
+    Serial.print(gyro_z);
     
 #endif
     Serial.println("");

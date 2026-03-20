@@ -20,6 +20,7 @@
 
 LIS331 xl;
 bool is_facing_up = true;   // true: facing up, false: upside down
+float gyro_z;
 
 void init_accel() {
     Wire.begin();
@@ -41,6 +42,7 @@ void init_accel() {
 float get_accel_force_g() {
     int16_t x, y, z;
     xl.readAxes(x, y, z);
-    is_facing_up = z > 0;
+    gyro_z = xl.convertToG(ACCEL_MAX_SCALE, z) - DEFAULT_ACCEL_ZERO_G_OFFSET_Z;
+    is_facing_up = gyro_z > 0;
     return xl.convertToG(ACCEL_MAX_SCALE, x);
 }

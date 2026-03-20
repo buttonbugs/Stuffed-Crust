@@ -19,12 +19,13 @@ static uint16_t toMicroseconds(float throttle_percent) {
     if (!is_facing_up) {
         throttle_percent = -throttle_percent;
     }
-    // Serial.print(throttle_percent);
+    Serial.print(throttle_percent);
     return map_float(throttle_percent, -1.0f, 1.0f, ESC_MIN_US, ESC_MAX_US);
 }
 
 void motor_on(float throttle_percent, Servo &motor) {
     motor.writeMicroseconds(toMicroseconds(throttle_percent));
+    Serial.println(toMicroseconds(throttle_percent));
 }
 
 void motor_1_on(float throttle_percent) {

@@ -19,7 +19,7 @@
 #define MAX_TRACKING_ROTATION_INTERVAL_US MAX_TRANSLATION_ROTATION_INTERVAL_US * 2   // don't track heading if we are this slow (also puts upper limit on time spent in melty loop for safety)
 
 static float accel_mount_radius_cm = DEFAULT_ACCEL_MOUNT_RADIUS_CM;
-static float accel_zero_g_offset = DEFAULT_ACCEL_ZERO_G_OFFSET;
+static float accel_zero_g_offset = DEFAULT_ACCEL_ZERO_G_OFFSET_X;
 static float led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in EEPROM as an INT - but handled as a float for configuration purposes
 
 static unsigned int highest_rpm = 0;
