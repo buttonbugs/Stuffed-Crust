@@ -18,7 +18,7 @@
 //----------TRANSLATIONAL DRIFT SETTINGS----------
 //"DEFAULT" values are overriden by interactive config / stored in EEPROM (interactive config will be easier if they are about correct)
 //To force these values to take effect after interactive config - increment EEPROM_WRITTEN_SENTINEL_VALUE
-#define DEFAULT_ACCEL_MOUNT_RADIUS_CM 2.177425795        //Radius of accelerometer from center of robot
+#define DEFAULT_ACCEL_MOUNT_RADIUS_CM 2.28        //Radius of accelerometer from center of robot
 #define DEFAULT_LED_OFFSET_PERCENT 13              //Adjust to make heading LED line up with direction robot travels 0-99 (increasing moves beacon clockwise)
                       
 #define DEFAULT_ACCEL_ZERO_G_OFFSET_Z 1.4f
@@ -35,7 +35,7 @@
 
 //----------LOW SPEED MODE----------
 #define LOW_SPEED_FORBACK_THROTTLE_PERCENT 0.5f
-#define LOW_SPEED_REVOLUTION_THROTTLE_PERCENT 0.5f
+#define LOW_SPEED_REVOLUTION_THROTTLE_PERCENT 0.4f
 
 //----------PIN MAPPINGS----------
 //RC pins must be Arduino interrupt pins
