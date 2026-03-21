@@ -257,6 +257,11 @@ static void translate_backward(struct melty_parameters_t melty_parameters, unsig
     }
 }
 
+static void spin(struct melty_parameters_t melty_parameters) {
+    motor_1_on(melty_parameters.throttle_percent);
+    motor_2_on(melty_parameters.throttle_percent);
+}
+
 // turns on heading LED at appropriate timing
 static void update_heading_led(struct melty_parameters_t melty_parameters, unsigned long time_spent_this_rotation_us) {
     if (melty_parameters.led_start > melty_parameters.led_stop) {
@@ -306,13 +311,17 @@ void spin_one_rotation(void) {
         // if translation direction is RC_FORBACK_NEUTRAL - robot cycles between forward and reverse translation for net zero translation
         // if motor 2 (or motor 1) is not present - control sequence remains identical (signal still generated for non-connected motor)
 
+        if (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL) {
+            spin(melty_parameters);
+        }
+
         // translate forward
-        if (melty_parameters.translate_forback == RC_FORBACK_FORWARD || (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL && cycle_count % 2 == 0)) {
+        if (melty_parameters.translate_forback == RC_FORBACK_FORWARD) {
             translate_forward(melty_parameters, time_spent_this_rotation_us);
         }
 
         // translate backward
-        if (melty_parameters.translate_forback == RC_FORBACK_BACKWARD || (melty_parameters.translate_forback == RC_FORBACK_NEUTRAL && cycle_count % 2 == 1)) {
+        if (melty_parameters.translate_forback == RC_FORBACK_BACKWARD) {
             translate_backward(melty_parameters, time_spent_this_rotation_us);
         }
 
