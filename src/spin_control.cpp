@@ -303,6 +303,7 @@ void spin_one_rotation(void) {
 
     // loop for one rotation of robot
     while (time_spent_this_rotation_us < melty_parameters.rotation_interval_us) {
+        service_watchdog();
         // update melty parameters if we haven't / update time has elapsed
         if (melty_parameters_updated_this_rotation == false && time_spent_this_rotation_us > melty_parameter_update_time_offset_us) {
             melty_parameters = get_melty_parameters();
