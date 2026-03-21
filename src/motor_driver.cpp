@@ -39,12 +39,7 @@ void motor_2_on(float throttle_percent) {
 void motor_coast(Servo &motor) {
     // In normal mode, coast is a low throttle rather than zero
     // to keep the ESC signal alive — adjust this value to suit your motor
-    if (is_facing_up) {
-        motor.writeMicroseconds(ESC_STOP_US + ESC_COAST_DIFF_US);
-    } else {
-        motor.writeMicroseconds(ESC_STOP_US - ESC_COAST_DIFF_US);
-    }
-    
+    motor.writeMicroseconds(ESC_STOP_US);
 }
 
 void motor_1_coast() {
