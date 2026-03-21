@@ -4,10 +4,10 @@
 //LOW_RANGE - +/-100g for the H3LIS331DH
 //MED_RANGE - +/-200g for the H3LIS331DH
 //HIGH_RANGE - +/-400g for the H3LIS331DH
-#define ACCEL_RANGE LIS331::LOW_RANGE   
+#define ACCEL_RANGE LIS331::MED_RANGE   
 
 //Set to correspond to ACCEL_RANGE
-#define ACCEL_MAX_SCALE 100
+#define ACCEL_MAX_SCALE 200
 
 //Change as needed as needed
 //(Adafuit breakout default is 0x18, Sparkfun default is 0x19)
