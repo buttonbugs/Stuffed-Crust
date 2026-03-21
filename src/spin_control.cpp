@@ -169,7 +169,8 @@ static struct melty_parameters_t get_melty_parameters(void) {
     }
 #endif
     
-    float led_on_portion = 1.00f - melty_parameters.throttle_percent;  // LED width changed with throttle percent
+    float led_on_portion = melty_parameters.throttle_percent;  // LED width changed with throttle percent
+    // led_on_portion = 1.0f - led_on_portion;
     if (led_on_portion < 0.10f)
         led_on_portion = 0.10f;
     if (led_on_portion > 0.90f)
