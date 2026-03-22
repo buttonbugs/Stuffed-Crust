@@ -4932,10 +4932,6 @@
 		(uuid "2b91acf1-0377-44dc-a927-ad13a4d7eedf")
 	)
 	(no_connect
-		(at 91.44 68.58)
-		(uuid "395d0683-00e6-4bb5-85bc-61d4cff08e1c")
-	)
-	(no_connect
 		(at 121.92 76.2)
 		(uuid "48bf548b-ba0c-4bff-8bef-07e5cc0cdfea")
 	)
@@ -4954,6 +4950,10 @@
 	(no_connect
 		(at 121.92 81.28)
 		(uuid "677685df-d688-40ca-848b-2644321c4e46")
+	)
+	(no_connect
+		(at 101.6 140.97)
+		(uuid "69e0a53c-584c-45dd-924a-c69b39f7efc4")
 	)
 	(no_connect
 		(at 121.92 66.04)
@@ -5000,10 +5000,6 @@
 		(uuid "9c7ebd0e-1452-4e61-b979-595679ae66b6")
 	)
 	(no_connect
-		(at 91.44 71.12)
-		(uuid "9e9a82b9-3bda-4a64-b98e-9f5515477fbc")
-	)
-	(no_connect
 		(at 121.92 55.88)
 		(uuid "9ed808d9-9ced-4dc0-b72e-372509405e9e")
 	)
@@ -5022,6 +5018,10 @@
 	(no_connect
 		(at 184.15 76.2)
 		(uuid "a643ddd9-3f35-42d5-8ad4-3a821cab0dfd")
+	)
+	(no_connect
+		(at 101.6 135.89)
+		(uuid "b758b04f-75d3-470b-b491-6e2e6f44f2c1")
 	)
 	(no_connect
 		(at 121.92 71.12)
@@ -6241,6 +6241,28 @@
 		)
 		(uuid "feb325bc-d8bd-4c03-9b88-10dd47b5ad39")
 	)
+	(global_label "LED_Data"
+		(shape input)
+		(at 91.44 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "53e4e980-54b7-4280-b28d-694decd106db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 79.7464 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "VBATT"
 		(shape input)
 		(at 270.51 46.99 0)
@@ -6259,6 +6281,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_Clock"
+		(shape input)
+		(at 91.44 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "68d4c1be-4fc1-40c0-b35e-2ab2e39ec210")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 78.8392 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -10078,10 +10122,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "91944c47-4bad-4543-a86d-b3ea24ce0b63")
+			(uuid "91944c47-4bad-4543-a86d-b3ea24ce0b64")
 		)
 		(pin "1"
-			(uuid "2e709775-8381-4ed1-9c60-8cd1b3de0f5e")
+			(uuid "2e709775-8381-4ed1-9c60-8cd1b3de0f5f")
 		)
 		(instances
 			(project ""
