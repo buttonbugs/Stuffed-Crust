@@ -4864,12 +4864,6 @@
 		(uuid "940bc877-09b5-49bb-a331-efbd70787e27")
 	)
 	(junction
-		(at 106.68 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a99f5651-7927-4674-9148-eae6958e1b25")
-	)
-	(junction
 		(at 88.9 190.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4880,12 +4874,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb179706-96c1-4466-b4ce-395c52c8d5b1")
-	)
-	(junction
-		(at 160.02 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d43770c6-422d-4a3a-892e-408ef5978ed9")
 	)
 	(junction
 		(at 82.55 35.56)
@@ -5463,16 +5451,6 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 30.48) (xy 106.68 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68259b96-e4bd-4c48-8f09-ddea2994b8e8")
-	)
-	(wire
-		(pts
 			(xy 168.91 27.94) (xy 184.15 27.94)
 		)
 		(stroke
@@ -5510,16 +5488,6 @@
 			(type default)
 		)
 		(uuid "6bff887d-b0cc-4676-89ef-5ee84aed3fa4")
-	)
-	(wire
-		(pts
-			(xy 162.56 72.39) (xy 160.02 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7675a645-fa90-4532-adfd-aeab84823e7d")
 	)
 	(wire
 		(pts
@@ -5653,23 +5621,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 76.2) (xy 160.02 72.39)
+			(xy 160.02 68.58) (xy 160.02 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b39fd737-0ae8-4e10-9200-568fae089b5f")
-	)
-	(wire
-		(pts
-			(xy 160.02 72.39) (xy 160.02 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb16c9da-d634-494c-86dd-a03edfe55ff5")
 	)
 	(wire
 		(pts
@@ -7893,73 +7851,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small_US")
-		(at 165.1 72.39 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4a859824-163d-4ff5-8461-a474ae06cee5")
-		(property "Reference" "C3"
-			(at 164.338 69.596 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10uF"
-			(at 168.402 69.596 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 165.1 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "capacitor, small US symbol"
-			(at 165.1 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28da8ffd-d47d-403f-ba24-a2b7e66332f0")
-		)
-		(pin "2"
-			(uuid "2a0ca445-5ba5-4ced-8c4c-46c792854e83")
-		)
-		(instances
-			(project ""
-				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized_Small_US")
 		(at 82.55 186.69 270)
 		(unit 1)
@@ -9000,74 +8891,6 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 97.79 30.48 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a260434f-9ed5-4ded-9374-6afbfe762ff1")
-		(property "Reference" "#PWR07"
-			(at 91.44 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDREF"
-			(at 93.98 30.4799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.79 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.79 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 97.79 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39ef4ebb-35d1-4c19-8764-8c94dc109f8b")
-		)
-		(instances
-			(project ""
-				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDREF")
 		(at 91.44 78.74 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9264,74 +9087,6 @@
 			(project ""
 				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDREF")
-		(at 167.64 72.39 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b613d803-12fc-43ab-ad38-e741881f2184")
-		(property "Reference" "#PWR06"
-			(at 173.99 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDREF"
-			(at 171.45 72.3899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 167.64 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e6cbbdb4-0334-4c0c-9e2f-26bb549c6574")
-		)
-		(instances
-			(project ""
-				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -9996,73 +9751,6 @@
 			(project ""
 				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small_US")
-		(at 100.33 30.48 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e131dc83-f7f3-430b-b448-280c8a166f54")
-		(property "Reference" "C4"
-			(at 103.124 28.702 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ".1uF"
-			(at 97.79 28.194 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 100.33 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 100.33 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "capacitor, small US symbol"
-			(at 100.33 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d3128079-99c4-4dee-be16-d68b118ad1a0")
-		)
-		(pin "2"
-			(uuid "a8d0da17-c7af-454e-bdbf-3bb196dd85a8")
-		)
-		(instances
-			(project ""
-				(path "/c820eee0-9a51-4601-b23c-3906ac354886"
-					(reference "C4")
 					(unit 1)
 				)
 			)
