@@ -27,7 +27,7 @@ static float accel_zero_g_offset = DEFAULT_ACCEL_ZERO_G_OFFSET_X;
 static float led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in EEPROM as an INT - but handled as a float for configuration purposes
 
 // loads settings from EEPROM
-void load_melty_config_settings() {
+void load_melty_config_settings_esp32() {       // Avoid multiple definition of `load_melty_config_settings()`
 #ifdef ENABLE_EEPROM_STORAGE
     accel_mount_radius_cm = load_accel_mount_radius();
     accel_zero_g_offset = load_accel_zero_g_offset();

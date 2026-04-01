@@ -1,3 +1,5 @@
+#ifndef RC_HANDLER
+#define RC_HANDLER
 
 //used to return forward / back control stick position
 typedef enum {
@@ -52,3 +54,4 @@ bool rc_get_is_rev_in_normal_deadzone();
 
 
 
+#endif
