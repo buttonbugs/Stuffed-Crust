@@ -1,15 +1,23 @@
 #include <Arduino.h>
 
 #include "melty_config.h"
-
+#include "config_storage.h"
 
 // If LED strip is enabled, LED is controlled using SPI (SCL and Data)
 // If LED strip isn't enabled, LED is controlled using digitalWrite()
 // #define ENABLE_LED_STRIP
 
-void init_led_driver() {
-    #ifdef ENABLE_LED_STRIP
 
+static int led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in EEPROM as an INT - but handled as a float for configuration purposes
+
+void init_led_driver() {
+    // Get led_offset_percent from storage
+    #ifdef ENABLE_EEPROM_STORAGE
+    led_offset_percent = load_heading_led_offset();
+    #endif
+
+    #ifdef ENABLE_LED_STRIP
+    
     #else
     pinMode(HEADING_LED_PIN, OUTPUT);
     #endif
@@ -37,11 +45,11 @@ void update_led(float robot_direction) {
 
     #else
     // Caculate whether the LED should be ON or OFF
-    const int led_on_percent = 40;  // from 0 to 100
+    const int led_on_percent = 30;  // from 0 to 100
     digitalWrite(
         HEADING_LED_PIN,
-        (robot_direction * 100) > (100 + DEFAULT_LED_OFFSET_PERCENT - led_on_percent / 2) % 100 &&
-        (robot_direction * 100) < (DEFAULT_LED_OFFSET_PERCENT + led_on_percent / 2) % 100
+        (robot_direction * 100) > (100 + led_offset_percent - led_on_percent / 2) % 100 &&
+        (robot_direction * 100) < (led_offset_percent + led_on_percent / 2) % 100
     );
     #endif
     
