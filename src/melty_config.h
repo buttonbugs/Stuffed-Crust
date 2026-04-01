@@ -50,6 +50,8 @@
 
 #define HEADING_LED_PIN	11                         //To heading LED (pin 13 is on-board Arduino LED)
 // #define HEADING_LED_PIN	13                         //For testing, in case we don't have external LED
+#define LED_STRIP_DATA 11                           // LED strip SPI DO/MOSI pin
+#define LED_STRIP_SCK 12                            // LED strip SPI SCK/Clock pin
 
 //no configuration changes are needed if only 1 motor is used!
 #define MOTOR_PIN1 2                              //Pin for Motor 1 driver
