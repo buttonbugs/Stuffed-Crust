@@ -13,7 +13,7 @@ constexpr uint16_t ESC_MAX_US   = 2000;
 constexpr uint16_t ESC_STOP_US  = 1500;
 constexpr uint16_t ESC_COAST_DIFF_US = 150;
 
-// Map 0-100% to 1000-2000us
+// Map (-1.0f)-(1.0f) to 1000-2000us
 static uint16_t toMicroseconds(float throttle_percent) {
     throttle_percent = constrain(throttle_percent, -1.0f, 1.0f);
     /* if (!is_facing_up) {
@@ -28,10 +28,12 @@ void motor_on(float throttle_percent, Servo &motor) {
     Serial.println(toMicroseconds(throttle_percent));
 }
 
+// From -1.0 to 1.0
 void motor_1_on(float throttle_percent) {
     motor_on(throttle_percent, motor1);
 }
 
+// From -1.0 to 1.0
 void motor_2_on(float throttle_percent) {
     motor_on(throttle_percent, motor2);
 }
