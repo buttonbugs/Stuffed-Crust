@@ -6,5 +6,6 @@ extern float forback_ratio;             // from -1.0 to 1.0 based on stick posit
 extern float leftright_ratio;           // from -1.0 to 1.0 based on stick position
 extern float revolution_ratio;          // from -1.0 to 1.0 based on stick position
 extern bool facing_up;                  // true/false based on the switch on the xbox controller
+extern bool config_mode;                  // true/false based on the switch on the xbox controller
 
 #endif
