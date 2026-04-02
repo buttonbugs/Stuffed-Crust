@@ -43,12 +43,60 @@ void init_high_speed_control() {
 
 // This function changes the direction of the heading LED
 // interval: seconds that have passed since last call of this function
-void revolution_motion(float interval) {
+void rotational_motion(float interval) {
     if (config_mode) {
         /* config mode */
     } else {
         robot_direction += MAX_HEADING_LED_REVOLUTION_SPEED * revolution_ratio * interval;
     }
+}
+
+void translational_motion() {
+    float motor_1_throttle = 1.0f;          // ranging from -1.0 to 1.0
+    float motor_2_throttle = 1.0f;          // ranging from -1.0 to 1.0
+    float translation_throttle = constrain(sqrt(sq(forback_ratio) + sq(leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
+    float translation_direction;            // the direction of the translation joystick, using +y-axis as the 0 direction
+
+    // Calculation translation direction, return from 0.0 to 1.0
+    if (leftright_ratio == 0.0f) {
+        if (forback_ratio > 0.0f) {
+            translation_direction = 0.0f;
+        } else {
+            translation_direction = 0.5f;
+        }
+    } else {
+        translation_direction = atan(forback_ratio / leftright_ratio) / (2 * PI);   // Use +x-axis as the 0 direction
+        if (leftright_ratio < 0.0f) {
+            translation_direction += 0.5f;
+        }
+        translation_direction -= 0.25f;     // Use +y-axis as the 0 direction
+        if (translation_direction < 0.0f) {
+            translation_direction += 1.0f;
+        }
+    }
+
+    /* Check if the robot rotates to the translation direction */
+    float direction_difference = robot_direction - translation_direction;
+    // restrict direction_difference to [-0.5, 0.5]
+    if (direction_difference > 0.5f) {
+        direction_difference -= 1.0f;
+    } else if (direction_difference < -0.5f) {
+        direction_difference += 1.0f;
+    }
+    // take abosulte value
+    direction_difference = abs(direction_difference);   // return [0.0, 0.5]
+
+    // Set motor throttle
+    if (direction_difference < 0.25f * translation_throttle) {
+        // Assuming motor 1 is on the left, motor 2 is on the right
+        motor_1_throttle = MOTOR_COAST_THROTTLE;
+    } else if (0.5f - direction_difference < 0.25f * translation_throttle) {
+        // Assuming motor 1 is on the left, motor 2 is on the right
+        motor_2_throttle = MOTOR_COAST_THROTTLE;
+    }
+    motor_1_on(motor_1_throttle * throttle_ratio);
+    motor_2_on(motor_2_throttle * throttle_ratio);
+
 }
 
 void update_robot_direction() {
@@ -60,11 +108,16 @@ void update_robot_direction() {
     /* Accumulate frequency to get robot direction */
     float interval = (micros() - last_measurement_micros) * 0.000001f;                          // convert to seconds
     last_measurement_micros = micros();
-    robot_direction += (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation
 
-    revolution_motion(interval);
+    if (facing_up) {
+        robot_direction += (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with positive area
+    } else {
+        robot_direction -= (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with negative area
+    }
 
-    // Rescrict robot_direction only in [0.0, 1.0)
+    rotational_motion(interval);
+
+    // Rescrict robot_direction into [0.0, 1.0)
     while (robot_direction >= 1.0f) {
         robot_direction -= 1.0f;
     }
@@ -73,16 +126,11 @@ void update_robot_direction() {
     }
 }
 
-void translation_motion() {
-    // Assuming motor 1 is left, motor 2 is right, robot_direction
-
-}
-
 void high_speed_set_motor() {
     service_watchdog();             // Watchdog is hungry
     update_robot_direction();
     update_led(robot_direction);    // Update LED
 
     // Update Motor
-    translation_motion();
+    translational_motion();
 }
