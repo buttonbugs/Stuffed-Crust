@@ -7,26 +7,27 @@ float revolution_ratio = 0.0;
 bool facing_up = true;
 
 // https://github.com/ricardoquesada/bluepad32?tab=readme-ov-file
-// return float from 0.0 to 1.0 based on stick position
-void rc_get_throttle_ratio_esp32() {
+// set throttle_ratio from 0.0 to 1.0 based on stick position
+void esp32_rc_throttle_callback() {
     // Set the variable throttle_ratio
 }
 
-// return float from -1.0 to 1.0 based on stick position
-void rc_get_forback_ratio_esp32() {
+// set forback_ratio from -1.0 to 1.0 based on stick position
+void esp32_rc_forback_callback() {
     // Set the variable forback_ratio
 }
 
-// return float from -1.0 to 1.0 based on stick position
-void rc_get_leftright_ratio_esp32() {
+// set leftright_ratio from -1.0 to 1.0 based on stick position
+void esp32_rc_leftright_callback() {
     // Set the variable leftright_ratio
 }
 
-// return float from -1.0 to 1.0 based on stick position
-void rc_get_revolution_ratio_esp32() {
+// set revolution_ratio from -1.0 to 1.0 based on stick position
+void esp32_rc_revolution_callback() {
     // Set the variable revolution_ratio
 }
 
-void rc_get_facing_esp32() {
+// set facing_up ture/false based on the switch status on the xbox controller
+void esp32_rc_facing_callback() {
     // Set the variable facing_up
 }
