@@ -1732,7 +1732,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 177.8 69.85 0)
 			(effects
 				(font
@@ -1818,7 +1818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_APV_APH0420"
+		(property "Footprint" "Inductor_SMD:L_APV_APH0630"
 			(at 171.45 66.04 0)
 			(effects
 				(font
@@ -1845,7 +1845,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C207831"
+		(property "LCSC PN" "C5349698"
 			(at 171.45 66.04 90)
 			(effects
 				(font
