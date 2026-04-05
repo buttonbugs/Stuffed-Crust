@@ -35,7 +35,7 @@ void init_led_driver() {
 
     // Initialize LED
     #ifdef ENABLE_LED_STRIP
-        FastLED.addLeds<APA102, LED_STRIP_DATA, LED_STRIP_SCK, COLOR_ORDER>(leds, NUM_LEDS);
+        FastLED.addLeds<SK9822, LED_STRIP_DATA, LED_STRIP_SCK, COLOR_ORDER>(leds, NUM_LEDS);
         FastLED.setBrightness(50);  // Set initial brightness (0-255)
     #else
         pinMode(HEADING_LED_PIN, OUTPUT);
