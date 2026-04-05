@@ -24,6 +24,7 @@ static int led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in
 - 0: sector
 - 1: arrow
 - 2: pizza
+- 3: show speed
  */
 int current_led_pattern = 0;
 
@@ -80,8 +81,8 @@ void draw_arrow(float robot_direction) {
 
     for (int led_index = 0; led_index < NUM_LEDS; led_index++) {
         // LED coordinate
-        float led_x = cos(2 * PI * (robot_direction + 0.25f));
-        float led_y = sin(2 * PI * (robot_direction + 0.25f));
+        float led_x = cosf(2 * PI * (robot_direction + 0.25f)) * led_index / NUM_LEDS;
+        float led_y = sinf(2 * PI * (robot_direction + 0.25f)) * led_index / NUM_LEDS;
 
         /* Ray Casting Algorithm */
         int num_intersections = 0;
