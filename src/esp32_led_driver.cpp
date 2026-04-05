@@ -75,7 +75,7 @@ const float arrow_graphs[][2] = {       // The coordinates of the vertices of th
     {-0.15f,  0.15f },
     {-0.50f,  0.00f }
 };
-const int arrow_vertex_num = ARRAY_SIZE(arrow_graphs);
+#define arrow_vertex_num (int)ARRAY_SIZE(arrow_graphs)
 void draw_arrow(float robot_direction) {
 
     for (int led_index = 0; led_index < NUM_LEDS; led_index++) {
