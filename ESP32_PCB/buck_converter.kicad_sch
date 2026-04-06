@@ -1476,7 +1476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
 			(at 149.86 76.2 0)
 			(effects
 				(font
@@ -1486,7 +1486,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tps54302.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C311983.pdf"
 			(at 140.97 58.42 0)
 			(effects
 				(font
@@ -1495,7 +1495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "3A, 4.5 to 28V Input, EMI Friendly integrated switch synchronous step-down regulator, pulse-skipping, SOT-23-6"
+		(property "Description" "Buck Switching Regulator IC Adjustable 1 Output 3A TSOT-23-6"
 			(at 148.59 67.31 0)
 			(effects
 				(font
@@ -1504,16 +1504,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C50310967"
-			(at 148.59 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
+		(property "LCSC PN" "C311983"
 			(at 148.59 67.31 0)
 			(effects
 				(font
