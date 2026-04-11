@@ -116,6 +116,6 @@ enum throttle_modes {
                                                   //Downside is if unexpected reboot occurs during a fight - driver will need to set throttle to zero before power 
 
 //----------ESP32----------
-// #define ENABLE_ESP32_RC                           // Enable ESP32 as the receiver
+#define ENABLE_ESP32_RC                           // Enable ESP32 as the receiver
 
 #endif
