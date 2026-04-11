@@ -108,12 +108,14 @@ enum throttle_modes {
 #define ARDUINIO_VOLTAGE 5.0f                     //Needed for ADC maths for battery monitor
 #define LOW_BAT_REPEAT_READS_BEFORE_ALARM 20      //Requires this many ADC reads below threshold before alarming
 
-//TODO: ADD WATCHDOG
 //----------SAFETY----------
 #define ENABLE_WATCHDOG                           //Uses WDT_T4's watchdog to enable watchdog / reset (tested on AVR - should work for ARM https://github.com/tonton81/WDT_T4)
 #define WATCH_DOG_TIMEOUT_MS 10000                 //Timeout value for watchdog (not all values are supported - 2000ms verified with Arudino Micro)
 #define VERIFY_RC_THROTTLE_ZERO_AT_BOOT           //Requires RC throttle be 0% at boot to allow spin-up for duration of MAX_MS_BETWEEN_RC_UPDATES (about 1 second)
                                                   //Intended as safety feature to prevent bot from spinning up at power-on if RC was inadvertently left on.
                                                   //Downside is if unexpected reboot occurs during a fight - driver will need to set throttle to zero before power 
+
+//----------ESP32----------
+// #define ENABLE_ESP32_RC                           // Enable ESP32 as the receiver
 
 #endif

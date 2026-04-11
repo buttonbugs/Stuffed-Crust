@@ -128,6 +128,9 @@ void update_robot_direction() {
 
 void high_speed_set_motor() {
     service_watchdog();             // Watchdog is hungry
+    #ifndef ENABLE_ESP32_RC
+        get_data_from_external_rc();
+    #endif
     update_robot_direction();
     update_led(robot_direction);    // Update LED
 

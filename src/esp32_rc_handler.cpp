@@ -1,9 +1,12 @@
 #include "melty_config.h"
+#ifndef ENABLE_ESP32_RC
+    #include "rc_handler.h"
+#endif
 
-float throttle_ratio = 0.0;
-float forback_ratio = 0.0;
-float leftright_ratio = 0.0;
-float revolution_ratio = 0.0;
+float throttle_ratio = 0.0;             // from 0.0 to 1.0 based on stick position
+float forback_ratio = 0.0;              // from -1.0 to 1.0 based on stick position
+float leftright_ratio = 0.0;            // from -1.0 to 1.0 based on stick position
+float revolution_ratio = 0.0;           // from -1.0 to 1.0 based on stick position
 bool facing_up = true;
 bool config_mode = false;
 
@@ -36,4 +39,13 @@ void esp32_rc_facing_callback() {
 // set config_mode ture/false based on the switch status on the xbox controller
 void esp32_rc_configmode_callback() {
     // Set the variable config_mode
+}
+
+void get_data_from_external_rc() {
+    #ifndef ENABLE_ESP32_RC
+        throttle_ratio = rc_get_throttle_percent() / 100.0f;
+        forback_ratio = rc_get_forback_ratio();
+        leftright_ratio = rc_get_leftright_ratio();
+        revolution_ratio = rc_get_revolution_ratio();
+    #endif
 }

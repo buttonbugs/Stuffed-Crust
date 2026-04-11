@@ -8,7 +8,7 @@
 
 // If LED strip is enabled, LED is controlled using SPI (SCL and Data)
 // If LED strip isn't enabled, LED is controlled using digitalWrite()
-#define ENABLE_LED_STRIP
+// #define ENABLE_LED_STRIP
 
 #define NUM_LEDS 14         // The number of LEDs on one LED strip
 #define COLOR_ORDER BGR     // Check physical channel order. BGR is common for SK9822; APA102 may vary
@@ -37,7 +37,7 @@ void init_led_driver() {
     // Initialize LED
     #ifdef ENABLE_LED_STRIP
         FastLED.addLeds<SK9822, LED_STRIP_DATA, LED_STRIP_SCK, COLOR_ORDER>(leds, NUM_LEDS);
-        FastLED.setBrightness(50);  // Set initial brightness (0-255)
+        FastLED.setBrightness(255);  // Set initial brightness (0-255)
     #else
         pinMode(HEADING_LED_PIN, OUTPUT);
     #endif
