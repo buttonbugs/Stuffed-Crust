@@ -12,8 +12,17 @@
 //#define JUST_DO_DIAGNOSTIC_LOOP                 //Disables the robot / just displays config / battery voltage / RC info via serial
 
 //----------EEPROM----------
-#define ENABLE_EEPROM_STORAGE                     //Comment out this to disable EEPROM (for ARM)
+// EEPROM storage is only available on Teensy (uses built-in EEPROM)
+#if defined(BOARD_TEENSY40)
+    #define ENABLE_EEPROM_STORAGE                     //Comment out this to disable EEPROM (for ARM)
+#endif
 #define EEPROM_WRITTEN_SENTINEL_VALUE 42          //Changing this value will cause existing EEPROM values to be invalidated (revert to defaults)
+
+//----------WATCHDOG----------
+// Watchdog is only available on Teensy (uses WDT_T4 library)
+#if defined(BOARD_TEENSY40)
+    #define ENABLE_WATCHDOG                           //Uses WDT_T4's watchdog to enable watchdog / reset
+#endif
 
 //----------TRANSLATIONAL DRIFT SETTINGS----------
 //"DEFAULT" values are overriden by interactive config / stored in EEPROM (interactive config will be easier if they are about correct)
@@ -43,21 +52,36 @@
 //Common RC receiver setup REVOLUTION = CH1, FORBACK = CH2, THROTTLE = CH3
 //Note: Accelerometer is connected with default Arduino SDA / SCL pins
 
-#define LEFTRIGHT_RC_CHANNEL_PIN 20                //To Left / Right on RC receiver
-#define FORBACK_RC_CHANNEL_PIN 21                  //To Forward / Back on RC receiver (Pin 1 on Arduino Micro labelled as "TX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
-#define THROTTLE_RC_CHANNEL_PIN 22                 //To Throttle on RC receiver (Pin 0 on Arduino Micro labelled as "RX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
-#define REVOLUTION_RC_CHANNEL_PIN 23                  //To Heading / Spin direction on RC receiver (Pin 4 on Arduino Micro - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
+#if defined(BOARD_TEENSY40)
+    // Teensy 4.0 pin mappings
+    #define LEFTRIGHT_RC_CHANNEL_PIN 20                //To Left / Right on RC receiver
+    #define FORBACK_RC_CHANNEL_PIN 21                  //To Forward / Back on RC receiver
+    #define THROTTLE_RC_CHANNEL_PIN 22                 //To Throttle on RC receiver
+    #define REVOLUTION_RC_CHANNEL_PIN 23               //To Heading / Spin direction on RC receiver
+    #define HEADING_LED_PIN	11                        //To heading LED
+    #define LED_STRIP_DATA 11                          // LED strip SPI DO/MOSI pin
+    #define LED_STRIP_SCK 12                           // LED strip SPI SCK/Clock pin
+    #define MOTOR_PIN1 2                               //Pin for Motor 1 driver
+    #define MOTOR_PIN2 3                               //Pin for Motor 2 driver
+    #define BATTERY_ADC_PIN A0                         //Pin for battery monitor
 
-#define HEADING_LED_PIN	11                         //To heading LED (pin 13 is on-board Arduino LED)
-// #define HEADING_LED_PIN	13                         //For testing, in case we don't have external LED
-#define LED_STRIP_DATA 11                           // LED strip SPI DO/MOSI pin
-#define LED_STRIP_SCK 12                            // LED strip SPI SCK/Clock pin
+#elif defined(BOARD_ESP32C3)
+    // Xiao ESP32-C3 pin mappings
+    // Note: Adjust these pins based on your wiring
+    #define LEFTRIGHT_RC_CHANNEL_PIN 3                 //GPIO3 - RC input
+    #define FORBACK_RC_CHANNEL_PIN 4                   //GPIO4 - RC input
+    #define THROTTLE_RC_CHANNEL_PIN 5                  //GPIO5 - RC input
+    #define REVOLUTION_RC_CHANNEL_PIN 6                //GPIO6 - RC input
+    #define HEADING_LED_PIN	7                         //GPIO7 - LED output
+    #define LED_STRIP_DATA 8                           //GPIO8 - LED strip data
+    #define LED_STRIP_SCK 9                            //GPIO9 - LED strip clock
+    #define MOTOR_PIN1 0                               //GPIO0 - Motor 1
+    #define MOTOR_PIN2 1                               //GPIO1 - Motor 2
+    #define BATTERY_ADC_PIN 2                          //GPIO2/ADC (analog input)
 
-//no configuration changes are needed if only 1 motor is used!
-#define MOTOR_PIN1 2                              //Pin for Motor 1 driver
-#define MOTOR_PIN2 3                             //Pin for Motor 2 driver
-
-#define BATTERY_ADC_PIN A0                        //Pin for battery monitor (if enabled)
+#else
+    #error "No board defined. Set -DBOARD_TEENSY40 or -DBOARD_ESP32C3"
+#endif
 
 
 //----------THROTTLE CONFIGURATION----------
@@ -109,7 +133,6 @@ enum throttle_modes {
 #define LOW_BAT_REPEAT_READS_BEFORE_ALARM 20      //Requires this many ADC reads below threshold before alarming
 
 //----------SAFETY----------
-#define ENABLE_WATCHDOG                           //Uses WDT_T4's watchdog to enable watchdog / reset (tested on AVR - should work for ARM https://github.com/tonton81/WDT_T4)
 #define WATCH_DOG_TIMEOUT_MS 10000                 //Timeout value for watchdog (not all values are supported - 2000ms verified with Arudino Micro)
 #define VERIFY_RC_THROTTLE_ZERO_AT_BOOT           //Requires RC throttle be 0% at boot to allow spin-up for duration of MAX_MS_BETWEEN_RC_UPDATES (about 1 second)
                                                   //Intended as safety feature to prevent bot from spinning up at power-on if RC was inadvertently left on.

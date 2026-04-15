@@ -5,7 +5,7 @@
 #ifndef WATCHDOG_HEADER_GUARD
 #define WATCHDOG_HEADER_GUARD
 
-#ifdef ENABLE_WATCHDOG
+#if defined(BOARD_TEENSY40) && defined(ENABLE_WATCHDOG)
 #include "Watchdog_t4.h"
 static WDT_T4<WDT3> wdt;
 #endif

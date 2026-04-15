@@ -214,3 +214,10 @@ void init_rc(void) {
     attachInterrupt(digitalPinToInterrupt(revolution_rc_channel.pin), revolution_rc_change, CHANGE);
     attachInterrupt(digitalPinToInterrupt(throttle_rc_channel.pin), throttle_rc_change, CHANGE);
 }
+
+// service_rc() - Teensy uses interrupt-based RC input, so this is a no-op
+// Kept for compatibility with ESP32 which uses polling-based input
+void service_rc(void) {
+    // Interrupt-based RC updates happen automatically
+}
+}

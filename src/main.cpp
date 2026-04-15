@@ -28,7 +28,13 @@ static void wait_for_rc_good_and_zero_throttle() {
 
 // INITIAL SETUP
 void setup() {
+    // Wait for USB serial to establish on ESP32
+    delay(2000);
     Serial.begin(115200);
+    delay(500);
+    
+    // Print startup marker so we know if serial is working
+    Serial.println("\n\n=== STARTUP ===");
 
     // get motor drivers setup (and off!) first thing
     init_motors();
@@ -37,7 +43,9 @@ void setup() {
     // returns actual watchdog timeout MS
     init_watchdog();
 
+    Serial.println("Calling init_rc()...");
     init_rc();
+    Serial.println("init_rc() complete");
     init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
 
 // load settings on boot
@@ -168,6 +176,9 @@ static void handle_bot_idle() {
 void loop() {
     service_watchdog();  // keep the watchdog happy
 
+    Serial.println("low_speed_set_motor(); start");
+    service_rc();        // update RC/gamepad input
+
     // if the rc signal isn't good - assure motors off - and "slow flash" LED
     // this will interrupt a spun-up bot if the signal becomes bad
     while (rc_signal_is_healthy() == false) {
@@ -180,6 +191,7 @@ void loop() {
 
         // services watchdog and echo diagnostics while we are waiting for RC signal
         service_watchdog();
+        service_rc();
         echo_diagnostics();
     }
 

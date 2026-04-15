@@ -152,3 +152,33 @@ void update_led(float robot_direction) {
     #endif
     
 }
+
+// ===== Teensy Compatibility Wrapper Functions =====
+static bool heading_led_state = false;
+
+// Teensy-compatible heading LED on function
+void heading_led_on(int shimmer) {
+    #ifdef ENABLE_LED_STRIP
+        fill_solid(leds, NUM_LEDS, CRGB::White);
+        FastLED.show();
+    #else
+        digitalWrite(HEADING_LED_PIN, HIGH);
+    #endif
+    heading_led_state = true;
+}
+
+// Teensy-compatible heading LED off function
+void heading_led_off() {
+    #ifdef ENABLE_LED_STRIP
+        fill_solid(leds, NUM_LEDS, CRGB::Black);
+        FastLED.show();
+    #else
+        digitalWrite(HEADING_LED_PIN, LOW);
+    #endif
+    heading_led_state = false;
+}
+
+// Legacy init_led function (calls init_led_driver)
+void init_led() {
+    init_led_driver();
+}

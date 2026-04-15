@@ -1,12 +1,10 @@
 #include <Arduino.h>
-
-#include "esp32_rc_handler.h"
-#include "esp32_led_driver.h"
-#include "accel_handler.h"
-#include "motor_driver.h"
-#include "watchdog.h"
-
 #include "melty_config.h"
+#include "motor_driver.h"
+#include "rc_handler.h"
+#include "spin_control.h"
+#include "led_driver.h"
+#include "accel_handler.h"
 #include "config_storage.h"
 
 /* 
@@ -136,4 +134,29 @@ void high_speed_set_motor() {
 
     // Update Motor
     translational_motion();
+}
+
+// ===== Teensy Compatibility Functions (Stubs) =====
+
+// Wrapper for high-speed motor control (called spin_one_rotation in Teensy)
+void spin_one_rotation() {
+    high_speed_set_motor();
+}
+
+//  Get maximum RPM achieved since last config
+int get_max_rpm() {
+    // TODO: Implement RPM tracking
+    return 0;
+}
+
+// Toggle configuration mode
+void toggle_config_mode() {
+    config_mode = !config_mode;
+}
+
+// Save melty configuration settings
+void save_melty_config_settings() {
+    #ifdef ENABLE_EEPROM_STORAGE
+        // TODO: Implement EEPROM storage for ESP32 (use Flash instead)
+    #endif
 }
