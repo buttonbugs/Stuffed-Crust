@@ -1,13 +1,7 @@
-#include "watchdog.h"       // No need to use #ifdef ENABLE_WATCHDOG here - handled in watchdog.h
+#ifndef ESP32_SPIN_CONTROL
+#define ESP32_SPIN_CONTROL
 
-//does translational drift rotation (robot spins 360 degrees)
-void spin_one_rotation(void);
+void init_high_speed_control();
+void high_speed_set_motor();
 
-//returns maximum rotation speed since last entering config mode
-int get_max_rpm();
-
-//toggles configuration mode
-void toggle_config_mode();
-
-//saves configuration settings
-void save_melty_config_settings();
+#endif
