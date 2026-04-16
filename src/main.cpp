@@ -11,6 +11,9 @@
 #include "led_driver.h"
 #include "battery_monitor.h"
 
+#ifdef ENABLE_ESP32_SPIN_CONTROL
+    #include "esp32_spin_control.h"
+#endif
 
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
@@ -185,8 +188,13 @@ void loop() {
 
     // if RC is good - and throtte is above 0 - spin a single rotation
     if (rc_get_throttle_percent() > LOW_SPEED_RC_THROTTLE_THRESHOLD) {
-        // this is where all the motor control happens!  (see spin_control.cpp)
-        spin_one_rotation();
+        #ifdef ENABLE_ESP32_SPIN_CONTROL
+            high_speed_set_motor();
+        #else
+            // this is where all the motor control happens!  (see spin_control.cpp)
+            spin_one_rotation();
+        #endif
+
         #ifdef ENABLE_REVERSE
     } else if (rc_get_throttle_percent() > 5) {
         Serial.println("low_speed_set_motor(); start");
