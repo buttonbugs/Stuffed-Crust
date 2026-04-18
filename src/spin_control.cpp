@@ -1,10 +1,10 @@
 #include <Arduino.h>
+#include "spin_control.h"
 
 #include "rc_handler.h"
 #include "led_driver.h"
 #include "accel_handler.h"
 #include "motor_driver.h"
-#include "watchdog.h"
 
 #include "melty_config.h"
 #include "config_storage.h"
@@ -36,7 +36,7 @@ void load_melty_config_settings_esp32() {       // Avoid multiple definition of 
 #endif
 }
 
-void init_high_speed_control() {
+void load_melty_config_settings() {
     load_melty_config_settings_esp32();
     last_measurement_micros = micros();  // uint32_t overflows in 70 minutes.
 }
@@ -129,7 +129,7 @@ void update_robot_direction() {
 void high_speed_set_motor() {
     service_watchdog();             // Watchdog is hungry
     #ifndef ENABLE_ESP32_RC
-        get_data_from_external_rc();
+        service_rc();
     #endif
     update_robot_direction();
     update_led(robot_direction);    // Update LED

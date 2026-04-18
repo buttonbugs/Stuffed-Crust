@@ -28,7 +28,7 @@ static int led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in
  */
 int current_led_pattern = 0;
 
-void init_led_driver() {
+void init_led() {
     // Get led_offset_percent from storage
     #ifdef ENABLE_EEPROM_STORAGE
         led_offset_percent = load_heading_led_offset();
@@ -44,10 +44,9 @@ void init_led_driver() {
 }
 
 bool calculate_led_status(float robot_direction) {
-    return (
-        (robot_direction * 100) > (led_offset_percent - led_on_percent / 2 + 100) % 100 &&
-        (robot_direction * 100) < (led_offset_percent + led_on_percent / 2) % 100
-    );
+    int led_deviation = abs(robot_direction * 100 - led_offset_percent);
+    led_deviation = led_deviation % 100;
+    return led_deviation <= led_on_percent / 2;
 }
 
 void change_pattern(int new_pattern) {
@@ -151,4 +150,22 @@ void update_led(float robot_direction) {
         digitalWrite(HEADING_LED_PIN, calculate_led_status(robot_direction));
     #endif
     
+}
+
+void heading_led_on(int shimmer) {
+    // check to see if we should "shimmer" the LED to indicate something to user
+    if (shimmer == 1) {
+        if (micros() & (1 << 10)) {
+            digitalWrite(HEADING_LED_PIN, HIGH);
+        } else {
+            digitalWrite(HEADING_LED_PIN, LOW);
+        }
+    } else {
+        // just turn LED on
+        digitalWrite(HEADING_LED_PIN, HIGH);
+    }
+}
+
+void heading_led_off() {
+    digitalWrite(HEADING_LED_PIN, LOW);
 }

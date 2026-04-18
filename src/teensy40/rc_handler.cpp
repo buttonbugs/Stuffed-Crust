@@ -5,6 +5,13 @@
 #include "melty_config.h"
 #include "map_float.h"
 
+float throttle_ratio = 0.0;
+float forback_ratio = 0.0;
+float leftright_ratio = 0.0;
+float revolution_ratio = 0.0;
+bool facing_up = true;
+bool config_mode = false;
+
 #define RC_DATA_UNLOCKED 0
 #define RC_DATA_LOCKED 1 
 
@@ -218,6 +225,8 @@ void init_rc(void) {
 // service_rc() - Teensy uses interrupt-based RC input, so this is a no-op
 // Kept for compatibility with ESP32 which uses polling-based input
 void service_rc(void) {
-    // Interrupt-based RC updates happen automatically
-}
+    throttle_ratio = rc_get_throttle_percent() / 100.0f;
+    forback_ratio = rc_get_forback_ratio();
+    leftright_ratio = rc_get_leftright_ratio();
+    revolution_ratio = rc_get_revolution_ratio();
 }
