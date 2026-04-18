@@ -118,12 +118,7 @@ void update_robot_direction() {
     rotational_motion(interval);
 
     // Rescrict robot_direction into [0.0, 1.0)
-    while (robot_direction >= 1.0f) {
-        robot_direction -= 1.0f;
-    }
-    while (robot_direction < 0.0f) {
-        robot_direction += 1.0f;
-    }
+    robot_direction -= floor(robot_direction);
 }
 
 void high_speed_set_motor() {
