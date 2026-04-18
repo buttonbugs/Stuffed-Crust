@@ -1,3 +1,11 @@
+#include "melty_config.h"
+
+// Fix macro collision with ESP32 framework
+// ESP32 defines OPEN_DRAIN as 0x10, but SparkFun library uses it as an enum value
+#ifdef OPEN_DRAIN
+#undef OPEN_DRAIN
+#endif
+
 #include "SparkFun_LIS331.h"
 
 //Set high enough to allow for G forces at top RPM

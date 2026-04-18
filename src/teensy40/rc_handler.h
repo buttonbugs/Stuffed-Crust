@@ -4,11 +4,13 @@
 //used to return forward / back control stick position
 typedef enum {
     RC_FORBACK_FORWARD = 1,     //control stick pushed forward
-    RC_FORBACK_NEUTRAL = 0,     //control stick neutral
+    RC_FORBACK_NEUTRAL = 0,     //control stick held back
     RC_FORBACK_BACKWARD = -1    //control stick held back
 } rc_forback;
 
 void init_rc();
+
+void service_rc();              // Call regularly to update RC input data
 
 bool rc_signal_is_healthy();            //return true if RC signal looks good
 
@@ -52,6 +54,11 @@ bool rc_get_is_rev_in_normal_deadzone();
 
 #define MAX_MS_BETWEEN_RC_UPDATES 900             //if we don't get a valid RC update on the throttle at least this often - spin down
 
-
+extern float throttle_ratio;            // 0.0 to 1.0 (triggers)
+extern float forback_ratio;             // -1.0 to 1.0 (left stick Y)
+extern float leftright_ratio;           // -1.0 to 1.0 (left stick X)
+extern float revolution_ratio;          // -1.0 to 1.0 (right stick X)
+extern bool facing_up;                  // true/false (A button)
+extern bool config_mode;                // true/false (B button)
 
 #endif

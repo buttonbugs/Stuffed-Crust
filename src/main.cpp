@@ -11,10 +11,6 @@
 #include "led_driver.h"
 #include "battery_monitor.h"
 
-#ifdef ENABLE_ESP32_SPIN_CONTROL
-    #include "esp32_spin_control.h"
-#endif
-
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
     while (rc_signal_is_healthy() == false || rc_get_throttle_percent() > 0) {
@@ -105,40 +101,44 @@ static void echo_diagnostics() {
 
 // Used to flash out max recorded RPM 100's of RPMs
 static void display_rpm_if_requested() {
-    // triggered by user pushing throttle up while bot is at idle for 750ms
-    if (rc_get_forback() == RC_FORBACK_FORWARD) {
-        delay(750);
-        // verify throttle at zero to prevent accidental entry into RPM flash
-        if (rc_get_forback() == RC_FORBACK_FORWARD && rc_get_throttle_percent() == 0) {
-            // throttle up cancels RPM count
-            for (int x = 0; x < get_max_rpm() && rc_get_throttle_percent() == 0; x = x + 100) {
-                service_watchdog();  // flashing out RPM can take a while - need to assure watchdog doesn't trigger
-                delay(600);
-                heading_led_on(0);
-                delay(20);
-                heading_led_off();
-            }
-            delay(1500);  // flash-out punctuated with delay to make clear RPM count has completed
-        }
-    }
+    // #ifdef BOARD_TEENSY40
+    // // triggered by user pushing throttle up while bot is at idle for 750ms
+    // if (rc_get_forback() == RC_FORBACK_FORWARD) {
+    //     delay(750);
+    //     // verify throttle at zero to prevent accidental entry into RPM flash
+    //     if (rc_get_forback() == RC_FORBACK_FORWARD && rc_get_throttle_percent() == 0) {
+    //         // throttle up cancels RPM count
+    //         for (int x = 0; x < get_max_rpm() && rc_get_throttle_percent() == 0; x = x + 100) {
+    //             service_watchdog();  // flashing out RPM can take a while - need to assure watchdog doesn't trigger
+    //             delay(600);
+    //             heading_led_on(0);
+    //             delay(20);
+    //             heading_led_off();
+    //         }
+    //         delay(1500);  // flash-out punctuated with delay to make clear RPM count has completed
+    //     }
+    // }
+    // #endif
 }
 
 // checks if user has requested to enter / exit config mode
 static void check_config_mode() {
-    // if user pulls control stick back for 150ms - enters (or exits) interactive configuration mode
-    if (rc_get_forback() == RC_FORBACK_BACKWARD) {
-        delay(150);
-        if (rc_get_forback() == RC_FORBACK_BACKWARD) {
-            toggle_config_mode();
-            if (get_config_mode() == false)
-                save_melty_config_settings();  // save melty settings on config mode exit
+    // #ifdef BOARD_TEENSY40
+    // // if user pulls control stick back for 150ms - enters (or exits) interactive configuration mode
+    // if (rc_get_forback() == RC_FORBACK_BACKWARD) {
+    //     delay(150);
+    //     if (rc_get_forback() == RC_FORBACK_BACKWARD) {
+    //         toggle_config_mode();
+    //         if (get_config_mode() == false)
+    //             save_melty_config_settings();  // save melty settings on config mode exit
 
-            // wait for user to release stick - so we don't re-toggle modes
-            while (rc_get_forback() == RC_FORBACK_BACKWARD) {
-                service_watchdog();
-            }
-        }
-    }
+    //         // wait for user to release stick - so we don't re-toggle modes
+    //         while (rc_get_forback() == RC_FORBACK_BACKWARD) {
+    //             service_watchdog();
+    //         }
+    //     }
+    // }
+    // #endif
 }
 
 // handles the bot when not spinning (with RC good)
@@ -152,14 +152,14 @@ static void handle_bot_idle() {
     delay(120);
 
     // if in config mode blip LED again to show "double-flash"
-    if (get_config_mode() == true) {
-        heading_led_off();
-        delay(400);
-        heading_led_on(0);
-        delay(30);
-        heading_led_off();
-        delay(140);
-    }
+    // if (get_config_mode() == true) {
+    //     heading_led_off();
+    //     delay(400);
+    //     heading_led_on(0);
+    //     delay(30);
+    //     heading_led_off();
+    //     delay(140);
+    // }
 
     check_config_mode();         // check if user requests we enter / exit config mode
     display_rpm_if_requested();  // flashed out RPM if user has requested

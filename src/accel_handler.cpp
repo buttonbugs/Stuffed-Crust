@@ -16,14 +16,19 @@
 #include "melty_config.h"
 #include "accel_handler.h"
 #include <Wire.h>
-#include "SparkFun_LIS331.h"
 
 LIS331 xl;
 bool is_facing_up = true;   // true: facing up, false: upside down
 float gyro_z;
 
 void init_accel() {
+#if defined(BOARD_ESP32C3)
+    // ESP32-C3: Configure I2C with custom pins (SDA=10, SCL=9)
+    Wire.begin(6, 7);
+#else
+    // Teensy 4.0: Use default I2C pins
     Wire.begin();
+#endif
 
     Wire.setClock(400000);  // increase I2C speed to reduce read times a bit
                             // value of 400000 allows accel read in ~1ms and

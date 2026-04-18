@@ -2,7 +2,6 @@
 #include <Servo.h>
 #include "melty_config.h"
 #include "motor_driver.h"
-#include "accel_handler.h"
 #include "map_float.h"
 
 Servo motor1;
