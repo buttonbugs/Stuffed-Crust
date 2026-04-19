@@ -171,6 +171,8 @@ static void handle_bot_idle() {
 void loop() {
     service_watchdog();  // keep the watchdog happy
 
+    service_rc();
+
     // if the rc signal isn't good - assure motors off - and "slow flash" LED
     // this will interrupt a spun-up bot if the signal becomes bad
     while (rc_signal_is_healthy() == false) {

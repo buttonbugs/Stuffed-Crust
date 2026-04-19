@@ -37,6 +37,10 @@ void onDisconnectedGamepad(ControllerPtr ctl) {
     Serial.println(ctl->index());
     gamepad_connected = false;
     myController = nullptr;
+    throttle_ratio = 0.0;
+    forback_ratio = 0.0;
+    leftright_ratio = 0.0;
+    revolution_ratio = 0.0;
 }
 
 void processGamepadData() {

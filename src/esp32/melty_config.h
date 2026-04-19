@@ -50,7 +50,7 @@
 #define HEADING_LED_PIN	7                         //GPIO7 - LED output
 #define LED_STRIP_DATA 8                           //GPIO8 - LED strip data
 #define LED_STRIP_SCK 9                            //GPIO9 - LED strip clock
-#define MOTOR_PIN1 0                               //GPIO0 - Motor 1
+#define MOTOR_PIN1 20                               //GPIO0 - Motor 1
 #define MOTOR_PIN2 1                               //GPIO1 - Motor 2
 #define BATTERY_ADC_PIN 2                          //GPIO2/ADC (analog input)
 

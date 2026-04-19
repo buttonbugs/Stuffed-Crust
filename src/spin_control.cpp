@@ -123,7 +123,6 @@ void update_robot_direction() {
 
 void high_speed_set_motor() {
     service_watchdog();             // Watchdog is hungry
-    service_rc();
     update_robot_direction();
     update_led(robot_direction);    // Update LED
 
