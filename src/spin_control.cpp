@@ -55,7 +55,7 @@ void rotational_motion(float interval) {
 void translational_motion() {
     float motor_1_throttle = 1.0f;          // ranging from -1.0 to 1.0
     float motor_2_throttle = 1.0f;          // ranging from -1.0 to 1.0
-    float translation_throttle = constrain(sqrt(sq(forback_ratio) + sq(leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
+    float translation_throttle = constrain(sqrt((forback_ratio*forback_ratio) + (leftright_ratio*leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
     float translation_direction;            // the direction of the translation joystick, using +y-axis as the 0 direction
 
     // Calculation translation direction, return from 0.0 to 1.0
@@ -71,19 +71,24 @@ void translational_motion() {
             translation_direction += 0.5f;
         }
         translation_direction -= 0.25f;     // Use +y-axis as the 0 direction
-        if (translation_direction < 0.0f) {
-            translation_direction += 1.0f;
-        }
     }
 
     /* Check if the robot rotates to the translation direction */
     float direction_difference = robot_direction - translation_direction;
-    // restrict direction_difference to [-0.5, 0.5]
-    if (direction_difference > 0.5f) {
-        direction_difference -= 1.0f;
-    } else if (direction_difference < -0.5f) {
-        direction_difference += 1.0f;
-    }
+    /* 
+    mode direction_difference to [-0.5, 0.5)
+    For example:
+    1.6 -> -0.4
+    1.4 -> +0.4
+    0.9 -> -0.1
+    0.4 -> +0.4
+    -0.6 -> +0.4
+    -1.2 -> -0.2
+    -1.4 -> -0.4
+    -1.6 -> +0.4
+    */
+    direction_difference -= floor(direction_difference + 0.5f);
+    
     // take abosulte value
     direction_difference = abs(direction_difference);   // return [0.0, 0.5]
 
@@ -91,13 +96,19 @@ void translational_motion() {
     if (direction_difference < 0.25f * translation_throttle) {
         // Assuming motor 1 is on the left, motor 2 is on the right
         motor_1_throttle = MOTOR_COAST_THROTTLE;
+        motor_2_throttle = 2.0f * motor_2_throttle - MOTOR_COAST_THROTTLE;  // For symmetry, making robot more stable
     } else if (0.5f - direction_difference < 0.25f * translation_throttle) {
         // Assuming motor 1 is on the left, motor 2 is on the right
         motor_2_throttle = MOTOR_COAST_THROTTLE;
+        motor_1_throttle = 2.0f * motor_1_throttle - MOTOR_COAST_THROTTLE;  // For symmetry, making robot more stable
     }
-    motor_1_on(motor_1_throttle * throttle_ratio);
-    motor_2_on(motor_2_throttle * throttle_ratio);
-
+    
+    motor_1_throttle *= throttle_ratio;
+    motor_2_throttle *= throttle_ratio;
+    motor_1_throttle = constrain(motor_1_throttle, -1.0f, 1.0f);
+    motor_2_throttle = constrain(motor_2_throttle, -1.0f, 1.0f);
+    motor_1_on(motor_1_throttle);
+    motor_2_on(motor_2_throttle);
 }
 
 void update_robot_direction() {
