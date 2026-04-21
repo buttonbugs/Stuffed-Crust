@@ -24,6 +24,7 @@
 uint32_t last_measurement_micros = 0;       // microseconds, the value of micros() when setting the last last_measurement_frequency
 float last_measurement_frequency = 0.0f;    // Hz (or revolutions per second) of the spin
 float robot_direction = 0.0f;
+float current_frequency = 1.0f;
 
 static float accel_mount_radius_cm = DEFAULT_ACCEL_MOUNT_RADIUS_CM;
 static float accel_zero_g_offset = DEFAULT_ACCEL_ZERO_G_OFFSET_X;
@@ -103,7 +104,7 @@ void update_robot_direction() {
     /* robot direction calculation - in SI units */
     float radial_acceleration = fabs(get_accel_force_g() - accel_zero_g_offset) * GRAVITATIONAL_ACCELERATION;
     float angular_velocity = sqrt(radial_acceleration / (accel_mount_radius_cm * 0.01f));       // radial_acceleration = angular_velocity^2 * radius
-    float current_frequency = angular_velocity / (2.0f * PI);                                   // angular_velocity = 2 * PI * frequency
+    current_frequency = angular_velocity / (2.0f * PI);                                   // angular_velocity = 2 * PI * frequency
 
     /* Accumulate frequency to get robot direction */
     float interval = (micros() - last_measurement_micros) * 0.000001f;                          // convert to seconds
