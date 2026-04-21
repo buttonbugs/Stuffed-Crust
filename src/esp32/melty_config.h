@@ -112,5 +112,6 @@ enum throttle_modes {
 //----------ESP32----------
 // #define ENABLE_ESP32_RC                           // Use ESP32 as the receiver
 #define ENABLE_ESP32_SPIN_CONTROL                 // Using esp32_spin_control.h to handle high speed mode
+#define DATA_RELAY
 
 #endif

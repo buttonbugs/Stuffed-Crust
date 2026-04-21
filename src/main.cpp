@@ -10,6 +10,7 @@
 #include "config_storage.h"
 #include "led_driver.h"
 #include "battery_monitor.h"
+#include "data_relay.h"
 
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
@@ -38,6 +39,10 @@ void setup() {
 
     init_rc();
     init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
+
+#ifdef DATA_RELAY
+    init_relay();
+#endif
 
 // load settings on boot
 #ifdef ENABLE_EEPROM_STORAGE
@@ -172,6 +177,25 @@ void loop() {
     service_watchdog();  // keep the watchdog happy
 
     service_rc();
+
+    #ifdef DATA_RELAY
+        #ifdef BOARD_TEENSY40
+        relay_data({
+            (uint8_t)rc_get_throttle_percent(), 
+            (uint8_t)get_battery_voltage(), 
+            (uint8_t)(get_accel_force_g()),  // convert to 0-100 scale (with 1 decimal place)
+            0,0,0
+        });
+        #else
+        relay_data({
+            (uint8_t)rc_get_throttle_percent(), 
+            (uint8_t)get_battery_voltage(),
+            0,
+            (uint8_t)(get_accel_force_g()),  // convert to 0-100 scale (with 1 decimal place)
+            0,0
+        });
+        #endif
+    #endif
 
     // if the rc signal isn't good - assure motors off - and "slow flash" LED
     // this will interrupt a spun-up bot if the signal becomes bad

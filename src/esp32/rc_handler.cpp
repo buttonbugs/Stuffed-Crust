@@ -64,10 +64,12 @@ void processGamepadData() {
 
     // Get trigger values (range: 0 to 255)
     uint8_t throttleL = myController->brake();  // Left trigger
-    uint8_t throttleR = myController->throttle();  // Right trigger
+    uint32_t throttleR = myController->throttle();  // Right trigger
+
+    Serial.println(throttleR);
 
     // Map triggers to throttle (0.0 to 1.0)
-    throttle_ratio = (throttleR - throttleL) / 255.0f;
+    throttle_ratio = throttleR / 1023.0f;
     throttle_ratio = constrain(throttle_ratio, 0.0f, 1.0f);
 
     // Get button states
