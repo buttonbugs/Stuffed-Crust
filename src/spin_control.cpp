@@ -55,7 +55,12 @@ void rotational_motion(float interval) {
 void translational_motion() {
     float motor_1_throttle = 1.0f;          // ranging from -1.0 to 1.0
     float motor_2_throttle = 1.0f;          // ranging from -1.0 to 1.0
-    float translation_throttle = constrain(sqrt((forback_ratio*forback_ratio) + (leftright_ratio*leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
+    float translation_throttle = constrain(sqrt(sq(forback_ratio) + sq(leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
+    Serial.print("forback_ratio: ");
+    Serial.print(forback_ratio);
+    Serial.print("leftright_ratio: ");
+    Serial.print(leftright_ratio);
+    Serial.print("\n");
     float translation_direction;            // the direction of the translation joystick, using +y-axis as the 0 direction
 
     // Calculation translation direction, return from 0.0 to 1.0
@@ -76,7 +81,7 @@ void translational_motion() {
     /* Check if the robot rotates to the translation direction */
     float direction_difference = robot_direction - translation_direction;
     /* 
-    mode direction_difference to [-0.5, 0.5)
+    modulo direction_difference to [-0.5, 0.5)
     For example:
     1.6 -> -0.4
     1.4 -> +0.4
