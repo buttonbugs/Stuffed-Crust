@@ -17,6 +17,8 @@ float leftright_ratio = 0.0;            // -1.0 to 1.0 (left stick X)
 float revolution_ratio = 0.0;           // -1.0 to 1.0 (right stick X)
 bool facing_up = true;
 bool config_mode = false;
+bool config_left = false;
+bool config_right = false;
 static volatile bool gamepad_connected = false;
 static ControllerPtr myController = nullptr;
 
@@ -44,6 +46,8 @@ void onDisconnectedGamepad(ControllerPtr ctl) {
     leftright_ratio = 0.0;
     revolution_ratio = 0.0;
     config_mode = false;
+    config_left = false;
+    config_right = false;
 }
 
 void processGamepadData() {
@@ -92,6 +96,8 @@ void processGamepadData() {
     
     // Map buttons (using button bitmasks)
     config_mode = (dpad & DPAD_DOWN);     // B button for config mode
+    config_left = (dpad & DPAD_LEFT);     // B button for config mode
+    config_right = (dpad & DPAD_RIGHT);     // B button for config mode
     facing_up = (buttons & BUTTON_A) == 0;       // A button to toggle facing direction (inverted)
 
     // Debug output every 500ms

@@ -43,6 +43,15 @@ void load_melty_config_settings() {
     last_measurement_micros = micros();  // uint32_t overflows in 70 minutes.
 }
 
+// Config Mode
+void update_config() {
+    if (config_left) {
+        accel_mount_radius_cm -= 1.0e-07f;
+    } else if (config_right) {
+        accel_mount_radius_cm += 1.0e-07f;
+    }
+}
+
 // This function changes the direction of the heading LED
 // interval: seconds that have passed since last call of this function
 void rotational_motion(float interval) {
@@ -147,4 +156,9 @@ void high_speed_set_motor() {
 
     // Update Motor
     translational_motion();
+
+    // Config Mode
+    if (config_mode) {
+        update_config();
+    }
 }

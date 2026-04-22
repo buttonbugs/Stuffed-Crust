@@ -16,6 +16,8 @@ extern float leftright_ratio;           // -1.0 to 1.0 (left stick X)
 extern float revolution_ratio;          // -1.0 to 1.0 (right stick X)
 extern bool facing_up;                  // true/false (A button)
 extern bool config_mode;                // true/false (B button)
+extern bool config_left = false;        // Config mode decreasing radius
+extern bool config_right = false;       // Config mode increasing radius
 
 void init_rc();                         // Initialize Bluepad32
 void service_rc();                      // Called regularly to update input
