@@ -43,11 +43,7 @@
 //Common RC receiver setup REVOLUTION = CH1, FORBACK = CH2, THROTTLE = CH3
 //Note: Accelerometer is connected with default Arduino SDA / SCL pins
 
-#define LEFTRIGHT_RC_CHANNEL_PIN 3                 //GPIO3 - RC input
-#define FORBACK_RC_CHANNEL_PIN 4                   //GPIO4 - RC input
-#define THROTTLE_RC_CHANNEL_PIN 5                  //GPIO5 - RC input
-#define REVOLUTION_RC_CHANNEL_PIN 6                //GPIO6 - RC input
-#define HEADING_LED_PIN	7                          //GPIO7 - LED output
+#define HEADING_LED_PIN	3                          //GPIO7 - LED output
 #define LED_STRIP_DATA 8                           //GPIO8 - LED strip data
 #define LED_STRIP_SCK 9                            //GPIO9 - LED strip clock
 #define MOTOR_PIN1 20                              //GPIO0 - Motor 1
