@@ -39,6 +39,7 @@ void setup() {
 
     init_rc();
     init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
+    start_accel_task();  // start accelerometer task immediately after init
 
 #ifdef DATA_RELAY
     init_relay();
@@ -177,8 +178,8 @@ void loop() {
     service_watchdog();  // keep the watchdog happy
 
     service_rc();
-
     #ifdef DATA_RELAY
+        if(config_mode){
         #ifdef BOARD_TEENSY40
         relay_data({
             (uint8_t)rc_get_throttle_percent(), 
@@ -197,10 +198,14 @@ void loop() {
             (uint32_t)interval_micros
         });
         #endif
-    #endif
+        } else {
+            Serial.print("Interval: ");
+            Serial.println(interval_micros);
 
-    Serial.print("Current Frequency (RPS): ");
-    Serial.println(current_frequency);
+            Serial.print("Current Frequency (RPS): ");
+            Serial.println(current_frequency);
+        }
+    #endif
 
     // if the rc signal isn't good - assure motors off - and "slow flash" LED
     // this will interrupt a spun-up bot if the signal becomes bad

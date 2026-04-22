@@ -25,6 +25,6 @@ extern bool is_facing_up;
 extern float gyro_z;
 
 void init_accel();
-
+void start_accel_task();
 float get_accel_force_g();
 
