@@ -74,9 +74,10 @@ void processGamepadData() {
 
     // Get button states
     uint16_t buttons = myController->buttons();
+    uint8_t dpad = myController->dpad();
     
     // Map buttons (using button bitmasks)
-    config_mode = (buttons & BUTTON_B) != 0;     // B button for config mode
+    config_mode = (dpad & DPAD_DOWN) != 0;     // B button for config mode
     facing_up = (buttons & BUTTON_A) == 0;       // A button to toggle facing direction (inverted)
 
     // Debug output every 500ms
