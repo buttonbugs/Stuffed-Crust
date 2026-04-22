@@ -26,7 +26,7 @@ float last_measurement_frequency = 0.0f;    // Hz (or revolutions per second) of
 float robot_direction = 0.0f;
 float current_frequency = 1.0f;
 
-static float accel_mount_radius_cm = DEFAULT_ACCEL_MOUNT_RADIUS_CM;
+float accel_mount_radius_cm = DEFAULT_ACCEL_MOUNT_RADIUS_CM;
 static float accel_zero_g_offset = DEFAULT_ACCEL_ZERO_G_OFFSET_X;
 
 // loads settings from EEPROM
