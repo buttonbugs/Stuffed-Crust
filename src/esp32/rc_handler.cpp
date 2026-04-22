@@ -58,7 +58,7 @@ void processGamepadData() {
     int16_t axisRY = myController->axisRY();     // Right stick Y (not used currently)
 
     // Normalize to -1.0 to 1.0
-    forback_ratio = axisY / 512.0f;              // Forward/backward
+    forback_ratio = -axisY / 512.0f;             // Forward/backward (Forward should be changed to positive)
     leftright_ratio = axisX / 512.0f;            // Left/right
     revolution_ratio = axisRX / 512.0f;          // Revolution/spin
 
