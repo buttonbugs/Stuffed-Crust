@@ -47,12 +47,12 @@
 #define FORBACK_RC_CHANNEL_PIN 4                   //GPIO4 - RC input
 #define THROTTLE_RC_CHANNEL_PIN 5                  //GPIO5 - RC input
 #define REVOLUTION_RC_CHANNEL_PIN 6                //GPIO6 - RC input
-#define HEADING_LED_PIN	7                         //GPIO7 - LED output
+#define HEADING_LED_PIN	7                          //GPIO7 - LED output
 #define LED_STRIP_DATA 8                           //GPIO8 - LED strip data
 #define LED_STRIP_SCK 9                            //GPIO9 - LED strip clock
-#define MOTOR_PIN1 20                               //GPIO0 - Motor 1
-#define MOTOR_PIN2 1                               //GPIO1 - Motor 2
-#define BATTERY_ADC_PIN 2                          //GPIO2/ADC (analog input)
+#define MOTOR_PIN1 20                              //GPIO0 - Motor 1
+#define MOTOR_PIN2 2                               //GPIO1 - Motor 2
+#define BATTERY_ADC_PIN 1                          //GPIO2/ADC (analog input)
 
 //----------THROTTLE CONFIGURATION----------
 //THROTTLE_TYPE / High-speed PWM motor driver support:
