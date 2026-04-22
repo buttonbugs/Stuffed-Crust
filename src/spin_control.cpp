@@ -22,6 +22,7 @@
 #define MAX_HEADING_LED_REVOLUTION_SPEED 0.8f   // revolutions per second, maximum heading LED revolution speed
 
 uint32_t last_measurement_micros = 0;       // microseconds, the value of micros() when setting the last last_measurement_frequency
+uint32_t interval_micros = 0;               // microseconds, interval of running update_robot_direction()
 float last_measurement_frequency = 0.0f;    // Hz (or revolutions per second) of the spin
 float robot_direction = 0.0f;
 float current_frequency = 1.0f;
@@ -123,7 +124,8 @@ void update_robot_direction() {
     current_frequency = angular_velocity / (2.0f * PI);                                   // angular_velocity = 2 * PI * frequency
 
     /* Accumulate frequency to get robot direction */
-    float interval = (micros() - last_measurement_micros) * 0.000001f;                          // convert to seconds
+    interval_micros = micros() - last_measurement_micros;
+    float interval = interval_micros * 0.000001f;                          // convert to seconds
     last_measurement_micros = micros();
 
     if (facing_up) {

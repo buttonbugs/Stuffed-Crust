@@ -193,7 +193,8 @@ void loop() {
             0,
             (uint8_t)(get_accel_force_g()),  // convert to 0-100 scale (with 1 decimal place)
             0,(uint16_t)(current_frequency * 60.0f),
-            (float)accel_mount_radius_cm
+            (float)accel_mount_radius_cm,
+            (uint32_t)interval_micros
         });
         #endif
     #endif

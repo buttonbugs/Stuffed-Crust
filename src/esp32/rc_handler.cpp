@@ -43,6 +43,7 @@ void onDisconnectedGamepad(ControllerPtr ctl) {
     forback_ratio = 0.0;
     leftright_ratio = 0.0;
     revolution_ratio = 0.0;
+    config_mode = false;
 }
 
 void processGamepadData() {
@@ -90,7 +91,7 @@ void processGamepadData() {
     uint8_t dpad = myController->dpad();
     
     // Map buttons (using button bitmasks)
-    config_mode = (dpad & DPAD_DOWN) != 0;     // B button for config mode
+    config_mode = (dpad & DPAD_DOWN);     // B button for config mode
     facing_up = (buttons & BUTTON_A) == 0;       // A button to toggle facing direction (inverted)
 
     // Debug output every 500ms

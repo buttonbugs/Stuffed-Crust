@@ -5,6 +5,7 @@
 
 extern float current_frequency;
 extern float accel_mount_radius_cm;
+extern uint32_t interval_micros;
 
 void load_melty_config_settings();
 void high_speed_set_motor();
