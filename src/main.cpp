@@ -233,13 +233,18 @@ void loop() {
 
         #ifdef ENABLE_REVERSE
     } else if (rc_get_throttle_percent() > 5) {
-        Serial.println("low_speed_set_motor(); start");
         service_watchdog();  // keep the watchdog happy
         low_speed_set_motor();
-        service_watchdog();  // keep the watchdog happy
-        Serial.println("low_speed_set_motor(); end");
         #endif
     } else {
+        #ifdef BOARD_TEENSY40
         handle_bot_idle();
+        #else
+            service_watchdog();  // keep the watchdog happy
+            low_speed_set_motor();
+        #endif
     }
+    #ifndef BOARD_TEENSY40
+        digitalWrite(HEADING_LED_PIN, millis() % 300 < 30);     // Blink the LED the same way as handle_bot_idle() without using delay()
+    #endif
 }
