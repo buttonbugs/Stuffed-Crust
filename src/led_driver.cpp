@@ -44,9 +44,9 @@ void init_led() {
 }
 
 bool calculate_led_status(float robot_direction) {
-    int led_deviation = abs(robot_direction * 100 - led_offset_percent);
-    led_deviation = led_deviation % 100;
-    return led_deviation <= led_on_percent / 2;
+    float led_deviation = robot_direction - led_offset_percent / 100.0f;
+    led_deviation -= floor(led_deviation + 0.5);    // modulo direction_difference to [-0.5, 0.5)
+    return abs(led_deviation) <= led_on_percent / 100.0f / 2.0f;
 }
 
 void change_pattern(int new_pattern) {
@@ -147,7 +147,12 @@ void update_led(float robot_direction) {
         FastLED.show();
     #else
         // Caculate whether the LED should be ON or OFF
-        digitalWrite(HEADING_LED_PIN, calculate_led_status(robot_direction));
+        bool led_status = calculate_led_status(robot_direction);
+        digitalWrite(HEADING_LED_PIN, led_status);
+        Serial.print("\n====================================");
+        if (led_status) {
+            Serial.print("OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo");
+        }
     #endif
     
 }

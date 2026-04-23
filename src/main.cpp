@@ -235,21 +235,15 @@ void loop() {
             // this is where all the motor control happens!  (see spin_control.cpp)
             spin_one_rotation();
         #endif
-
-        #ifdef ENABLE_REVERSE
-    } else if (rc_get_throttle_percent() > 5) {
-        service_watchdog();  // keep the watchdog happy
-        low_speed_set_motor();
-        #endif
     } else {
         #ifdef BOARD_TEENSY40
-            handle_bot_idle();
+            if (rc_get_throttle_percent() < 5) {
+                handle_bot_idle();
+            }
         #else
-            service_watchdog();  // keep the watchdog happy
-            low_speed_set_motor();
+            digitalWrite(HEADING_LED_PIN, millis() % 150 < 30);     // Blink the LED the same way as handle_bot_idle() without using delay()
         #endif
+
+        low_speed_set_motor();
     }
-    #ifndef BOARD_TEENSY40
-        digitalWrite(HEADING_LED_PIN, millis() % 300 < 30);     // Blink the LED the same way as handle_bot_idle() without using delay()
-    #endif
 }
