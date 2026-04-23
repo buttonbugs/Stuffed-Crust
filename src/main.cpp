@@ -10,7 +10,10 @@
 #include "config_storage.h"
 #include "led_driver.h"
 #include "battery_monitor.h"
-#include "data_relay.h"
+
+#ifndef BOARD_TEENSY40
+    #include "data_relay.h"
+#endif
 
 // loops until a good RC signal is detected and throttle is zero (assures safe start)
 static void wait_for_rc_good_and_zero_throttle() {
@@ -39,7 +42,9 @@ void setup() {
 
     init_rc();
     init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
-    start_accel_task();  // start accelerometer task immediately after init
+    #ifndef BOARD_TEENSY40
+        start_accel_task();  // start accelerometer task immediately after init
+    #endif
 
 #ifdef DATA_RELAY
     init_relay();
@@ -238,7 +243,7 @@ void loop() {
         #endif
     } else {
         #ifdef BOARD_TEENSY40
-        handle_bot_idle();
+            handle_bot_idle();
         #else
             service_watchdog();  // keep the watchdog happy
             low_speed_set_motor();

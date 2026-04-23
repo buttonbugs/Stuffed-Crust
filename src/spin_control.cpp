@@ -45,11 +45,13 @@ void load_melty_config_settings() {
 
 // Config Mode
 void update_config() {
-    if (config_left) {
-        accel_mount_radius_cm -= 0.00002f;
-    } else if (config_right) {
-        accel_mount_radius_cm += 0.00002f;
-    }
+    #ifndef BOARD_TEENSY40
+        if (config_left) {
+            accel_mount_radius_cm -= 0.00002f;
+        } else if (config_right) {
+            accel_mount_radius_cm += 0.00002f;
+        }
+    #endif
 }
 
 // This function changes the direction of the heading LED
