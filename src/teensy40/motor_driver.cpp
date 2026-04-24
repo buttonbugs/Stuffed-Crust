@@ -15,9 +15,6 @@ constexpr uint16_t ESC_COAST_DIFF_US = 150;
 // Map (-1.0f)-(1.0f) to 1000-2000us
 static uint16_t toMicroseconds(float throttle_percent) {
     throttle_percent = constrain(throttle_percent, -1.0f, 1.0f);
-    /* if (!is_facing_up) {
-        throttle_percent = -throttle_percent;
-    } */
     Serial.print(throttle_percent);
     return map_float(throttle_percent, -1.0f, 1.0f, ESC_MIN_US, ESC_MAX_US);
 }

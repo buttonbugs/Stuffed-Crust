@@ -147,12 +147,7 @@ void update_led(float robot_direction) {
         FastLED.show();
     #else
         // Caculate whether the LED should be ON or OFF
-        bool led_status = calculate_led_status(robot_direction);
-        digitalWrite(HEADING_LED_PIN, led_status);
-        Serial.print("\n====================================");
-        if (led_status) {
-            Serial.print("OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo");
-        }
+        digitalWrite(HEADING_LED_PIN, calculate_led_status(robot_direction));
     #endif
     
 }

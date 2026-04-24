@@ -18,7 +18,6 @@
 #include <Wire.h>
 
 LIS331 xl;
-bool is_facing_up = true;   // true: facing up, false: upside down
 float gyro_z;
 
 void init_accel() {

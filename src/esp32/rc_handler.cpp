@@ -26,6 +26,11 @@ static ControllerPtr myController = nullptr;
 static unsigned long last_good_signal = 0;
 static const unsigned long SIGNAL_TIMEOUT_MS = 500;  // 500ms timeout
 
+// Button cooling
+const int button_cooling_time_ms = 100;
+int left_bumper_last_trigger_ms = 0;
+bool left_bumper_status = false;
+
 void onConnectedGamepad(ControllerPtr ctl) {
     Serial.print("Gamepad connected: index=");
     Serial.print(ctl->index());
@@ -94,11 +99,24 @@ void processGamepadData() {
     uint16_t buttons = myController->buttons();
     uint8_t dpad = myController->dpad();
     
+    if (millis() - left_bumper_last_trigger_ms > button_cooling_time_ms) {  // Toggle facing_up
+        bool left_bumper_current_status = myController->l1();
+    
+        if (left_bumper_current_status != left_bumper_status) {
+            left_bumper_status = left_bumper_current_status;
+            left_bumper_last_trigger_ms = millis();
+            
+            if (left_bumper_status) {
+                facing_up = !facing_up;
+            }
+        }
+    }
+    
+    
     // Map buttons (using button bitmasks)
     config_mode = (dpad & DPAD_DOWN);     // B button for config mode
     config_left = (dpad & DPAD_LEFT);     // B button for config mode
     config_right = (dpad & DPAD_RIGHT);     // B button for config mode
-    facing_up = (buttons & BUTTON_A) == 0;       // A button to toggle facing direction (inverted)
 
     // Debug output every 500ms
     static unsigned long last_print = 0;

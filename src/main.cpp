@@ -246,4 +246,9 @@ void loop() {
 
         low_speed_set_motor();
     }
+
+        Serial.print("\n====================================");
+        if (facing_up) {
+            Serial.print("OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo");
+        }
 }
