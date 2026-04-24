@@ -5,6 +5,7 @@
 #include <Arduino.h>
 #include "melty_config.h"
 #include "rc_handler.h"
+#include "accel_handler.h"      // Only enable facing toggling when G < 20
 
 #include <Bluepad32.h>
 
@@ -107,7 +108,9 @@ void processGamepadData() {
             left_bumper_last_trigger_ms = millis();
             
             if (left_bumper_status) {
-                facing_up = !facing_up;
+                if (abs(get_accel_force_g()) < 20.0f) {     // 20 G is much more than the offset, so G offset is ignored. Otherwise, G offset is too complicated to add here
+                    facing_up = !facing_up;
+                }
             }
         }
     }
