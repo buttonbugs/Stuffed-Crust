@@ -9,7 +9,8 @@
 
 #include <Bluepad32.h>
 
-#define deadzone 0.1
+#define joystick_deadzone 0.1f          // range: 0 to 1.0f
+#define throttle_deadzone 10            // range: 0 to 1023
 
 // RC channel values (mapped from Xbox controller)
 float throttle_ratio = 0.0;             // 0.0 to 1.0 (right trigger)
@@ -78,20 +79,28 @@ void processGamepadData() {
     leftright_ratio = axisX / 512.0f;            // Left/right
     revolution_ratio = axisRX / 512.0f;          // Revolution/spin
 
-    // Deadzone
-    if (abs(forback_ratio) < deadzone) {
+    // Joystick Deadzone
+    if (abs(forback_ratio) < joystick_deadzone) {
         forback_ratio = 0.0f;
     }
-    if (abs(leftright_ratio) < deadzone) {
+    if (abs(leftright_ratio) < joystick_deadzone) {
         leftright_ratio = 0.0f;
     }
-    if (abs(revolution_ratio) < deadzone) {
+    if (abs(revolution_ratio) < joystick_deadzone) {
         revolution_ratio = 0.0f;
     }
 
     // Get trigger values (range: 0 to 1023)
     uint32_t throttleL = myController->brake();  // Left trigger
     uint32_t throttleR = myController->throttle();  // Right trigger
+
+    // Throttle Deadzone
+    if (throttleL < throttle_deadzone) {
+        throttleL = 0;
+    }
+    if (throttleR < throttle_deadzone) {
+        throttleR = 0;
+    }
 
     // Map triggers to throttle (0.0 to 1.0)
     throttle_ratio = max(throttleL, throttleR) / 1023.0f;
