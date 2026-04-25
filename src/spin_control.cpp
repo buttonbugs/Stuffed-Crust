@@ -51,6 +51,10 @@ void update_config() {
         } else if (config_right) {
             accel_mount_radius_cm += 0.00002f;
         }
+        if (config_heading) {
+            led_offset_ratio += 0.0004f;
+            led_offset_ratio -= floor(led_offset_ratio);    // Restrict led_offset_ratio in [0.0, 1.0)
+        }
     #endif
 }
 

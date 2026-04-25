@@ -20,6 +20,7 @@ bool facing_up = true;
 bool config_mode = false;
 bool config_left = false;
 bool config_right = false;
+bool config_heading = false;
 static volatile bool gamepad_connected = false;
 static ControllerPtr myController = nullptr;
 
@@ -54,6 +55,8 @@ void onDisconnectedGamepad(ControllerPtr ctl) {
     config_mode = false;
     config_left = false;
     config_right = false;
+    config_heading = false;
+    left_bumper_status = false;
 }
 
 void processGamepadData() {
@@ -120,6 +123,7 @@ void processGamepadData() {
     config_mode = (dpad & DPAD_DOWN);     // B button for config mode
     config_left = (dpad & DPAD_LEFT);     // B button for config mode
     config_right = (dpad & DPAD_RIGHT);     // B button for config mode
+    config_heading = myController -> r1();
 
     // Debug output every 500ms
     static unsigned long last_print = 0;

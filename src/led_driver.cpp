@@ -17,7 +17,7 @@
 CRGB leds[NUM_LEDS];
 
 const int led_on_percent = 30;  // from 0 to 100
-static int led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in EEPROM as an INT - but handled as a float for configuration purposes
+float led_offset_ratio = DEFAULT_LED_OFFSET_PERCENT / 100.0f;         // from 0.0 to 1.0
 
 /*
 ### Current pattern
@@ -29,9 +29,9 @@ static int led_offset_percent = DEFAULT_LED_OFFSET_PERCENT;         // stored in
 int current_led_pattern = 0;
 
 void init_led() {
-    // Get led_offset_percent from storage
+    // Get led_offset_ratio from storage
     #ifdef ENABLE_EEPROM_STORAGE
-        led_offset_percent = load_heading_led_offset();
+        led_offset_ratio = load_heading_led_offset() / 100.0f;
     #endif
 
     // Initialize LED
@@ -44,7 +44,7 @@ void init_led() {
 }
 
 bool calculate_led_status(float robot_direction) {
-    float led_deviation = robot_direction - led_offset_percent / 100.0f;
+    float led_deviation = robot_direction - led_offset_ratio;
     led_deviation -= floor(led_deviation + 0.5);    // modulo direction_difference to [-0.5, 0.5)
     return abs(led_deviation) <= led_on_percent / 100.0f / 2.0f;
 }

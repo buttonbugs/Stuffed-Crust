@@ -10,6 +10,7 @@ struct BotData {
     uint16_t rpm;      // 0 -> 9999
     float radius;
     uint32_t interval_micros;
+    int led_offset_persent;     // 0 -> 100
 } __attribute__((packed));
 
 void init_relay();

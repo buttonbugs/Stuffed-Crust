@@ -21,8 +21,8 @@ void init_relay() {
 
     // Initialize ESP-NOW
     if (esp_now_init() != ESP_OK) {
-      Serial.println("Error initializing ESP-NOW");
-      return;
+        Serial.println("Error initializing ESP-NOW");
+        return;
     }
     
     Serial.println("ESP-NOW initialized");
@@ -36,14 +36,14 @@ void init_relay() {
     peerInfo.encrypt = false;
     
     if (esp_now_add_peer(&peerInfo) != ESP_OK) {
-      Serial.println("Failed to add peer");
-      return;
+        Serial.println("Failed to add peer");
+        return;
     }
     
     Serial.print("Peer added: ");
     for (int i = 0; i < 6; i++) {
-      Serial.print(receiverMacAddress[i], HEX);
-      if (i < 5) Serial.print(":");
+        Serial.print(receiverMacAddress[i], HEX);
+        if (i < 5) Serial.print(":");
     }
     Serial.println();
 }
@@ -55,6 +55,6 @@ void relay_data(BotData data) {
     esp_err_t result = esp_now_send(receiverMacAddress, (uint8_t *)&data, sizeof(BotData));
 
     if (result != ESP_OK) {
-      isSending = false; // Reset if queueing itself failed
+        isSending = false; // Reset if queueing itself failed
     }
 }

@@ -1,6 +1,8 @@
 #ifndef ESP32_LED_DRIVER
 #define ESP32_LED_DRIVER
 
+extern float led_offset_ratio;
+
 void init_led();
 
 void change_pattern(int new_pattern);

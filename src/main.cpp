@@ -200,7 +200,8 @@ void loop() {
             (uint8_t)(get_accel_force_g()),  // convert to 0-100 scale (with 1 decimal place)
             0,(uint16_t)(current_frequency * 60.0f),
             (float)accel_mount_radius_cm,
-            (uint32_t)interval_micros
+            (uint32_t)interval_micros,
+            (int)(led_offset_ratio * 100.0f)
         });
         #endif
         } else {
@@ -209,6 +210,9 @@ void loop() {
 
             Serial.print("Current Frequency (RPS): ");
             Serial.println(current_frequency);
+
+            Serial.print("Current LED Offset (%): ");
+            Serial.println(led_offset_ratio * 100);
         }
     #endif
 
@@ -246,9 +250,4 @@ void loop() {
 
         low_speed_set_motor();
     }
-
-        Serial.print("\n====================================");
-        if (facing_up) {
-            Serial.print("OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo");
-        }
 }
