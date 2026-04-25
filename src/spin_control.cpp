@@ -137,9 +137,9 @@ void update_robot_direction() {
     last_measurement_micros = current_micros;
 
     if (facing_up) {
-        robot_direction += (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with positive area
-    } else {
         robot_direction -= (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with negative area
+    } else {
+        robot_direction += (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with positive area
     }
 
     last_measurement_frequency = current_frequency;
