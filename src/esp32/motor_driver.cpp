@@ -14,7 +14,7 @@ constexpr uint16_t ESC_COAST_DIFF_US = 150;  // unused for now, keep for referen
 
 static void setPower(uint8_t channel, double val) {
     val = constrain(val, -1.0, 1.0);
-    if (facing_up) {
+    if (!facing_up) {
         val = -val;
     }
     ledcWrite(channel, 51 + ((val + 1.0) / 2.0) * 51);
