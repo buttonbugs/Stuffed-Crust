@@ -18,7 +18,7 @@
  */
 
 #define GRAVITATIONAL_ACCELERATION 9.8f      // m / s^2
-#define MOTOR_COAST_THROTTLE 0.3f
+#define MOTOR_COAST_THROTTLE 0.05f
 #define MAX_HEADING_LED_REVOLUTION_SPEED 0.8f   // revolutions per second, maximum heading LED revolution speed
 
 uint32_t last_measurement_micros = 0;       // microseconds, the value of micros() when setting the last last_measurement_frequency
