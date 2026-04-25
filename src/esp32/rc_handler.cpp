@@ -29,9 +29,9 @@ static unsigned long last_good_signal = 0;
 static const unsigned long SIGNAL_TIMEOUT_MS = 500;  // 500ms timeout
 
 // Button cooling
-const int button_cooling_time_ms = 100;
-int left_bumper_last_trigger_ms = 0;
-bool left_bumper_status = false;
+// const int button_cooling_time_ms = 100;
+// int left_bumper_last_trigger_ms = 0;
+// bool left_bumper_status = false;
 
 void onConnectedGamepad(ControllerPtr ctl) {
     Serial.print("Gamepad connected: index=");
@@ -56,7 +56,7 @@ void onDisconnectedGamepad(ControllerPtr ctl) {
     config_left = false;
     config_right = false;
     config_heading = false;
-    left_bumper_status = false;
+    // left_bumper_status = false;
 }
 
 void processGamepadData() {
@@ -89,35 +89,38 @@ void processGamepadData() {
         revolution_ratio = 0.0f;
     }
 
-    // Get trigger values (range: 0 to 255)
-    uint8_t throttleL = myController->brake();  // Left trigger
+    // Get trigger values (range: 0 to 1023)
+    uint32_t throttleL = myController->brake();  // Left trigger
     uint32_t throttleR = myController->throttle();  // Right trigger
 
-    Serial.println(throttleR);
-
     // Map triggers to throttle (0.0 to 1.0)
-    throttle_ratio = throttleR / 1023.0f;
+    throttle_ratio = max(throttleL, throttleR) / 1023.0f;
     throttle_ratio = constrain(throttle_ratio, 0.0f, 1.0f);
+
+    if (throttleL < throttleR) {
+        facing_up = true;
+    } else if (throttleL > throttleR) {
+        facing_up = false;
+    }   // When throttleL == throttleR, do not change the value of facing_up
 
     // Get button states
     uint16_t buttons = myController->buttons();
     uint8_t dpad = myController->dpad();
     
-    if (millis() - left_bumper_last_trigger_ms > button_cooling_time_ms) {  // Toggle facing_up
-        bool left_bumper_current_status = myController->l1();
+    // if (millis() - left_bumper_last_trigger_ms > button_cooling_time_ms) {  // Toggle facing_up
+    //     bool left_bumper_current_status = myController->l1();
     
-        if (left_bumper_current_status != left_bumper_status) {
-            left_bumper_status = left_bumper_current_status;
-            left_bumper_last_trigger_ms = millis();
+    //     if (left_bumper_current_status != left_bumper_status) {
+    //         left_bumper_status = left_bumper_current_status;
+    //         left_bumper_last_trigger_ms = millis();
             
-            if (left_bumper_status) {
-                if (abs(get_accel_force_g()) < 20.0f) {     // 20 G is much more than the offset, so G offset is ignored. Otherwise, G offset is too complicated to add here
-                    facing_up = !facing_up;
-                }
-            }
-        }
-    }
-    
+    //         if (left_bumper_status) {
+    //             if (abs(get_accel_force_g()) < 20.0f) {     // 20 G is much more than the offset, so G offset is ignored. Otherwise, G offset is too complicated to add here
+    //                 facing_up = !facing_up;
+    //             }
+    //         }
+    //     }
+    // }
     
     // Map buttons (using button bitmasks)
     config_mode = (dpad & DPAD_DOWN);     // B button for config mode
