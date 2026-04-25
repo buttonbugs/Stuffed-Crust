@@ -72,11 +72,6 @@ void translational_motion() {
     float motor_1_throttle = 1.0f;          // ranging from -1.0 to 1.0
     float motor_2_throttle = 1.0f;          // ranging from -1.0 to 1.0
     float translation_throttle = constrain(sqrt(sq(forback_ratio) + sq(leftright_ratio)), -1.0f, 1.0f); // the throttle of the translation joystick
-    Serial.print("forback_ratio: ");
-    Serial.print(forback_ratio);
-    Serial.print("leftright_ratio: ");
-    Serial.print(leftright_ratio);
-    Serial.print("\n");
     float translation_direction;            // the direction of the translation joystick, using +y-axis as the 0 direction
 
     // Calculation translation direction, return from 0.0 to 1.0
@@ -87,10 +82,7 @@ void translational_motion() {
             translation_direction = 0.5f;
         }
     } else {
-        translation_direction = atan(forback_ratio / leftright_ratio) / (2 * PI);   // Use +x-axis as the 0 direction
-        if (leftright_ratio < 0.0f) {
-            translation_direction += 0.5f;
-        }
+        translation_direction = atan2(forback_ratio, leftright_ratio) / (2.0f * PI);   // Use +x-axis as the 0 direction
         translation_direction -= 0.25f;     // Use +y-axis as the 0 direction
     }
 
@@ -139,15 +131,18 @@ void update_robot_direction() {
     current_frequency = angular_velocity / (2.0f * PI);                                   // angular_velocity = 2 * PI * frequency
 
     /* Accumulate frequency to get robot direction */
-    interval_micros = micros() - last_measurement_micros;
+    unsigned long current_micros = micros();
+    interval_micros = current_micros - last_measurement_micros;
     float interval = interval_micros * 0.000001f;                          // convert to seconds
-    last_measurement_micros = micros();
+    last_measurement_micros = current_micros;
 
     if (facing_up) {
         robot_direction += (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with positive area
     } else {
         robot_direction -= (current_frequency + last_measurement_frequency) * interval / 2.0f;      // trapezoid estimation with negative area
     }
+
+    last_measurement_frequency = current_frequency;
 
     rotational_motion(interval);
 
