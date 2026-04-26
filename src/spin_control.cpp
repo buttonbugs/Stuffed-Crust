@@ -125,13 +125,13 @@ void translational_motion() {
 }
 
 void update_robot_direction() {
+    uint32_t current_micros = micros();
     /* robot direction calculation - in SI units */
     float radial_acceleration = fabs(get_accel_force_g() - accel_zero_g_offset) * GRAVITATIONAL_ACCELERATION;
     float angular_velocity = sqrt(radial_acceleration / (accel_mount_radius_cm * 0.01f));       // radial_acceleration = angular_velocity^2 * radius
     current_frequency = angular_velocity / (2.0f * PI);                                   // angular_velocity = 2 * PI * frequency
 
     /* Accumulate frequency to get robot direction */
-    unsigned long current_micros = micros();
     interval_micros = current_micros - last_measurement_micros;
     float interval = interval_micros * 0.000001f;                          // convert to seconds
     last_measurement_micros = current_micros;
