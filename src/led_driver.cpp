@@ -31,7 +31,7 @@ int current_led_pattern = 0;
 void init_led() {
     // Get led_offset_ratio from storage
     #ifdef ENABLE_EEPROM_STORAGE
-        led_offset_ratio = load_heading_led_offset() / 100.0f;
+        //led_offset_ratio = load_heading_led_offset() / 100.0f;
     #endif
 
     // Initialize LED
