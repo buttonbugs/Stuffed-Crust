@@ -48,8 +48,10 @@
 #define THROTTLE_RC_CHANNEL_PIN 22                 //To Throttle on RC receiver (Pin 0 on Arduino Micro labelled as "RX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
 #define REVOLUTION_RC_CHANNEL_PIN 23                  //To Heading / Spin direction on RC receiver (Pin 4 on Arduino Micro - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
 
-#define HEADING_LED_PIN	11                         //To heading LED (pin 13 is on-board Arduino LED)
-// #define HEADING_LED_PIN	13                         //For testing, in case we don't have external LED
+#define HEADING_LED_1_PIN 11                         //To heading LED (pin 13 is on-board Arduino LED)
+#define HEADING_LED_2_PIN 12                         //
+// #define HEADING_LED_1_PIN	13                         //For testing, in case we don't have external LED
+
 #define LED_STRIP_DATA 11                           // LED strip SPI DO/MOSI pin
 #define LED_STRIP_SCK 12                            // LED strip SPI SCK/Clock pin
 

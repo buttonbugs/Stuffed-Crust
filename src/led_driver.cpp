@@ -39,7 +39,8 @@ void init_led() {
         FastLED.addLeds<SK9822, LED_STRIP_DATA, LED_STRIP_SCK, COLOR_ORDER>(leds, NUM_LEDS);
         FastLED.setBrightness(255);  // Set initial brightness (0-255)
     #else
-        pinMode(HEADING_LED_PIN, OUTPUT);
+        pinMode(HEADING_LED_1_PIN, OUTPUT);
+        pinMode(HEADING_LED_2_PIN, OUTPUT);
     #endif
 }
 
@@ -147,7 +148,9 @@ void update_led(float robot_direction) {
         FastLED.show();
     #else
         // Caculate whether the LED should be ON or OFF
-        digitalWrite(HEADING_LED_PIN, calculate_led_status(robot_direction));
+        bool current_led_status = calculate_led_status(robot_direction);
+        digitalWrite(HEADING_LED_1_PIN, current_led_status);
+        digitalWrite(HEADING_LED_2_PIN, current_led_status);
     #endif
     
 }
@@ -156,16 +159,20 @@ void heading_led_on(int shimmer) {
     // check to see if we should "shimmer" the LED to indicate something to user
     if (shimmer == 1) {
         if (micros() & (1 << 10)) {
-            digitalWrite(HEADING_LED_PIN, HIGH);
+            digitalWrite(HEADING_LED_1_PIN, HIGH);
+            digitalWrite(HEADING_LED_2_PIN, HIGH);
         } else {
-            digitalWrite(HEADING_LED_PIN, LOW);
+            digitalWrite(HEADING_LED_1_PIN, LOW);
+            digitalWrite(HEADING_LED_2_PIN, LOW);
         }
     } else {
         // just turn LED on
-        digitalWrite(HEADING_LED_PIN, HIGH);
+        digitalWrite(HEADING_LED_1_PIN, HIGH);
+        digitalWrite(HEADING_LED_2_PIN, HIGH);
     }
 }
 
 void heading_led_off() {
-    digitalWrite(HEADING_LED_PIN, LOW);
+    digitalWrite(HEADING_LED_1_PIN, LOW);
+    digitalWrite(HEADING_LED_2_PIN, LOW);
 }

@@ -245,7 +245,9 @@ void loop() {
                 handle_bot_idle();
             }
         #else
-            digitalWrite(HEADING_LED_PIN, millis() % 150 < 30);     // Blink the LED the same way as handle_bot_idle() without using delay()
+            bool current_led_status = (millis() % 150 < 30);
+            digitalWrite(HEADING_LED_1_PIN, current_led_status);     // Blink the LED the same way as handle_bot_idle() without using delay()
+            digitalWrite(HEADING_LED_2_PIN, current_led_status);     // Blink the LED the same way as handle_bot_idle() without using delay()
         #endif
 
         low_speed_set_motor();
