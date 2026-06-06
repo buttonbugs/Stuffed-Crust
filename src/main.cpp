@@ -32,18 +32,20 @@ static void wait_for_rc_good_and_zero_throttle() {
 // INITIAL SETUP
 void setup() {
     Serial.begin(115200);
+    Serial.println("\n\n=== MELTYBOT BOOTING ===");
 
     // get motor drivers setup (and off!) first thing
-    init_motors();
+    //init_motors();
     init_led();
+    heading_led_on(0);
 
     // returns actual watchdog timeout MS
-    init_watchdog();
+    //init_watchdog();
 
-    init_rc();
-    init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
+    //init_rc();
+    //init_accel();  // accelerometer uses i2c - which can fail blocking (so only initializing it -after- the watchdog is running)
     #ifndef BOARD_TEENSY40
-        start_accel_task();  // start accelerometer task immediately after init
+        //start_accel_task();  // start accelerometer task immediately after init
     #endif
 
 #ifdef DATA_RELAY
@@ -182,7 +184,7 @@ static void handle_bot_idle() {
 void loop() {
     service_watchdog();  // keep the watchdog happy
 
-    service_rc();
+    //service_rc();
     #ifdef DATA_RELAY
         if(config_mode){
         #ifdef BOARD_TEENSY40

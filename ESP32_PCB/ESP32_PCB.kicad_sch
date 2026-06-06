@@ -4921,6 +4921,18 @@
 		)
 		(uuid "066041cd-2ae1-4728-91dc-0702e6c1e90e")
 	)
+	(text "Stuffed Crust ESP32-S3"
+		(exclude_from_sim no)
+		(at 227.076 174.498 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+			)
+		)
+		(uuid "0ad5813b-b627-4251-b147-af14d15f8d14")
+	)
 	(text "Status LED\n(for programming debugging)"
 		(exclude_from_sim no)
 		(at 254 95.25 0)

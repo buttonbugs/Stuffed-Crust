@@ -12,7 +12,7 @@
 //#define JUST_DO_DIAGNOSTIC_LOOP                 //Disables the robot / just displays config / battery voltage / RC info via serial
 
 //----------EEPROM----------
-#define ENABLE_EEPROM_STORAGE                     //Comment out this to disable EEPROM (for ARM)
+//#define ENABLE_EEPROM_STORAGE                     //Comment out this to disable EEPROM (for ARM)
 #define EEPROM_WRITTEN_SENTINEL_VALUE 42          //Changing this value will cause existing EEPROM values to be invalidated (revert to defaults)
 
 //----------TRANSLATIONAL DRIFT SETTINGS----------
@@ -43,11 +43,11 @@
 //Common RC receiver setup REVOLUTION = CH1, FORBACK = CH2, THROTTLE = CH3
 //Note: Accelerometer is connected with default Arduino SDA / SCL pins
 
-#define HEADING_LED_1_PIN 3                        //GPIO7 - LED output
-#define HEADING_LED_2_PIN 4                        //GPIO7 - LED output
-#define LED_STRIP_DATA 8                           //GPIO8 - LED strip data
-#define LED_STRIP_SCK 9                            //GPIO9 - LED strip clock
-#define MOTOR_PIN1 20                              //GPIO0 - Motor 1
+#define HEADING_LED_1_PIN 10                        //GPIO7 - LED output
+#define HEADING_LED_2_PIN 13                        //GPIO7 - LED output
+#define LED_STRIP_DATA 11                           //GPIO8 - LED strip data
+#define LED_STRIP_SCK 12                            //GPIO9 - LED strip clock
+#define MOTOR_PIN1 3                              //GPIO0 - Motor 1
 #define MOTOR_PIN2 2                               //GPIO1 - Motor 2
 #define BATTERY_ADC_PIN 1                          //GPIO2/ADC (analog input)
 
@@ -109,6 +109,5 @@ enum throttle_modes {
 //----------ESP32----------
 // #define ENABLE_ESP32_RC                           // Use ESP32 as the receiver
 #define ENABLE_ESP32_SPIN_CONTROL                 // Using esp32_spin_control.h to handle high speed mode
-#define DATA_RELAY
 
 #endif

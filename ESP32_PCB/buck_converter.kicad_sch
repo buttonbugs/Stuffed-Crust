@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "5c8d83ff-7b26-4ce7-b715-36761fa9495b")
 	(paper "A4")
+	(title_block
+		(title "buck_converter")
+	)
 	(lib_symbols
 		(symbol "Device:C_Polarized_Small_US"
 			(pin_numbers
@@ -939,6 +942,18 @@
 			)
 			(embedded_fonts no)
 		)
+	)
+	(text "Buck Converter"
+		(exclude_from_sim no)
+		(at 209.042 174.752 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+			)
+		)
+		(uuid "22644a6e-39f6-4204-b560-d9097dd82a6b")
 	)
 	(junction
 		(at 187.96 66.04)

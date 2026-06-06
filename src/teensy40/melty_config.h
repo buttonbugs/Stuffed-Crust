@@ -43,10 +43,10 @@
 //Common RC receiver setup REVOLUTION = CH1, FORBACK = CH2, THROTTLE = CH3
 //Note: Accelerometer is connected with default Arduino SDA / SCL pins
 
-#define LEFTRIGHT_RC_CHANNEL_PIN 20                //To Left / Right on RC receiver
-#define FORBACK_RC_CHANNEL_PIN 21                  //To Forward / Back on RC receiver (Pin 1 on Arduino Micro labelled as "TX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
-#define THROTTLE_RC_CHANNEL_PIN 22                 //To Throttle on RC receiver (Pin 0 on Arduino Micro labelled as "RX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
-#define REVOLUTION_RC_CHANNEL_PIN 23                  //To Heading / Spin direction on RC receiver (Pin 4 on Arduino Micro - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
+#define LEFTRIGHT_RC_CHANNEL_PIN 20                //Channel 4 To Left / Right on RC receiver
+#define FORBACK_RC_CHANNEL_PIN 21                  //Channel 3 To Forward / Back on RC receiver (Pin 1 on Arduino Micro labelled as "TX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
+#define THROTTLE_RC_CHANNEL_PIN 22                 //Channel 2 To Throttle on RC receiver (Pin 0 on Arduino Micro labelled as "RX" - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
+#define REVOLUTION_RC_CHANNEL_PIN 23                  //Channel 1 To Heading / Spin direction on RC receiver (Pin 4 on Arduino Micro - https://docs.arduino.cc/hacking/hardware/PinMapping32u4)
 
 #define HEADING_LED_1_PIN 11                         //To heading LED (pin 13 is on-board Arduino LED)
 #define HEADING_LED_2_PIN 12                         //
