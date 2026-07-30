@@ -1,0 +1,1043 @@
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.88  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.84  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.65  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.32  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.44  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.73  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.46  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 73.92  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.22  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.73  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.78  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.32  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.78  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.27  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.38  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.88  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.25  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.76  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.30  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.60  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.35  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.25  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.30  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.41  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.19  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.30  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 62.42  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.82  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.84  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.49  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.60  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.74  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.74  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.53  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.39  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.39  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.65  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.38  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.84  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.32  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 73.87  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.41  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.78  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 74.41  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.80  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.82  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.25  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 76.13  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 76.08  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.98  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.32  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.38  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.48  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.76  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 62.53  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.60  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.96  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.69  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.74  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.49  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.69  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.88  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 67.47  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.39  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.33  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.16  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 76.02  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.29  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.48  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.25  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.76  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.43  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.54  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.44  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.44  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.59  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.43  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.54  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 75.54  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.98  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.39  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] BP32 Scanning... (no gamepad found)
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.49  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.71  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.59  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 69.25  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.76  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.68  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.60  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.39  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.55  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0
+Gamepad connected - Throttle: 0.000 FB: -0.008 LR: 0.023 Rev: -0.010 Config: NO
+[RC] Throttle ratio: 0.00
+Data sent successfully
+Current Frequency (RPS): 1.78
+[RC] Gamepad is connected
+[RC] Throttle ratio: 0.00
+[RC] Throttle ratio: 0.00
+Raw Accel G: 0.78  RC Health: [RC] Gamepad is connected
+1  RC Throttle: [RC] Throttle ratio: 0.00
+0.00  RC L/R: 0  RC F/B: 0  Battery Voltage: 68.66  Accel Radius: 2.45  Heading Offset: 13  Zero G Offset: 0.80Gyro Z: 0.00
+0

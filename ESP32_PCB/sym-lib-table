@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "H3LIS331DL")(type "KiCad")(uri "${KIPRJMOD}/imports/ul_H3LIS331DL/KiCADv6/2026-03-01_20-54-36.kicad_sym")(options "")(descr ""))
+)

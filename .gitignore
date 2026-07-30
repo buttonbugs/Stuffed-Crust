@@ -1,3 +1,16 @@
 .vscode
 .DS_Store
-.pio/
+.pio/build/
+
+# KiCad Temp File
+*/~*
+*.kicad_prl
+*fp-info-cache
+*fp-lib-table
+*-backups
+*-backups
+*.lck
+*_autosave-*
+*#auto_saved_files#
+*.zip
+.pio
