@@ -7,9 +7,9 @@ authors:
     given-names: "Mile"
     orcid: "https://orcid.org/0009-0005-7837-3514"
 title: "Stuffed Crust"
-version: "1.0.0"
-doi: ""
-date-released: ""
+version: 1.0.0
+doi: 10.5281/zenodo.22105744
+date-released: 2026-08-25
 url: "https://github.com/buttonbugs/Auto-Blinds/"
 references:
   - type: software
@@ -21,4 +21,4 @@ references:
     title: "Open Melt"
     abstract: "Open Melt is an open-source translational drift (\"melty brain\") robot controller based on Arduino"
     repository-code: "https://github.com/nothinglabs/openmelt2/"
-    version: "0.0.0"
+    version: 0.0.0

@@ -1,5 +1,7 @@
 # Stuffed Crust
 
+[![DOI](https://zenodo.org/badge/1060879974.svg)](https://doi.org/10.5281/zenodo.22105744)
+
 This repository contains the code for Wildcat Robotics' team Stuffed Crust. This is a fork of the open source melty brain code, openmelt [^1], with improved translational drift algorithm, adapted watchdog [^2] for [Teensy 4.0](https://www.pjrc.com/store/teensy40.html) and some other changes specific to Stuffed Crust's design.
 
 ## Preview
