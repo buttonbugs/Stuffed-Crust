@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Bennett"
+    given-names: "James"
+  - family-names: "Chen"
+    given-names: "Mile"
+    orcid: "https://orcid.org/0009-0005-7837-3514"
+title: "Stuffed Crust"
+version: "1.0.0"
+doi: ""
+date-released: ""
+url: "https://github.com/buttonbugs/Auto-Blinds/"
+references:
+  - type: software
+    authors:
+      - family-names: "Olson"
+        given-names: "Rich"
+      - family-names: "Schoppert"
+        given-names: "Makoto"
+    title: "Open Melt"
+    abstract: "Open Melt is an open-source translational drift (\"melty brain\") robot controller based on Arduino"
+    repository-code: "https://github.com/nothinglabs/openmelt2/"
+    version: "0.0.0"
