@@ -8,9 +8,9 @@ authors:
     orcid: "https://orcid.org/0009-0005-7837-3514"
 title: "Stuffed Crust"
 version: 1.0.0
-doi: 10.5281/zenodo.22105744
-date-released: 2026-08-25
-url: "https://github.com/buttonbugs/Auto-Blinds/"
+doi: 
+date-released: 2026-08-31
+url: "https://github.com/buttonbugs/Stuffed-Crust/"
 references:
   - type: software
     authors:
